@@ -20,13 +20,15 @@
 #define SCIENCE_HEADER_HEIGHT SCREEN_HEIGHT * 0.1
 
 @implementation lzhTableHeaderViewForFirstPage
+ NSArray *announceArr;
 
-
-- (instancetype)initWithFrame:(CGRect)frame targetDelegate:(id)_delegate
+- (instancetype)initWithFrame:(CGRect)frame targetDelegate:(id)_delegate announceTitleArr:(NSArray*)_announceArr
 {
+   
     self = [super initWithFrame:frame];
     if (self) {
         self.targetDelega = _delegate;
+        announceArr = _announceArr;
         self.scoView = [self createScrollView];
         self.anounceView = [self createAnounmentView];
         self.groupButton = [self testButtonGroup];
@@ -49,7 +51,9 @@
 }
 //创建最新公告
 - (newAnnouncementView*)createAnounmentView{
-    newAnnouncementView *anounmentView = [[newAnnouncementView alloc]initWithFrame:CGRectMake(0, self.scoView.bounds.size.height, SCREEN_WIDTH, ANNOUNCE_HEIGHT)];
+    //newAnnouncementView *anounmentView = [[newAnnouncementView alloc]initWithFrame:CGRectMake(0, self.scoView.bounds.size.height, SCREEN_WIDTH, ANNOUNCE_HEIGHT)];
+    
+     newAnnouncementView *anounmentView = [[newAnnouncementView alloc]initWithFrame:CGRectMake(0, self.scoView.bounds.size.height, SCREEN_WIDTH, ANNOUNCE_HEIGHT) announceTitleArr:announceArr];
     return anounmentView;
 }
 

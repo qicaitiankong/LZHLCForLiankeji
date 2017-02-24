@@ -9,9 +9,15 @@
 #import "newAnnouncementView.h"
 #import "appCommonAttributes.h"
 
+@interface newAnnouncementView ()
+
+@property (strong,nonatomic)VierticalScrollView *textScrollView;
+
+@end
+
 @implementation newAnnouncementView
 
--(instancetype)initWithFrame:(CGRect)frame{
+-(instancetype)initWithFrame:(CGRect)frame announceTitleArr:(NSArray*)titleArr{
     self = [super initWithFrame:frame];
     if(self){
         self.backgroundColor = [UIColor whiteColor];
@@ -19,22 +25,30 @@
         //imageView.backgroundColor = [UIColor grayColor];
         [imageView setImage:[UIImage imageNamed:@"1_25"]];
         [self addSubview:imageView];
+        //添加灰色线
+        UIView *styleLine1 = [[UIView alloc]initWithFrame:CGRectMake(0, 0 , 1, self.frame.size.height)];
+        styleLine1.backgroundColor = [UIColor grayColor];
+        [self addSubview:styleLine1];
+        //
+        //最新公告轮播
+        self.textScrollView = [VierticalScrollView initWithTitleArray:titleArr AndFrame:CGRectMake(imageView.frame.origin.x + imageView.frame.size.width, imageView.frame.origin.y, 100, imageView.frame.size.height)];
+        self.textScrollView.backgroundColor = [UIColor whiteColor];
+        [self addSubview:self.textScrollView];
+        //
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self).offset(SCREEN_WIDTH * 0.047);
             make.height.equalTo(self).multipliedBy(0.6);
             make.width.equalTo(imageView.mas_height);
             make.centerY.equalTo(self);
         }];
-        //最新公告轮播
-        self.textScrollView = [[LMJScrollTextView alloc]initWithFrame:CGRectMake(0,0,0,0) textScrollModel:LMJTextScrollFromOutside direction:LMJTextScrollMoveLeft];
-        self.textScrollView.backgroundColor = [UIColor whiteColor];
-        [self addSubview:self.textScrollView];
-        [self.textScrollView setMoveSpeed:0.2];
-        [self.textScrollView startScrollWithText:@"最新公告：链科技正在打造国际一流技术对接平台，期望您的加入！" textColor: [UIColor lightGrayColor] font:[UIFont boldSystemFontOfSize:16]];
-        NSLog(@"最新公告间距%lf",SCREEN_WIDTH * 0.033);
-         //NSLog(@"imageview width = %lf",imageView.bounds.size.width);
-        [self.textScrollView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self).offset(SCREEN_WIDTH * 0.047 + SCREEN_WIDTH * 0.033 + self.frame.size.height * 0.6);
+        [styleLine1 mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(imageView.mas_right).offset(1);
+            make.width.mas_equalTo(1);
+            make.height.mas_equalTo(imageView.mas_height);
+            make.centerY.mas_equalTo(self);
+        }];
+        [self.textScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(imageView.mas_right).offset(2);
             make.right.equalTo(self).offset(-5);
             make.height.equalTo(imageView);
             make.centerY.equalTo(self);

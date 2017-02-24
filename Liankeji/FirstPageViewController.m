@@ -22,6 +22,8 @@
 #import "centerButtonGroupViewController.h"
 #import "searchViewController.h"
 #import "lzhTableHeaderViewForFirstPage.h"
+
+
 //滚动视图高度
 #define SCROLLVIEW_HEIGHT SCREEN_HEIGHT * 0.374
 //中间按钮组整体的高度
@@ -46,15 +48,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
     self.tableHeaderHeight = SCROLLVIEW_HEIGHT + ANNOUNCE_HEIGHT + BUTTON_GROUP_HEIGHT + SCIENCE_HEADER_HEIGHT;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.newsArr = [[NSMutableArray alloc]initWithCapacity:2];
     self.view.backgroundColor = [UIColor whiteColor];
     [self initTableView];
+    
     //NSLog(@"导航栏高度 %lf screenheight = %lf",self.navigationController.navigationBar.frame.size.height,[UIScreen mainScreen].bounds.size.height);
-    
-    
 }
+
 
 //轮播点击
 -(void)scrollViewDidClickedAtPage:(NSInteger)pageNumber{
@@ -65,12 +68,13 @@
     NSLog(@"buttonGroup:%li",buttonIndex);
     centerButtonGroupViewController *detailVC = [[centerButtonGroupViewController alloc]init];
     [self presentViewController:detailVC animated:YES completion:nil];
-    //[self.navigationController pushViewController:detailVC animated:YES];
 }
 //添加表头
 - (UIView*)crateTableHeaderView{
-    UIView *headerView = [[lzhTableHeaderViewForFirstPage alloc]initWithFrame:CGRectMake(0, -self.tableHeaderHeight, SCREEN_WIDTH, self.tableHeaderHeight) targetDelegate:self];
+    NSArray *announceArr = [NSArray arrayWithObjects:@"今人",@"今月曾",@"古人今",@"共看明", nil];
+    lzhTableHeaderViewForFirstPage *headerView = [[lzhTableHeaderViewForFirstPage alloc]initWithFrame:CGRectMake(0, -self.tableHeaderHeight, SCREEN_WIDTH, self.tableHeaderHeight) targetDelegate:self announceTitleArr:announceArr];
     return headerView;
+    
 }
 //初始化tableView
 - (void)initTableView{
@@ -112,22 +116,6 @@
 //cell高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return SCREEN_HEIGHT * 0.346;
-}
-//数据库操作
-- (void)operateDataBase{
-    ShareDataBase *dataBaseClass = [ShareDataBase shareDataBase];
-    [dataBaseClass getDataBase:@"db.sqlite"];
-    BOOL dataBaseSuc = [dataBaseClass openDataBase ];
-    BOOL tableCreateSuc = NO;
-    BOOL dataInsertTableSuc = NO;
-    if(dataBaseSuc){
-        //建立News2表
-        NSString *createTabelSql = @"create table if not exists News2(flag integer not null primary key autoincrement, title2 text not null,click2 integer not null,image2 blob not null)";
-        //tableCreateSuc = [dataBaseClass createTable:createTabelSql];
-    }
-    if(tableCreateSuc){
-       // NSLog(@"成功");
-    }
 }
 
 - (void)didReceiveMemoryWarning {

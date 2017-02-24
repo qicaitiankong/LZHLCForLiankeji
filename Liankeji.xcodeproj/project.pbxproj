@@ -140,6 +140,10 @@
 		0480EAEE1E2F302C0000E084 /* personalFirstPageMyMessage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0480EAD31E2F302C0000E084 /* personalFirstPageMyMessage@3x.png */; };
 		0480EAF41E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0480EAF31E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m */; };
 		0489F3D91E4C3C3E0050AC8E /* announceWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0489F3D81E4C3C3E0050AC8E /* announceWindowView.m */; };
+		048CB6E51E5FCADA00B554E1 /* UIView+EdgeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CB6E41E5FCADA00B554E1 /* UIView+EdgeAnimation.m */; };
+		048CB6E81E5FCFBB00B554E1 /* LZHAddGesterForAround.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CB6E71E5FCFBB00B554E1 /* LZHAddGesterForAround.m */; };
+		048CB6ED1E5FE0C200B554E1 /* VierticalScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CB6E91E5FE0C200B554E1 /* VierticalScrollView.m */; };
+		048CB6EE1E5FE0C200B554E1 /* UIView+FrameExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CB6EB1E5FE0C200B554E1 /* UIView+FrameExtension.m */; };
 		048EB3BD1E5433580080F2E8 /* lzhGetCurrentTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 048EB3BC1E5433580080F2E8 /* lzhGetCurrentTime.m */; };
 		048EB3C01E54458A0080F2E8 /* BasicViewOfAddReturnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048EB3BF1E54458A0080F2E8 /* BasicViewOfAddReturnView.m */; };
 		048EB3C31E544A930080F2E8 /* BasicViewControllerForAddReturnview.m in Sources */ = {isa = PBXBuildFile; fileRef = 048EB3C21E544A930080F2E8 /* BasicViewControllerForAddReturnview.m */; };
@@ -214,7 +218,6 @@
 		99AA38E11E08C1F6000A57BC /* sidemenu_362.png in Resources */ = {isa = PBXBuildFile; fileRef = 99AA38DE1E08C1F6000A57BC /* sidemenu_362.png */; };
 		99AA38E31E08C296000A57BC /* lzhdownMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AA38E21E08C296000A57BC /* lzhdownMenuView.m */; };
 		99AA38E81E08C454000A57BC /* scinenceHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AA38E71E08C454000A57BC /* scinenceHeaderView.m */; };
-		99AA38EC1E09053B000A57BC /* LMJScrollTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AA38EA1E09053B000A57BC /* LMJScrollTextView.m */; };
 		99AA38F01E092C8C000A57BC /* sideMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AA38EF1E092C8C000A57BC /* sideMenuButton.m */; };
 		99BDE0561DF3DE020079EEF8 /* FFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99BDE0551DF3DE020079EEF8 /* FFScrollView.m */; };
 		99C1F98F1E10A79D004DE512 /* firstpage_buttonGroup_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 99C1F9831E10A79C004DE512 /* firstpage_buttonGroup_03.png */; };
@@ -500,6 +503,14 @@
 		0480EAF31E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = personalFirstPageUserTableViewCell.m; sourceTree = "<group>"; };
 		0489F3D71E4C3C3E0050AC8E /* announceWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = announceWindowView.h; sourceTree = "<group>"; };
 		0489F3D81E4C3C3E0050AC8E /* announceWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = announceWindowView.m; sourceTree = "<group>"; };
+		048CB6E31E5FCADA00B554E1 /* UIView+EdgeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EdgeAnimation.h"; sourceTree = "<group>"; };
+		048CB6E41E5FCADA00B554E1 /* UIView+EdgeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+EdgeAnimation.m"; sourceTree = "<group>"; };
+		048CB6E61E5FCFBB00B554E1 /* LZHAddGesterForAround.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LZHAddGesterForAround.h; sourceTree = "<group>"; };
+		048CB6E71E5FCFBB00B554E1 /* LZHAddGesterForAround.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LZHAddGesterForAround.m; sourceTree = "<group>"; };
+		048CB6E91E5FE0C200B554E1 /* VierticalScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VierticalScrollView.m; sourceTree = "<group>"; };
+		048CB6EA1E5FE0C200B554E1 /* UIView+FrameExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameExtension.h"; sourceTree = "<group>"; };
+		048CB6EB1E5FE0C200B554E1 /* UIView+FrameExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FrameExtension.m"; sourceTree = "<group>"; };
+		048CB6EC1E5FE0C200B554E1 /* VierticalScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VierticalScrollView.h; sourceTree = "<group>"; };
 		048EB3BB1E5433580080F2E8 /* lzhGetCurrentTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhGetCurrentTime.h; sourceTree = "<group>"; };
 		048EB3BC1E5433580080F2E8 /* lzhGetCurrentTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhGetCurrentTime.m; sourceTree = "<group>"; };
 		048EB3BE1E54458A0080F2E8 /* BasicViewOfAddReturnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewOfAddReturnView.h; sourceTree = "<group>"; };
@@ -616,8 +627,6 @@
 		99AA38E21E08C296000A57BC /* lzhdownMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhdownMenuView.m; sourceTree = "<group>"; };
 		99AA38E61E08C454000A57BC /* scinenceHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scinenceHeaderView.h; sourceTree = "<group>"; };
 		99AA38E71E08C454000A57BC /* scinenceHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scinenceHeaderView.m; sourceTree = "<group>"; };
-		99AA38EA1E09053B000A57BC /* LMJScrollTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMJScrollTextView.m; sourceTree = "<group>"; };
-		99AA38EB1E09053B000A57BC /* LMJScrollTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMJScrollTextView.h; sourceTree = "<group>"; };
 		99AA38EE1E092C8C000A57BC /* sideMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sideMenuButton.h; sourceTree = "<group>"; };
 		99AA38EF1E092C8C000A57BC /* sideMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sideMenuButton.m; sourceTree = "<group>"; };
 		99BDE0541DF3DE020079EEF8 /* FFScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFScrollView.h; sourceTree = "<group>"; };
@@ -1052,6 +1061,17 @@
 			name = "我的";
 			sourceTree = "<group>";
 		};
+		048CB6E21E5FC9BB00B554E1 /* 边缘手势效果 */ = {
+			isa = PBXGroup;
+			children = (
+				048CB6E31E5FCADA00B554E1 /* UIView+EdgeAnimation.h */,
+				048CB6E41E5FCADA00B554E1 /* UIView+EdgeAnimation.m */,
+				048CB6E61E5FCFBB00B554E1 /* LZHAddGesterForAround.h */,
+				048CB6E71E5FCFBB00B554E1 /* LZHAddGesterForAround.m */,
+			);
+			name = "边缘手势效果";
+			sourceTree = "<group>";
+		};
 		049B18461E568545008013FB /* searchView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1376,8 +1396,10 @@
 		99AA38E91E0904BC000A57BC /* 滚动插件 */ = {
 			isa = PBXGroup;
 			children = (
-				99AA38EA1E09053B000A57BC /* LMJScrollTextView.m */,
-				99AA38EB1E09053B000A57BC /* LMJScrollTextView.h */,
+				048CB6E91E5FE0C200B554E1 /* VierticalScrollView.m */,
+				048CB6EA1E5FE0C200B554E1 /* UIView+FrameExtension.h */,
+				048CB6EB1E5FE0C200B554E1 /* UIView+FrameExtension.m */,
+				048CB6EC1E5FE0C200B554E1 /* VierticalScrollView.h */,
 			);
 			name = "滚动插件";
 			sourceTree = "<group>";
@@ -1701,6 +1723,7 @@
 		99E41F7F1DED5C9100F32968 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				048CB6E21E5FC9BB00B554E1 /* 边缘手势效果 */,
 				049B18471E568552008013FB /* search */,
 				0479BE9A1E553BBC00FFF991 /* BasicViewController */,
 				0479BE991E553B8700FFF991 /* BasicView */,
@@ -2153,6 +2176,7 @@
 				046CFB751E34548100E80E9F /* lzhDealNavigationColor.m in Sources */,
 				992D730E1DF1557300FFD2DD /* GetCellHeight.m in Sources */,
 				049261FD1E1F277F00AFC111 /* commentView.m in Sources */,
+				048CB6ED1E5FE0C200B554E1 /* VierticalScrollView.m in Sources */,
 				047227831E5E926E0045A0C7 /* CommunicateFirstViewController.m in Sources */,
 				04764C6C1E2DFD3000704C96 /* annoounceSecondPageViewController.m in Sources */,
 				04764C691E2DA85A00704C96 /* lzhAlertControllerViewController.m in Sources */,
@@ -2176,6 +2200,8 @@
 				9961CFA41E026DF20021D123 /* firstPageButtonGroup.m in Sources */,
 				999D99471DF04C950067CFBA /* ShareDataBase.m in Sources */,
 				04EC82031E5BCB1600CDA9C9 /* lzhOperationFile.m in Sources */,
+				048CB6EE1E5FE0C200B554E1 /* UIView+FrameExtension.m in Sources */,
+				048CB6E51E5FCADA00B554E1 /* UIView+EdgeAnimation.m in Sources */,
 				0435BF9D1E1B8ED300DE859D /* informationSecondPgeTavCell.m in Sources */,
 				0479BE9D1E55512C00FFF991 /* returnViewForSearchViewController.m in Sources */,
 				047A39D21E2C678400651C7E /* anounceSecondPageView.m in Sources */,
@@ -2199,7 +2225,6 @@
 				99E41F661DED291A00F32968 /* NavViewControllerForPersonal.m in Sources */,
 				04CDD9B31E1DDD3B009330FD /* cellHeaderView3.m in Sources */,
 				0473353C1E30A6D300671F44 /* searchViewController.m in Sources */,
-				99AA38EC1E09053B000A57BC /* LMJScrollTextView.m in Sources */,
 				049C63091E4EFB0400B83543 /* lzhRefresh.m in Sources */,
 				0479BE981E55358300FFF991 /* BasicViewControllerOfAllMainPage.m in Sources */,
 				049B18421E568496008013FB /* searchHistoryTableView.m in Sources */,
@@ -2211,6 +2236,7 @@
 				047227951E5E92A30045A0C7 /* LCReleaseCell.m in Sources */,
 				049262031E1F939A00AFC111 /* cellFootView.m in Sources */,
 				047A39C51E2C4E3500651C7E /* announceViewController.m in Sources */,
+				048CB6E81E5FCFBB00B554E1 /* LZHAddGesterForAround.m in Sources */,
 				9953E2F01E0D238700F55604 /* LZHTabBar.m in Sources */,
 				99C1F9B71E10BE81004DE512 /* informationTableViewCell.m in Sources */,
 				047F2C4F1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m in Sources */,
@@ -2296,7 +2322,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2341,7 +2367,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

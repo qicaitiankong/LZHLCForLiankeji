@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LMJScrollTextView.h"
 #import <Masonry.h>
+#import "VierticalScrollView.h"
 
 @interface newAnnouncementView : UIView
 
-@property (strong,nonatomic)LMJScrollTextView *textScrollView;
+-(instancetype)initWithFrame:(CGRect)frame announceTitleArr:(NSArray*)titleArr;
+
 @end

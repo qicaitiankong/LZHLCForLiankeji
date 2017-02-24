@@ -10,6 +10,7 @@
 #import "searchViewController.h"
 #import "lzhDealNavigationColor.h"
 #import "lzhdownMenuView.h"
+#import "LZHAddGesterForAround.h"
 
 @interface BasicViewControllerOfAllMainPage ()<pullDownMenuDelegate>
 @property (strong,nonatomic)lzhDealNavigationColor* dealNavigationColor;
@@ -25,9 +26,12 @@
     UIColor *titleColor = NAVIGATION_TITLE_COLOR;
     [self.navigationController.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:titleColor}];
     [self setNavigationButton];
-    
+    //添加手势虚晃
+    [LZHAddGesterForAround init:self.view];
     // Do any additional setup after loading the view.
 }
+
+
 
 //导航栏右侧搜索按钮
 - (void)rightSearchHandler:(UIBarButtonItem*)_u{

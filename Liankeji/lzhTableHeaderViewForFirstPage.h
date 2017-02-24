@@ -26,6 +26,6 @@
 //代理
 @property (assign,nonatomic)id targetDelega;
 
-- (instancetype)initWithFrame:(CGRect)frame targetDelegate:(id)_delegate;
+- (instancetype)initWithFrame:(CGRect)frame targetDelegate:(id)_delegate announceTitleArr:(NSArray*)_announceArr;
 
 @end

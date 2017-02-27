@@ -11,7 +11,6 @@
 @protocol VierticalScrollViewDelegate <NSObject>
 
 
-@optional
 
 -(void)clickTitleButton:(UIButton *)button;
 

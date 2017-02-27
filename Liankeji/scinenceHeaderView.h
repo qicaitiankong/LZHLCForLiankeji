@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <Masonry.h>
 
+@protocol segumentDelegate <NSObject>
+- (void)clickSegumentIndex:(NSInteger)index;
+@end
+
 @interface scinenceHeaderView : UIView
+
+@property(assign,nonatomic)id<segumentDelegate>targetDelegate;
 
 @end

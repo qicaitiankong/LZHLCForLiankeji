@@ -22,7 +22,7 @@
 #import "centerButtonGroupViewController.h"
 #import "searchViewController.h"
 #import "lzhTableHeaderViewForFirstPage.h"
-
+//
 
 //滚动视图高度
 #define SCROLLVIEW_HEIGHT SCREEN_HEIGHT * 0.374
@@ -33,7 +33,7 @@
 //科技头条
 #define SCIENCE_HEADER_HEIGHT SCREEN_HEIGHT * 0.1
 
-@interface FirstPageViewController ()<FFScrollViewDelegate,groupButtonDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface FirstPageViewController ()<FFScrollViewDelegate,groupButtonDelegate,VierticalScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,segumentDelegate>
 
 @property (strong,nonatomic)NSMutableArray *newsArr;
 //表视图
@@ -48,33 +48,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
     self.tableHeaderHeight = SCROLLVIEW_HEIGHT + ANNOUNCE_HEIGHT + BUTTON_GROUP_HEIGHT + SCIENCE_HEADER_HEIGHT;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.newsArr = [[NSMutableArray alloc]initWithCapacity:2];
     self.view.backgroundColor = [UIColor whiteColor];
     [self initTableView];
-    
-    //NSLog(@"导航栏高度 %lf screenheight = %lf",self.navigationController.navigationBar.frame.size.height,[UIScreen mainScreen].bounds.size.height);
 }
-
 
 //轮播点击
 -(void)scrollViewDidClickedAtPage:(NSInteger)pageNumber{
     NSLog(@"你点击了轮播中的%li",pageNumber);
 }
+-(void)clickTitleButton:(UIButton *)button{
+    NSLog(@"点击最新公告：%li",button.tag);
+}
+
 //中间按钮点击事件
 -(void)groupButtonClickHandler:(NSInteger)buttonIndex{
     NSLog(@"buttonGroup:%li",buttonIndex);
     centerButtonGroupViewController *detailVC = [[centerButtonGroupViewController alloc]init];
     [self presentViewController:detailVC animated:YES completion:nil];
 }
+-(void)clickSegumentIndex:(NSInteger)index{
+    NSLog(@"点击分隔控制符：%li",index);
+}
+
 //添加表头
 - (UIView*)crateTableHeaderView{
-    NSArray *announceArr = [NSArray arrayWithObjects:@"今人",@"今月曾",@"古人今",@"共看明", nil];
+    NSArray *announceArr = [NSArray arrayWithObjects:@"今人不见古时月",@"今月曾经照古人",@"古人今人若流水",@"共看明月皆如此", nil];
     lzhTableHeaderViewForFirstPage *headerView = [[lzhTableHeaderViewForFirstPage alloc]initWithFrame:CGRectMake(0, -self.tableHeaderHeight, SCREEN_WIDTH, self.tableHeaderHeight) targetDelegate:self announceTitleArr:announceArr];
     return headerView;
-    
 }
 //初始化tableView
 - (void)initTableView{

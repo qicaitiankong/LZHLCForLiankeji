@@ -50,7 +50,7 @@ static NSString *collectionViewCellIdentifier = @"lzhCollectionViewCell";
     operationFile = [lzhOperationFile operationFile];
     ShareHomePath *homePath = [ShareHomePath GetShareHome];
     historyFilePath = [[homePath getDocumentsPath]stringByAppendingPathComponent:@"searchHistoryFile"];
-    NSLog(@"历史记录文件:%@",historyFilePath);
+    //NSLog(@"历史记录文件:%@",historyFilePath);
     imageTest = [UIImage imageNamed:@"a1"];
     leftTitleArr = @[@"技术",@"项目",@"需求",@"资金",@"设备",@"更多"];
     [self addReturnView];

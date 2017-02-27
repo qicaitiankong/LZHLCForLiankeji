@@ -51,9 +51,7 @@
 }
 //创建最新公告
 - (newAnnouncementView*)createAnounmentView{
-    //newAnnouncementView *anounmentView = [[newAnnouncementView alloc]initWithFrame:CGRectMake(0, self.scoView.bounds.size.height, SCREEN_WIDTH, ANNOUNCE_HEIGHT)];
-    
-     newAnnouncementView *anounmentView = [[newAnnouncementView alloc]initWithFrame:CGRectMake(0, self.scoView.bounds.size.height, SCREEN_WIDTH, ANNOUNCE_HEIGHT) announceTitleArr:announceArr];
+     newAnnouncementView *anounmentView = [[newAnnouncementView alloc]initWithFrame:CGRectMake(0, self.scoView.bounds.size.height, SCREEN_WIDTH, ANNOUNCE_HEIGHT) announceTitleArr:announceArr delegate:_targetDelega];
     return anounmentView;
 }
 
@@ -72,6 +70,7 @@
 //科技头条
 - (scinenceHeaderView*)createScientHeaderView{
     scinenceHeaderView *scienceView = [[scinenceHeaderView alloc]initWithFrame:CGRectMake(0, self.groupButton.frame.origin.y+ self.groupButton.bounds.size.height, SCREEN_WIDTH, SCIENCE_HEADER_HEIGHT)];
+    scienceView.targetDelegate = self.targetDelega;
     return scienceView;
 }
 /*

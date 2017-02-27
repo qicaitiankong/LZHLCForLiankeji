@@ -12,6 +12,6 @@
 
 @interface newAnnouncementView : UIView
 
--(instancetype)initWithFrame:(CGRect)frame announceTitleArr:(NSArray*)titleArr;
+-(instancetype)initWithFrame:(CGRect)frame announceTitleArr:(NSArray*)titleArr delegate:(id)targetDelegate;
 
 @end

@@ -17,7 +17,7 @@
 
 @implementation newAnnouncementView
 
--(instancetype)initWithFrame:(CGRect)frame announceTitleArr:(NSArray*)titleArr{
+-(instancetype)initWithFrame:(CGRect)frame announceTitleArr:(NSArray*)titleArr delegate:(id)targetDelegate{
     self = [super initWithFrame:frame];
     if(self){
         self.backgroundColor = [UIColor whiteColor];
@@ -27,12 +27,13 @@
         [self addSubview:imageView];
         //添加灰色线
         UIView *styleLine1 = [[UIView alloc]initWithFrame:CGRectMake(0, 0 , 1, self.frame.size.height)];
-        styleLine1.backgroundColor = [UIColor grayColor];
+        styleLine1.backgroundColor = [UIColor clearColor];
         [self addSubview:styleLine1];
         //
         //最新公告轮播
         self.textScrollView = [VierticalScrollView initWithTitleArray:titleArr AndFrame:CGRectMake(imageView.frame.origin.x + imageView.frame.size.width, imageView.frame.origin.y, 100, imageView.frame.size.height)];
         self.textScrollView.backgroundColor = [UIColor whiteColor];
+        self.textScrollView.delegate = targetDelegate;
         [self addSubview:self.textScrollView];
         //
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {

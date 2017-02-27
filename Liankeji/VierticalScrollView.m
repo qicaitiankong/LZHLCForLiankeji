@@ -16,8 +16,8 @@
 
 -(instancetype)initWithArray:(NSArray *)titles AndFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-        
         NSMutableArray *MutableTitles = [NSMutableArray arrayWithArray:titles];
+        //字符串用来区分一次轮播结束标志
         NSString *str = @"";
         self.titles = MutableTitles;
         [self.titles addObject:str];
@@ -26,11 +26,16 @@
         btn.frame = CGRectMake(0, 0, BTNWidth, BTNHeight);
         btn.tag = self.index;
         [btn addTarget:self action:@selector(clickBtn:) forControlEvents:UIControlEventTouchUpInside];
-        [btn setTitle:self.titles[0] forState:UIControlStateNormal];
-        [btn setBackgroundColor:MMRandomColor];
+        [btn setTitle:self.titles[self.titleIndex] forState:UIControlStateNormal];
+        [btn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+        [btn.titleLabel setTextColor:[UIColor blackColor]];
+        [btn setBackgroundColor:[UIColor whiteColor]];
+        //修改对齐方式
+        [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+        btn.titleEdgeInsets = UIEdgeInsetsMake(btn.titleEdgeInsets.top, 0, btn.titleEdgeInsets.bottom, 0);
+       
         [self addSubview:btn];
         self.clipsToBounds = YES;
-        
         [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(nextButton) userInfo:nil repeats:YES];
     }
     
@@ -47,7 +52,11 @@
 -(void)nextButton{
     UIButton *firstBtn = [self viewWithTag:self.index];
     UIButton *modelBtn = [[UIButton alloc]initWithFrame:CGRectMake(0, BTNHeight, BTNWidth, BTNHeight)];
-    [modelBtn setBackgroundColor:MMRandomColor];
+    [modelBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [modelBtn.titleLabel setFont:[UIFont systemFontOfSize:15]];
+    modelBtn.titleEdgeInsets = UIEdgeInsetsMake(modelBtn.titleEdgeInsets.top, 0, modelBtn.titleEdgeInsets.bottom, 0);
+    [modelBtn setBackgroundColor:[UIColor whiteColor]];
+    [modelBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     modelBtn.tag = self.index + 1;
     if ([self.titles[self.titleIndex+1] isEqualToString:@""]) {
         self.titleIndex = -1;
@@ -74,12 +83,6 @@
     self.index++;
     self.titleIndex++;
     
-    
-    
-    
-    
-    
-    
 }
 
 -(void)clickBtn:(UIButton *)btn{
@@ -90,9 +93,8 @@
         
     }
     
-    
-    
-    
 }
+
+
 
 @end

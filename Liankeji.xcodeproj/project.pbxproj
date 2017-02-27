@@ -1384,13 +1384,13 @@
 			name = "滚动视图";
 			sourceTree = "<group>";
 		};
-		99AA38E51E08C3FC000A57BC /* 科技头条 */ = {
+		99AA38E51E08C3FC000A57BC /* 科技圈 */ = {
 			isa = PBXGroup;
 			children = (
 				99AA38E61E08C454000A57BC /* scinenceHeaderView.h */,
 				99AA38E71E08C454000A57BC /* scinenceHeaderView.m */,
 			);
-			name = "科技头条";
+			name = "科技圈";
 			sourceTree = "<group>";
 		};
 		99AA38E91E0904BC000A57BC /* 滚动插件 */ = {
@@ -1619,7 +1619,7 @@
 			children = (
 				992C697F1E0A69410052D21B /* 导航栏变色渐隐第三方库 */,
 				99AA38ED1E09177E000A57BC /* 侧拉菜单 */,
-				99AA38E51E08C3FC000A57BC /* 科技头条 */,
+				99AA38E51E08C3FC000A57BC /* 科技圈 */,
 				992180041E077EFF00070D46 /* 首页企业等按钮组 */,
 				992180061E0787FA00070D46 /* 最新公告 */,
 				99E41F601DED249500F32968 /* C */,

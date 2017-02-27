@@ -15,22 +15,28 @@
     self = [super initWithFrame:frame];
     self.backgroundColor = RGBA(244, 244, 244, 1);
     if(self){
-        UILabel *headerLable = [[UILabel alloc]init];
-        headerLable.backgroundColor = [UIColor whiteColor];
-        headerLable.textAlignment = NSTextAlignmentCenter;
-        [headerLable setTextColor:[UIColor blueColor]];
-        headerLable.font = [UIFont systemFontOfSize:16];
-        headerLable.textColor = RGBA(52, 124, 205, 1);
-        headerLable.text = @"科技头条";
-        [self addSubview:headerLable];
-        [headerLable mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(self);
-            make.width.equalTo(self);
+        //
+        UISegmentedControl *segumentControl = [[UISegmentedControl alloc]initWithItems:@[@"科技圈1",@"科技圈2"]];
+        segumentControl.frame = CGRectMake(0, 0,self.frame.size.width, self.frame.size.height);
+        UIColor *tintColor = RGBA(52, 124, 205, 1);
+        [segumentControl setTintColor:tintColor];
+        [segumentControl addTarget:self action:@selector(actionHandler:) forControlEvents:UIControlEventValueChanged];
+        [self addSubview:segumentControl];
+        [segumentControl mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(self).offset(10);
+            make.right.mas_equalTo(self).offset(-10);
             make.top.equalTo(self).offset(SCREEN_HEIGHT * 0.018);
             make.bottom.equalTo(self).offset(-SCREEN_HEIGHT * 0.018);
-        }];
+        }];        
     }
     return  self;
+}
+
+- (void)actionHandler:(UISegmentedControl*)_u{
+    if(self.targetDelegate){
+        [self.targetDelegate clickSegumentIndex:_u.selectedSegmentIndex];
+    }
+    //NSLog(@"在点击分栏控制器：%li",_u.selectedSegmentIndex);
 }
 
 /*

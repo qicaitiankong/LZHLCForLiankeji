@@ -42,6 +42,7 @@
         self.searchField.center = CGPointMake(self.searchField.center.x, self.frame.size.height / 2);
         self.searchField.returnKeyType = UIReturnKeySearch;
         self.searchField.delegate = self;
+        [self.searchField addTarget:self action:@selector(searchValueChanged:) forControlEvents:UIControlEventEditingChanged];
         [self addSubview:self.searchField];
         
         //清除按钮
@@ -51,6 +52,8 @@
         [clearButt setTitle:@"清除" forState:UIControlStateNormal];
         //[clearButt setImage:[UIImage imageNamed:@"nav2"] forState:UIControlStateNormal];
         [clearButt addTarget:self action:@selector(clearButtonhHandler:) forControlEvents:UIControlEventTouchUpInside];
+        clearButt.hidden = YES;
+        clearButt.userInteractionEnabled = NO;
         //self.searchButt.backgroundColor = [UIColor redColor];
         [self addSubview:clearButt];
     }
@@ -58,12 +61,12 @@
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
-    NSLog(@"开始编辑");
+    //NSLog(@"开始编辑");
     if(self.targetDelegate){//历史记录
         [self.targetDelegate displaySearchHistoryView];
     }
 }
-//回车键
+//回车键搜索
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     //self.searchButt.userInteractionEnabled = YES;
@@ -74,22 +77,17 @@
     return YES;
 }
 
--(BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    if([self.searchField.text isEqualToString:@""]){//开始有字
-       //NSLog(@"输入框里开始有字");
+//输入框内容变化
+- (void)searchValueChanged:(UITextField*)textField{
+    if([textField.text isEqualToString:@""]){
+        clearButt.hidden = YES;
+        clearButt.userInteractionEnabled = NO;
+    }else{
         clearButt.hidden = NO;
         clearButt.userInteractionEnabled = YES;
-    }else{
-        
-        if(range.location == 0){//文字开始为空
-            // NSLog(@"输入框里内容变为空");
-            clearButt.hidden = YES;
-            clearButt.userInteractionEnabled = NO;
-        }
     }
-    return YES;
 }
-
+//清除
 - (void)clearButtonhHandler:(UIButton*)_b{
     self.searchField.text = @"";
     clearButt.hidden = YES;

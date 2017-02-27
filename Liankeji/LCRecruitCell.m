@@ -73,6 +73,15 @@
     self.contentLabel.font = [UIFont systemFontOfSize:14];
     [self.contentView addSubview:self.contentLabel];
     
+    self.adressView = [[lzhFindJobCellSmallView alloc]initWithFrame:CGRectMake(0, 70, 15, 15) isSecond:NO];
+    self.adressView.firstImageView.image = [UIImage imageNamed:@"findFirstPageLocation"];
+    self.adressView.secondTitleLabel.text = @"山东-青岛";
+    [self.contentView addSubview:self.adressView];
+    self.educationview = [[lzhFindJobCellSmallView alloc]initWithFrame:CGRectMake(0, 70, 10, 10) isSecond:YES];
+    self.educationview.firstImageView.image = [UIImage imageNamed:@"findFirstPageAcademic"];
+    self.educationview.secondTitleLabel.text = @"大专";
+    [self.contentView addSubview:self.educationview];
+    
     //视图布局
     WS(ws);
     [self.picImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -108,6 +117,20 @@
         make.left.mas_equalTo(ws.tLabel.mas_left);
         make.right.mas_equalTo(ws.contentView.mas_right).offset(-10);
         make.height.mas_equalTo(40);
+    }];
+    
+    [self.adressView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(ws.contentLabel.mas_bottom);
+        make.left.mas_equalTo(ws.contentLabel.mas_left);
+        make.height.mas_equalTo(30);
+        make.width.mas_equalTo(ws.contentView.mas_width).multipliedBy(0.2);
+    }];
+    
+    [self.educationview mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(ws.adressView.mas_right);
+        make.top.mas_equalTo(ws.adressView.mas_top);
+        make.height.mas_equalTo(ws.adressView.mas_height);
+        make.width.mas_equalTo(ws.adressView.mas_width);
     }];
 }
 

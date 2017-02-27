@@ -12,8 +12,10 @@
 #import "appCommonAttributes.h"
 #import "personalFirstPageUserTableViewCell.h"
 #import "LZHTabBarController.h"
+#import "JumpView.h"
+#import <MessageUI/MessageUI.h>
 
-@interface personalFirstPageViewController ()<UITableViewDelegate,UITableViewDataSource>{
+@interface personalFirstPageViewController ()<UITableViewDelegate,UITableViewDataSource,JumpViewPassMessageDelegate,MFMessageComposeViewControllerDelegate,UINavigationControllerDelegate,MFMailComposeViewControllerDelegate>{
     personalViewOfFirstPage *secondHeaderView;
     UITableView *ownTableView;
     UIView *spaceView;
@@ -25,6 +27,8 @@
     NSArray *thirdSectionTitleArr;
     NSArray *fourthSectionImageArr;
     NSArray *fourthSectionTitleArr;
+    //客服视图
+    JumpView *jumpView;
 }
 @end
 
@@ -38,8 +42,8 @@
 
      thirdSectionImageArr = @[[UIImage imageNamed:@"personalFirstPageMyWallet"],[UIImage imageNamed:@"personalFirstPageMyJifen"],[UIImage imageNamed:@"personalFirstPageMemberCenter"]];
     thirdSectionTitleArr = @[@"我的钱包",@"我的积分",@"会员中心"];
-    fourthSectionImageArr = @[[UIImage imageNamed:@"personalFirstPageCustomer"],[UIImage imageNamed:@"personalFirstPageUs"]];
-    fourthSectionTitleArr = @[@"客服中心",@"关于我们"];
+    fourthSectionImageArr = @[[UIImage imageNamed:@"personalFirstPageCustomer"],[UIImage imageNamed:@"personalFirstPageUs"],[UIImage imageNamed:@"personalFirstPageUs.png "]];
+    fourthSectionTitleArr = @[@"客服中心",@"关于我们",@"设置"];
     
     secondHeaderView = [[personalViewOfFirstPage alloc]initWithFrame:CGRectMake(0, - SCREEN_HEIGHT * 0.089, self.view.frame.size.width, SCREEN_HEIGHT * 0.089) numArr:@[@"123",@"23",@"322"] titleArray:@[@"发布的消息",@"关注",@"粉丝"]];
     spaceView = [[UIView alloc]initWithFrame:CGRectMake(0,  - SCREEN_HEIGHT * 0.02, self.view.frame.size.width, SCREEN_HEIGHT * 0.02)];
@@ -79,7 +83,7 @@
             myRows = 3;
             break;
         case 3:
-            myRows = 2;
+            myRows = 3;
             break;
         default:
             break;
@@ -180,6 +184,196 @@
     }
     return height;
 }
+
+#pragma mark - cell点击方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    switch (indexPath.section) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            switch (indexPath.row) {
+                case 0:{
+                    //添加数据
+                    NSArray *textArray = @[@"短信",@"QQ",@"客服热线",@"邮箱"];
+                    NSArray *imageArray = @[@"a1.png",@"a1.png",@"a1.png",@"a1.png"];
+                    jumpView = [[JumpView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-49) andTitleArray:textArray andImageArray:imageArray];
+                    [self.view addSubview:jumpView];
+                    //创建代理
+                    jumpView.jumpDelegate = self;
+                }
+                    break;
+                case 1:
+                    
+                    break;
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
+    }
+}
+
+#pragma mark - 代理实现方法
+//删除客服中心功能视图
+- (void)remove{
+
+    //简单的动画效果
+    [UIView animateWithDuration:1.0 animations:^{
+        jumpView.alpha=0;
+    } completion:^(BOOL finished) {
+        [jumpView removeFromSuperview];
+    }];
+}
+//实现客服中心响应功能
+- (void)acitonOpen:(UIButton *)button{
+    
+    switch (button.tag) {
+            //短信
+        case 100001:
+            [self sendMessage];
+            break;
+            //QQ
+        case 100002:
+            [self openQQ];
+            break;
+            //客服热线
+        case 1000032:
+            [self phoneSend];
+            break;
+            //邮箱
+        case 100004:
+            [self mailOpen];
+            break;
+        default:
+            break;
+    }
+}
+
+
+#pragma mark - 发送短信
+- (void)sendMessage{
+    
+    //用于判断是否有发送短信的功能（模拟器上就没有短信功能）
+    Class messageClass = (NSClassFromString(@"MFMessageComposeViewController"));
+    //判断是否有短信功能
+    if (messageClass != nil) {
+        //实例化MFMessageComposeViewController,并设置委托
+        MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
+        messageController.delegate = self;
+        //设置发送给谁
+        messageController.recipients = @[@"18363802529"];
+        //推到发送试图控制器
+        [self presentViewController:messageController animated:YES completion:^{
+            
+        }];
+    }else{
+        [self showOKAlertWithMessage:@"该设备无法发送短信,请检查"];
+    }
+}
+#pragma mark - QQ
+- (void)openQQ{
+    
+    //是否安装QQ
+    if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"mqq://"]])
+    {
+        //用来接收临时消息的客服QQ号码(注意此QQ号需开通QQ推广功能,否则陌生人向他发送消息会失败)
+        NSString *QQ = @"1246158996";
+        //调用QQ客户端,发起QQ临时会话
+        NSString *url = [NSString stringWithFormat:@"mqq://im/chat?chat_type=wpa&uin=%@&version=1&src_type=web",QQ];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
+    }else{
+        //跳转到QQ下载界面
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms://itunes.apple.com/cn/app/qq/id451108668?mt=12"]];
+    }
+}
+#pragma mark - 客服热线
+- (void)phoneSend{
+    
+    NSMutableString * str=[[NSMutableString alloc] initWithFormat:@"tel:%@",@"18363802529"];
+    UIWebView * callWebview = [[UIWebView alloc] init];
+    [callWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:str]]];
+    [self.view addSubview:callWebview];
+}
+#pragma mark - 邮箱
+- (void)mailOpen{
+
+    if ([MFMailComposeViewController canSendMail]) { // 用户已设置邮件账户
+        
+    }else{
+        [self showOKAlertWithMessage:@"请登录您的邮件帐户来发送电子邮件"];
+        return;
+    }
+    MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc]init];
+    mailComposer.mailComposeDelegate = self;
+    [self presentViewController:mailComposer animated:YES completion:nil];
+}
+
+
+#pragma mark - 系统短信+邮件回调方法
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result{
+    NSString *tipContent;
+    switch (result) {
+        case MessageComposeResultCancelled:
+            tipContent = @"发送短信已";
+            break;
+        case MessageComposeResultFailed:
+            tipContent = @"发送短信失败";
+            break;
+        case MessageComposeResultSent:
+            tipContent = @"发送成功";
+            break;
+        default:
+            break;
+    }
+    [self showOKAlertWithMessage:tipContent];
+}
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    if (result) {
+        NSLog(@"Result : %ld",(long)result);
+    }
+    if (error) {
+        NSLog(@"Error : %@",error);
+    }
+    switch (result)
+    {
+        case MFMailComposeResultCancelled: // 用户取消编辑
+            [self showOKAlertWithMessage:@"用户取消编辑"];
+            break;
+        case MFMailComposeResultSaved: // 用户保存邮件
+            [self showOKAlertWithMessage:@"用户保存邮件"];
+            break;
+        case MFMailComposeResultSent: // 用户点击发送
+            [self showOKAlertWithMessage:@"用户点击发送"];
+            break;
+        case MFMailComposeResultFailed: // 用户尝试保存或发送邮件失败
+            [self showOKAlertWithMessage:@"用户尝试保存或发送邮件失败"];
+            break;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark - 提示窗口
+- (void)showOKAlertWithMessage:(NSString *)message{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -7,6 +7,7 @@
 //()适配完成
 
 #import <UIKit/UIKit.h>
+#import <Masonry.h>
 
 @interface lzhFindJobCellSmallView : UIView
 //图标

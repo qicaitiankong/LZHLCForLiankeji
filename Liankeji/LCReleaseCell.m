@@ -65,12 +65,8 @@
         UIButton *xqLabel = [[UIButton alloc]initWithFrame:CGRectMake(imageView.frame.size.width/2.0-20, imageView.frame.size.height-label.frame.size.height*2, 40, label.frame.size.height)];
         [xqLabel setTitle:@"详情>" forState:UIControlStateNormal];
         [xqLabel setFont:[UIFont systemFontOfSize:13]];
-        [xqLabel setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+        [xqLabel setTitleColor:[UIColor colorWithRed:2/255.0 green:149/255.0 blue:211/255.0 alpha:1] forState:UIControlStateNormal];
         [xqLabel setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
-//        xqLabel.titleLabel.text = @"详情>";
-//        xqLabel.textAlignment = NSTextAlignmentCenter;
-//        xqLabel.textColor = RGBA(0, 177, 233, 1);
-//        xqLabel.font = [UIFont systemFontOfSize:12];
         [imageView addSubview:xqLabel];
         //布局imageView上的label
         [self.picScrollView addSubview:imageView];

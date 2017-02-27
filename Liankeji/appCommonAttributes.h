@@ -29,6 +29,8 @@
 #define NAVIGATION_HEIGHT [UIScreen mainScreen].bounds.size.height * 0.065
 //电池栏高度
 #define STATUSBAR_HEIGHT     [UIApplication sharedApplication].statusBarFrame.size.height
+//导航栏的高度
+#define NAVIGATIONOfSYSTEM_HEIGHT    self.navigationController.navigationBar.frame.size.height
 
 //标签栏高度
 #define TABBAR_HEIGHT [LZHTabBarController shareLZHTabbarController].myTabBar.frame.size.height

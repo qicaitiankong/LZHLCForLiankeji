@@ -10,5 +10,4 @@
 #import "BasicViewControllerOfAllMainPage.h"
 
 @interface personalFirstPageViewController : BasicViewControllerOfAllMainPage
-
 @end

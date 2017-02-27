@@ -69,7 +69,7 @@
     self.timeLabel.text = @"限时:00:38:09";
     self.timeLabel.textColor = [UIColor whiteColor];
     self.timeLabel.textAlignment = NSTextAlignmentCenter;
-    self.timeLabel.font = [UIFont systemFontOfSize:13];
+    self.timeLabel.font = [UIFont systemFontOfSize:11];
     self.timeLabel.backgroundColor = RGBA(255, 206, 75, 1);
     self.timeLabel.layer.masksToBounds = YES;
     self.timeLabel.layer.cornerRadius = 3;
@@ -103,13 +103,13 @@
         make.left.mas_equalTo(ws.tLabel.mas_left);
         make.top.mas_equalTo(ws.priceLabel.mas_bottom);
         make.height.mas_equalTo(15);
-        make.width.mas_equalTo(150);
+        make.width.mas_equalTo(130);
     }];
     [self.timeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.mas_equalTo(ws.contentView.mas_right).with.offset(-15);
+        make.right.mas_equalTo(ws.contentView.mas_right).with.offset(-10);
         make.bottom.mas_equalTo(ws.picImageView.mas_bottom);
         make.height.mas_equalTo(30);
-        make.width.mas_equalTo(95);
+        make.width.mas_equalTo(80);
     }];
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "lzhFindJobCellSmallView.h"
 
 @interface LCRecruitCell : UITableViewCell
 
@@ -17,5 +18,8 @@
 @property (nonatomic,strong) UILabel *contentLabel;
 
 @property (nonatomic,strong) NSDictionary *LCRecruitDic;
+
+@property (nonatomic,strong) lzhFindJobCellSmallView *adressView;
+@property (nonatomic,strong) lzhFindJobCellSmallView *educationview;
 
 @end

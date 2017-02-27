@@ -74,9 +74,6 @@
 		047227931E5E92A30045A0C7 /* LCBiddingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047227861E5E92A30045A0C7 /* LCBiddingCell.m */; };
 		047227941E5E92A30045A0C7 /* LCRecruitCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047227881E5E92A30045A0C7 /* LCRecruitCell.m */; };
 		047227951E5E92A30045A0C7 /* LCReleaseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472278A1E5E92A30045A0C7 /* LCReleaseCell.m */; };
-		047227961E5E92A30045A0C7 /* lzhFindJobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472278C1E5E92A30045A0C7 /* lzhFindJobCell.m */; };
-		047227971E5E92A30045A0C7 /* lzhFindJobCellGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0472278E1E5E92A30045A0C7 /* lzhFindJobCellGroupView.m */; };
-		047227981E5E92A30045A0C7 /* lzhFindJobCellSmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047227901E5E92A30045A0C7 /* lzhFindJobCellSmallView.m */; };
 		047227991E5E92A30045A0C7 /* lzhFindPageTableHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 047227921E5E92A30045A0C7 /* lzhFindPageTableHeader.m */; };
 		047335371E305BCF00671F44 /* searchFirstPageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047335361E305BCF00671F44 /* searchFirstPageCollectionViewCell.m */; };
 		047335391E308B1F00671F44 /* a2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 047335381E308B1F00671F44 /* a2.jpg */; };
@@ -187,6 +184,14 @@
 		60180E5C1E5D79A500570818 /* findFirstPagePrice.png in Resources */ = {isa = PBXBuildFile; fileRef = 60180E471E5D79A500570818 /* findFirstPagePrice.png */; };
 		60180E5D1E5D79A500570818 /* findFirstPagePrice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60180E481E5D79A500570818 /* findFirstPagePrice@2x.png */; };
 		60180E5E1E5D79A500570818 /* findFirstPagePrice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60180E491E5D79A500570818 /* findFirstPagePrice@3x.png */; };
+		60232E371E600F5500ACF137 /* JumpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 60232E361E600F5500ACF137 /* JumpButton.m */; };
+		60443E4A1E5FC05D00EE0928 /* lzhFindJobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E451E5FC05D00EE0928 /* lzhFindJobCell.m */; };
+		60443E4B1E5FC05D00EE0928 /* lzhFindJobCellGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E471E5FC05D00EE0928 /* lzhFindJobCellGroupView.m */; };
+		60443E4C1E5FC05D00EE0928 /* lzhFindJobCellSmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E491E5FC05D00EE0928 /* lzhFindJobCellSmallView.m */; };
+		60D6FAE81E63CD19001C20AB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D6FAE71E63CD19001C20AB /* MessageUI.framework */; };
+		60D6FAEE1E63D4F3001C20AB /* JumpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6FAED1E63D4F3001C20AB /* JumpView.m */; };
+		60D6FAF71E6414EA001C20AB /* LCSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6FAF61E6414EA001C20AB /* LCSetView.m */; };
+		60D6FAFA1E641542001C20AB /* LCSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6FAF91E641542001C20AB /* LCSetViewController.m */; };
 		7B3C91A23811F61D8BFFF1E5 /* libPods-Liankeji.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F252549BA2B14C997713502 /* libPods-Liankeji.a */; };
 		992180091E0788AD00070D46 /* newAnnouncementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 992180081E0788AD00070D46 /* newAnnouncementView.m */; };
 		9921800C1E07AF9700070D46 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 9921800A1E07AF9700070D46 /* 1.png */; };
@@ -411,12 +416,6 @@
 		047227881E5E92A30045A0C7 /* LCRecruitCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCRecruitCell.m; sourceTree = "<group>"; };
 		047227891E5E92A30045A0C7 /* LCReleaseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCReleaseCell.h; sourceTree = "<group>"; };
 		0472278A1E5E92A30045A0C7 /* LCReleaseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCReleaseCell.m; sourceTree = "<group>"; };
-		0472278B1E5E92A30045A0C7 /* lzhFindJobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFindJobCell.h; sourceTree = "<group>"; };
-		0472278C1E5E92A30045A0C7 /* lzhFindJobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindJobCell.m; sourceTree = "<group>"; };
-		0472278D1E5E92A30045A0C7 /* lzhFindJobCellGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFindJobCellGroupView.h; sourceTree = "<group>"; };
-		0472278E1E5E92A30045A0C7 /* lzhFindJobCellGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindJobCellGroupView.m; sourceTree = "<group>"; };
-		0472278F1E5E92A30045A0C7 /* lzhFindJobCellSmallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFindJobCellSmallView.h; sourceTree = "<group>"; };
-		047227901E5E92A30045A0C7 /* lzhFindJobCellSmallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindJobCellSmallView.m; sourceTree = "<group>"; };
 		047227911E5E92A30045A0C7 /* lzhFindPageTableHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFindPageTableHeader.h; sourceTree = "<group>"; };
 		047227921E5E92A30045A0C7 /* lzhFindPageTableHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindPageTableHeader.m; sourceTree = "<group>"; };
 		047335351E305BCF00671F44 /* searchFirstPageCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = searchFirstPageCollectionViewCell.h; sourceTree = "<group>"; };
@@ -572,6 +571,21 @@
 		60180E471E5D79A500570818 /* findFirstPagePrice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = findFirstPagePrice.png; sourceTree = "<group>"; };
 		60180E481E5D79A500570818 /* findFirstPagePrice@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findFirstPagePrice@2x.png"; sourceTree = "<group>"; };
 		60180E491E5D79A500570818 /* findFirstPagePrice@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findFirstPagePrice@3x.png"; sourceTree = "<group>"; };
+		60232E351E600F5500ACF137 /* JumpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpButton.h; sourceTree = "<group>"; };
+		60232E361E600F5500ACF137 /* JumpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpButton.m; sourceTree = "<group>"; };
+		60443E441E5FC05D00EE0928 /* lzhFindJobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFindJobCell.h; sourceTree = "<group>"; };
+		60443E451E5FC05D00EE0928 /* lzhFindJobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindJobCell.m; sourceTree = "<group>"; };
+		60443E461E5FC05D00EE0928 /* lzhFindJobCellGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFindJobCellGroupView.h; sourceTree = "<group>"; };
+		60443E471E5FC05D00EE0928 /* lzhFindJobCellGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindJobCellGroupView.m; sourceTree = "<group>"; };
+		60443E481E5FC05D00EE0928 /* lzhFindJobCellSmallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFindJobCellSmallView.h; sourceTree = "<group>"; };
+		60443E491E5FC05D00EE0928 /* lzhFindJobCellSmallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindJobCellSmallView.m; sourceTree = "<group>"; };
+		60D6FAE71E63CD19001C20AB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		60D6FAEC1E63D4F3001C20AB /* JumpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpView.h; sourceTree = "<group>"; };
+		60D6FAED1E63D4F3001C20AB /* JumpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpView.m; sourceTree = "<group>"; };
+		60D6FAF51E6414EA001C20AB /* LCSetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSetView.h; sourceTree = "<group>"; };
+		60D6FAF61E6414EA001C20AB /* LCSetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSetView.m; sourceTree = "<group>"; };
+		60D6FAF81E641542001C20AB /* LCSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCSetViewController.h; sourceTree = "<group>"; };
+		60D6FAF91E641542001C20AB /* LCSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCSetViewController.m; sourceTree = "<group>"; };
 		6F252549BA2B14C997713502 /* libPods-Liankeji.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Liankeji.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		992180051E077F7000070D46 /* groupButttonClickDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = groupButttonClickDelegate.h; sourceTree = "<group>"; };
 		992180071E0788AD00070D46 /* newAnnouncementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newAnnouncementView.h; sourceTree = "<group>"; };
@@ -741,6 +755,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60D6FAE81E63CD19001C20AB /* MessageUI.framework in Frameworks */,
 				7B3C91A23811F61D8BFFF1E5 /* libPods-Liankeji.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -900,18 +915,18 @@
 		047335341E305B9600671F44 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				047227891E5E92A30045A0C7 /* LCReleaseCell.h */,
+				0472278A1E5E92A30045A0C7 /* LCReleaseCell.m */,
 				047227851E5E92A30045A0C7 /* LCBiddingCell.h */,
 				047227861E5E92A30045A0C7 /* LCBiddingCell.m */,
 				047227871E5E92A30045A0C7 /* LCRecruitCell.h */,
 				047227881E5E92A30045A0C7 /* LCRecruitCell.m */,
-				047227891E5E92A30045A0C7 /* LCReleaseCell.h */,
-				0472278A1E5E92A30045A0C7 /* LCReleaseCell.m */,
-				0472278B1E5E92A30045A0C7 /* lzhFindJobCell.h */,
-				0472278C1E5E92A30045A0C7 /* lzhFindJobCell.m */,
-				0472278D1E5E92A30045A0C7 /* lzhFindJobCellGroupView.h */,
-				0472278E1E5E92A30045A0C7 /* lzhFindJobCellGroupView.m */,
-				0472278F1E5E92A30045A0C7 /* lzhFindJobCellSmallView.h */,
-				047227901E5E92A30045A0C7 /* lzhFindJobCellSmallView.m */,
+				60443E441E5FC05D00EE0928 /* lzhFindJobCell.h */,
+				60443E451E5FC05D00EE0928 /* lzhFindJobCell.m */,
+				60443E461E5FC05D00EE0928 /* lzhFindJobCellGroupView.h */,
+				60443E471E5FC05D00EE0928 /* lzhFindJobCellGroupView.m */,
+				60443E481E5FC05D00EE0928 /* lzhFindJobCellSmallView.h */,
+				60443E491E5FC05D00EE0928 /* lzhFindJobCellSmallView.m */,
 				047227911E5E92A30045A0C7 /* lzhFindPageTableHeader.h */,
 				047227921E5E92A30045A0C7 /* lzhFindPageTableHeader.m */,
 			);
@@ -1202,9 +1217,39 @@
 			name = "一级界面";
 			sourceTree = "<group>";
 		};
+		60232E301E60046300ACF137 /* 弹窗视图 */ = {
+			isa = PBXGroup;
+			children = (
+				60232E351E600F5500ACF137 /* JumpButton.h */,
+				60232E361E600F5500ACF137 /* JumpButton.m */,
+				60D6FAEC1E63D4F3001C20AB /* JumpView.h */,
+				60D6FAED1E63D4F3001C20AB /* JumpView.m */,
+			);
+			name = "弹窗视图";
+			sourceTree = "<group>";
+		};
+		60D6FAEF1E640CFC001C20AB /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				60D6FAF51E6414EA001C20AB /* LCSetView.h */,
+				60D6FAF61E6414EA001C20AB /* LCSetView.m */,
+			);
+			name = "设置";
+			sourceTree = "<group>";
+		};
+		60D6FAF41E64141F001C20AB /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				60D6FAF81E641542001C20AB /* LCSetViewController.h */,
+				60D6FAF91E641542001C20AB /* LCSetViewController.m */,
+			);
+			name = "设置";
+			sourceTree = "<group>";
+		};
 		82A04DE6B425D207E39EFC6B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				60D6FAE71E63CD19001C20AB /* MessageUI.framework */,
 				6F252549BA2B14C997713502 /* libPods-Liankeji.a */,
 			);
 			name = Frameworks;
@@ -1642,6 +1687,10 @@
 			isa = PBXGroup;
 			children = (
 				99E41F701DED2AD600F32968 /* C */,
+				99E41F641DED291A00F32968 /* NavViewControllerForPersonal.h */,
+				99E41F651DED291A00F32968 /* NavViewControllerForPersonal.m */,
+				0480EAAF1E2EFF740000E084 /* personalFirstPageViewController.h */,
+				0480EAB01E2EFF740000E084 /* personalFirstPageViewController.m */,
 				99E41F6F1DED2AB600F32968 /* V */,
 				99E41F6E1DED2AB000F32968 /* M */,
 			);
@@ -1658,6 +1707,8 @@
 		99E41F6F1DED2AB600F32968 /* V */ = {
 			isa = PBXGroup;
 			children = (
+				60D6FAEF1E640CFC001C20AB /* 设置 */,
+				60232E301E60046300ACF137 /* 弹窗视图 */,
 				99E41F711DED2B1E00F32968 /* PersonalTableViewCell.h */,
 				99E41F721DED2B1E00F32968 /* PersonalTableViewCell.m */,
 				0480EAB21E2F00D30000E084 /* personalViewOfFirstPage.h */,
@@ -1673,10 +1724,7 @@
 		99E41F701DED2AD600F32968 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				99E41F641DED291A00F32968 /* NavViewControllerForPersonal.h */,
-				99E41F651DED291A00F32968 /* NavViewControllerForPersonal.m */,
-				0480EAAF1E2EFF740000E084 /* personalFirstPageViewController.h */,
-				0480EAB01E2EFF740000E084 /* personalFirstPageViewController.m */,
+				60D6FAF41E64141F001C20AB /* 设置 */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -2136,6 +2184,7 @@
 			files = (
 				992D730B1DF114F000FFD2DD /* NewsTestModel.m in Sources */,
 				0480EAB71E2F04D90000E084 /* personalSmallViewOfFirstPage.m in Sources */,
+				60443E4B1E5FC05D00EE0928 /* lzhFindJobCellGroupView.m in Sources */,
 				047A39CF1E2C602100651C7E /* lzhReturnView.m in Sources */,
 				992180091E0788AD00070D46 /* newAnnouncementView.m in Sources */,
 				99E41F2F1DED0E0D00F32968 /* AppDelegate.m in Sources */,
@@ -2145,12 +2194,14 @@
 				99C1F9B41E10B11A004DE512 /* ZHQScrollMenu.m in Sources */,
 				04A2E9DA1E23290C00E7F9DF /* HotCommentView.m in Sources */,
 				048EB3C31E544A930080F2E8 /* BasicViewControllerForAddReturnview.m in Sources */,
+				60443E4C1E5FC05D00EE0928 /* lzhFindJobCellSmallView.m in Sources */,
 				99EF897F1E03B28F002836B3 /* firstPageHeaderCell.m in Sources */,
 				99E41F691DED29FD00F32968 /* FirstPageViewController.m in Sources */,
 				99E41F631DED270300F32968 /* NavViewControllerForFirstPage.m in Sources */,
 				049B18451E56850A008013FB /* searchHistoryTableViewCell.m in Sources */,
 				0434BDEA1E1CC44B0096136E /* cellHeaderView2.m in Sources */,
 				046CFB751E34548100E80E9F /* lzhDealNavigationColor.m in Sources */,
+				60D6FAFA1E641542001C20AB /* LCSetViewController.m in Sources */,
 				992D730E1DF1557300FFD2DD /* GetCellHeight.m in Sources */,
 				049261FD1E1F277F00AFC111 /* commentView.m in Sources */,
 				047227831E5E926E0045A0C7 /* CommunicateFirstViewController.m in Sources */,
@@ -2158,7 +2209,6 @@
 				04764C691E2DA85A00704C96 /* lzhAlertControllerViewController.m in Sources */,
 				04A2EA5B1E23575900E7F9DF /* AddressPickerView.m in Sources */,
 				049C63051E4EF06700B83543 /* lzhRedeceTopSpaceLabel.m in Sources */,
-				047227981E5E92A30045A0C7 /* lzhFindJobCellSmallView.m in Sources */,
 				047335371E305BCF00671F44 /* searchFirstPageCollectionViewCell.m in Sources */,
 				99AA38F01E092C8C000A57BC /* sideMenuButton.m in Sources */,
 				047A3A121E2CB3A800651C7E /* announSecondPageNextStepView.m in Sources */,
@@ -2172,16 +2222,17 @@
 				9953E2EE1E0D238700F55604 /* LZHTabBigButton.m in Sources */,
 				0489F3D91E4C3C3E0050AC8E /* announceWindowView.m in Sources */,
 				99C1F9BE1E10C247004DE512 /* inforMationTableView.m in Sources */,
-				047227961E5E92A30045A0C7 /* lzhFindJobCell.m in Sources */,
 				9961CFA41E026DF20021D123 /* firstPageButtonGroup.m in Sources */,
 				999D99471DF04C950067CFBA /* ShareDataBase.m in Sources */,
 				04EC82031E5BCB1600CDA9C9 /* lzhOperationFile.m in Sources */,
 				0435BF9D1E1B8ED300DE859D /* informationSecondPgeTavCell.m in Sources */,
 				0479BE9D1E55512C00FFF991 /* returnViewForSearchViewController.m in Sources */,
+				60D6FAEE1E63D4F3001C20AB /* JumpView.m in Sources */,
 				047A39D21E2C678400651C7E /* anounceSecondPageView.m in Sources */,
 				0480EAF41E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m in Sources */,
 				04976EBC1E5189AA00116BE1 /* lzhShadeButton.m in Sources */,
 				047A3A0F1E2CACA600651C7E /* announceSecondPageNextStepButt.m in Sources */,
+				60D6FAF71E6414EA001C20AB /* LCSetView.m in Sources */,
 				047227991E5E92A30045A0C7 /* lzhFindPageTableHeader.m in Sources */,
 				04976EB91E51877700116BE1 /* lzhPickerView.m in Sources */,
 				99E41F881DED7EDD00F32968 /* ShareUrlString.m in Sources */,
@@ -2210,13 +2261,14 @@
 				04A2EA601E23641C00E7F9DF /* cityPickerView.m in Sources */,
 				047227951E5E92A30045A0C7 /* LCReleaseCell.m in Sources */,
 				049262031E1F939A00AFC111 /* cellFootView.m in Sources */,
+				60443E4A1E5FC05D00EE0928 /* lzhFindJobCell.m in Sources */,
 				047A39C51E2C4E3500651C7E /* announceViewController.m in Sources */,
 				9953E2F01E0D238700F55604 /* LZHTabBar.m in Sources */,
 				99C1F9B71E10BE81004DE512 /* informationTableViewCell.m in Sources */,
 				047F2C4F1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m in Sources */,
 				04CDD9B61E1E44CB009330FD /* ownTextSpace.m in Sources */,
 				99554A4E1DF012BF0028A59E /* ShareHomePath.m in Sources */,
-				047227971E5E92A30045A0C7 /* lzhFindJobCellGroupView.m in Sources */,
+				60232E371E600F5500ACF137 /* JumpButton.m in Sources */,
 				047A3A061E2C8EAC00651C7E /* announSecondPageSelectView.m in Sources */,
 				047227931E5E92A30045A0C7 /* LCBiddingCell.m in Sources */,
 				048EB3C01E54458A0080F2E8 /* BasicViewOfAddReturnView.m in Sources */,
@@ -2315,6 +2367,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2352,6 +2405,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

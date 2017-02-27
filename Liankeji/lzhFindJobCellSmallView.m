@@ -7,7 +7,7 @@
 //
 
 #import "lzhFindJobCellSmallView.h"
-#import <Masonry.h>
+#import "appCommonAttributes.h"
 
 @implementation lzhFindJobCellSmallView
 
@@ -15,7 +15,7 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.backgroundColor = [UIColor whiteColor];
+       //self.backgroundColor = [UIColor grayColor];
         
         self.firstImageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 7, 11)];
         //self.firstImageView.backgroundColor = [UIColor grayColor];
@@ -24,20 +24,22 @@
         if(isSecond){//比例不同
             [self.firstImageView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.mas_equalTo(self);
-                make.top.bottom.mas_equalTo(self);
+                make.height.mas_equalTo(self).multipliedBy(0.4);
+                make.centerY.mas_equalTo(self);
                 make.width.mas_equalTo(self.firstImageView.mas_height);
             }];
         }else{
             [self.firstImageView mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.left.mas_equalTo(self);
-                make.top.bottom.mas_equalTo(self);
+                make.height.mas_equalTo(self).multipliedBy(0.4);
+                make.centerY.mas_equalTo(self);
                 make.width.mas_equalTo(self.firstImageView.mas_height).multipliedBy(0.63);
             }];
         }
         //
         self.secondTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.firstImageView.frame.origin.x + self.firstImageView.frame.size.width, self.firstImageView.frame.origin.y, self.frame.size.width - self.firstImageView.frame.size.width, self.frame.size.height)];
         self.secondTitleLabel.font = [UIFont systemFontOfSize:10];
-        //self.secondTitleLabel.backgroundColor = [UIColor redColor];
+        self.secondTitleLabel.textColor = RGBA(35, 35, 35, 0.6);
         [self addSubview:self.secondTitleLabel];
         //
         [self.secondTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -45,8 +47,6 @@
             make.right.mas_equalTo(self);
             make.top.bottom.mas_equalTo(self);
         }];
-        
-        
     }
     return self;
 }

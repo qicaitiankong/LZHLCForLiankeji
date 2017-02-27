@@ -10,6 +10,8 @@
 #import "lzhFindJobCellGroupView.h"
 #import "appCommonAttributes.h"
 #import <Masonry.h>
+#define CELL_HEIGHT 100
+
 
 @implementation lzhFindJobCell
 
@@ -20,13 +22,10 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         //添加子视图
         self.personImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 5, self.contentView.frame.size.height * 0.8, self.contentView.frame.size.height * 0.8)];
-        self.personImageView.center = CGPointMake(self.personImageView.center.x, self.contentView.frame.size.height * 0.5);
         self.personImageView.backgroundColor = [UIColor grayColor];
-        self.personImageView.layer.masksToBounds = YES;
-        self.personImageView.layer.cornerRadius = 40;
-        self.personImageView.image = [UIImage imageNamed:@"u=933971716,719375787&fm=23&gp=0.jpg"];
         self.personImageView.clipsToBounds = YES;// 超出主层边框就要裁剪掉
-        //self.personImageView.layer.cornerRadius = self.personImageView.frame.size.width / 2;
+        self.personImageView.layer.cornerRadius = CELL_HEIGHT * 0.8 * 0.5;
+        self.personImageView.image = [UIImage imageNamed:@"u=933971716,719375787&fm=23&gp=0.jpg"];
         [self.contentView addSubview:self.personImageView];
         //
         self.personNameLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.personImageView.frame.origin.x + self.personImageView.frame.size.width + 5, self.personImageView.frame.origin.y, 120, self.contentView.frame.size.height * 0.25)];
@@ -37,8 +36,8 @@
         //
         self.personJobLabel = [[UILabel alloc]initWithFrame:CGRectMake(self.personNameLabel.frame.origin.x, self.personNameLabel.frame.origin.y + self.personNameLabel.frame.size.height, self.personNameLabel.frame.size.width, self.contentView.frame.size.height * 0.25)];
         self.personJobLabel.text = @"JAVA开发工程师";
-         self.personJobLabel.font = [UIFont systemFontOfSize:13];
-        //self.personJobLabel.backgroundColor = [UIColor yellowColor];
+        self.personJobLabel.font = [UIFont systemFontOfSize:13];
+        self.personJobLabel.textColor = RGBA(35, 35, 35, 0.9);
         [self.contentView addSubview:self.personJobLabel];
         //
         self.personSalaryLabel = [[UILabel alloc]initWithFrame:CGRectMake(tableView.frame.size.width - 100, self.personNameLabel.frame.origin.y, 80, self.personNameLabel.frame.size.height)];
@@ -57,42 +56,32 @@
         self.experienceLabel = groupView.thirdLabel;
         [self.contentView addSubview:groupView];
         //适配
+        NSMutableArray *viewArr = [[NSMutableArray alloc]init];
+        [viewArr addObject:self.personNameLabel];
+        [viewArr addObject:self.personJobLabel];
+        [viewArr addObject:groupView];
+        //
         [self.personImageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.contentView).offset(10);
+            make.top.mas_equalTo(self.contentView).offset(CELL_HEIGHT * 0.1);
             make.height.mas_equalTo(self.contentView).multipliedBy(0.8);
             make.width.mas_equalTo(self.personImageView.mas_height);
-            make.centerY.mas_equalTo(self.contentView);
+
+            
         }];
         //
         [self.personSalaryLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.width.mas_equalTo(self.contentView).multipliedBy(0.2);
             make.right.mas_equalTo(self.contentView);
-            make.top.mas_equalTo(self.personImageView.mas_top).offset(2);
+            make.top.mas_equalTo(self.personImageView.mas_top).offset(0);
             make.height.mas_equalTo(self.personImageView).multipliedBy(0.25);
         }];
         //
-        [self.personNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        [viewArr mas_distributeViewsAlongAxis:MASAxisTypeVertical withFixedSpacing:0 leadSpacing:CELL_HEIGHT * 0.1 tailSpacing:CELL_HEIGHT * 0.1];
+        [viewArr mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(self.personImageView.mas_right).offset(5);
-            make.right.mas_equalTo(self.personSalaryLabel.mas_left);
-            make.top.mas_equalTo(self.personImageView);
-            make.height.mas_equalTo(self.personImageView).multipliedBy(0.25);
+            make.right.mas_equalTo(self.personSalaryLabel.mas_left).offset(-5);
         }];
-        
-        [self.personJobLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.personNameLabel);
-            make.right.mas_equalTo(self.contentView);
-            make.top.mas_equalTo(self.personNameLabel.mas_bottom).offset(3);
-             make.height.mas_equalTo(self.personImageView).multipliedBy(0.25);
-        }];
-        [groupView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.personJobLabel);
-            make.top.mas_equalTo(self.personJobLabel.mas_bottom).offset(10);
-            make.height.mas_equalTo(self.personImageView).multipliedBy(0.25);
-            make.width.mas_equalTo(self.contentView).multipliedBy(0.45);
-            
-        }];
-//
-        
     }
     return self;
 }

@@ -14,4 +14,7 @@
 
 @property (strong,nonatomic)UILabel *ownTitleLabel;
 
+//后期添加搜索button
+@property (nonatomic,strong) UIButton *lcSearchButton;
+
 @end

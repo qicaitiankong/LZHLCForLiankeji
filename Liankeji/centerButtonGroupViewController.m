@@ -39,6 +39,7 @@
     jobArr = @[@"软件",@"养殖",@"工业",@"制造业"];
     [self setReturnButton];
     [self AddButtonGroup];
+    
     // Do any additional setup after loading the view.
 }
 //返回按钮

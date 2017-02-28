@@ -50,6 +50,11 @@
     [self initOwnTableView];
     //转场view1
     [self createExchangeview1];
+    
+    //
+  
+    
+    
         // Do any additional setup after loading the view.
 }
 //返回按钮

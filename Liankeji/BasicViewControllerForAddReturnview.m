@@ -20,6 +20,8 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.returnView = [[lzhReturnView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, self.view.frame.size.width, NAVIGATION_HEIGHT)];
+    self.returnView.backgroundColor = [UIColor whiteColor];
+    
     [self.returnView.ownButt setTitle:@"返回" forState:UIControlStateNormal];
     [self.returnView.ownButt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.view addSubview:self.returnView];

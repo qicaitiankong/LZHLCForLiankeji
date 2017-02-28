@@ -189,6 +189,7 @@
 		60443E4B1E5FC05D00EE0928 /* lzhFindJobCellGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E471E5FC05D00EE0928 /* lzhFindJobCellGroupView.m */; };
 		60443E4C1E5FC05D00EE0928 /* lzhFindJobCellSmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E491E5FC05D00EE0928 /* lzhFindJobCellSmallView.m */; };
 		605BA9281E65276E00760A03 /* PersonMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BA9271E65276E00760A03 /* PersonMessageViewController.m */; };
+		605BA92C1E653EC600760A03 /* PersonMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BA92B1E653EC600760A03 /* PersonMessageCell.m */; };
 		60D6FAE81E63CD19001C20AB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D6FAE71E63CD19001C20AB /* MessageUI.framework */; };
 		60D6FAEE1E63D4F3001C20AB /* JumpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6FAED1E63D4F3001C20AB /* JumpView.m */; };
 		60D6FAF71E6414EA001C20AB /* LCSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6FAF61E6414EA001C20AB /* LCSetView.m */; };
@@ -582,6 +583,8 @@
 		60443E491E5FC05D00EE0928 /* lzhFindJobCellSmallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindJobCellSmallView.m; sourceTree = "<group>"; };
 		605BA9261E65276E00760A03 /* PersonMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonMessageViewController.h; sourceTree = "<group>"; };
 		605BA9271E65276E00760A03 /* PersonMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonMessageViewController.m; sourceTree = "<group>"; };
+		605BA92A1E653EC600760A03 /* PersonMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonMessageCell.h; sourceTree = "<group>"; };
+		605BA92B1E653EC600760A03 /* PersonMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonMessageCell.m; sourceTree = "<group>"; };
 		60D6FAE71E63CD19001C20AB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		60D6FAEC1E63D4F3001C20AB /* JumpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpView.h; sourceTree = "<group>"; };
 		60D6FAED1E63D4F3001C20AB /* JumpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpView.m; sourceTree = "<group>"; };
@@ -1240,9 +1243,19 @@
 			name = "个人信息";
 			sourceTree = "<group>";
 		};
+		605BA9291E653E8F00760A03 /* 个人信息 */ = {
+			isa = PBXGroup;
+			children = (
+				605BA92A1E653EC600760A03 /* PersonMessageCell.h */,
+				605BA92B1E653EC600760A03 /* PersonMessageCell.m */,
+			);
+			name = "个人信息";
+			sourceTree = "<group>";
+		};
 		60D6FAEF1E640CFC001C20AB /* 设置 */ = {
 			isa = PBXGroup;
 			children = (
+				605BA9291E653E8F00760A03 /* 个人信息 */,
 				60D6FAF51E6414EA001C20AB /* LCSetView.h */,
 				60D6FAF61E6414EA001C20AB /* LCSetView.m */,
 			);
@@ -1700,10 +1713,6 @@
 			isa = PBXGroup;
 			children = (
 				99E41F701DED2AD600F32968 /* C */,
-				99E41F641DED291A00F32968 /* NavViewControllerForPersonal.h */,
-				99E41F651DED291A00F32968 /* NavViewControllerForPersonal.m */,
-				0480EAAF1E2EFF740000E084 /* personalFirstPageViewController.h */,
-				0480EAB01E2EFF740000E084 /* personalFirstPageViewController.m */,
 				99E41F6F1DED2AB600F32968 /* V */,
 				99E41F6E1DED2AB000F32968 /* M */,
 			);
@@ -1737,6 +1746,10 @@
 		99E41F701DED2AD600F32968 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				99E41F641DED291A00F32968 /* NavViewControllerForPersonal.h */,
+				99E41F651DED291A00F32968 /* NavViewControllerForPersonal.m */,
+				0480EAAF1E2EFF740000E084 /* personalFirstPageViewController.h */,
+				0480EAB01E2EFF740000E084 /* personalFirstPageViewController.m */,
 				60D6FAF41E64141F001C20AB /* 设置 */,
 			);
 			name = C;
@@ -2263,6 +2276,7 @@
 				9953E2EC1E0D238700F55604 /* UIView+Extension.m in Sources */,
 				99E41F661DED291A00F32968 /* NavViewControllerForPersonal.m in Sources */,
 				04CDD9B31E1DDD3B009330FD /* cellHeaderView3.m in Sources */,
+				605BA92C1E653EC600760A03 /* PersonMessageCell.m in Sources */,
 				0473353C1E30A6D300671F44 /* searchViewController.m in Sources */,
 				99AA38EC1E09053B000A57BC /* LMJScrollTextView.m in Sources */,
 				049C63091E4EFB0400B83543 /* lzhRefresh.m in Sources */,

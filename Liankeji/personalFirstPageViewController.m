@@ -232,7 +232,7 @@
 - (void)remove{
 
     //简单的动画效果
-    [UIView animateWithDuration:1.0 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         jumpView.alpha=0;
     } completion:^(BOOL finished) {
         [jumpView removeFromSuperview];

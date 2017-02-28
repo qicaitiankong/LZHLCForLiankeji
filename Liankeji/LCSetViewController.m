@@ -8,6 +8,7 @@
 
 #import "LCSetViewController.h"
 #import "appCommonAttributes.h"
+#import "PersonMessageViewController.h"
 #import "lzhReturnView.h"
 #import "LCSetView.h"
 
@@ -45,7 +46,7 @@
     returnView.lcSearchButton.hidden = NO;
     returnView.lcSearchButton.userInteractionEnabled = YES;
     [returnView.ownButt addTarget:self action:@selector(dissmiss) forControlEvents:UIControlEventTouchUpInside];
-    returnView.ownTitleLabel.text = @"个人信息";
+    returnView.ownTitleLabel.text = @"设置";
     returnView.ownTitleLabel.textColor = [UIColor whiteColor];
     [self.view addSubview:returnView];
     
@@ -156,7 +157,7 @@
             
             break;
         case 1:
-            
+            [self presentViewController:[PersonMessageViewController new] animated:YES completion:nil];
             break;
         case 2:
             

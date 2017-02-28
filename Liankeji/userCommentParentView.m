@@ -27,13 +27,13 @@
         
         [self.commentView.cancelButton addTarget:self action:@selector(buttonClickHandler:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:self.commentView];
-        
+        //动态获取键盘高度
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyBoarWillShow:) name:UIKeyboardWillShowNotification object:nil];
         
     }
     return self;
 }
-
+//键盘方法
 - (void)keyBoarWillShow:(NSNotification*)noti{
     NSDictionary *userInfo = [noti userInfo];
     NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
@@ -46,6 +46,7 @@
 //背景与取消按钮点击事件
 - (void)buttonClickHandler:(UIButton*)_b{
     [self.commentView.textView resignFirstResponder];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillShowNotification  object:nil];
    // [self.commentView removeFromSuperview];
     [self removeFromSuperview];
 }

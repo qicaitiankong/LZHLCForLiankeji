@@ -4,7 +4,7 @@
 //
 //  Created by 李自豪 on 16/12/26.
 //  Copyright © 2016年 haichuanhuiwulianxinxi. All rights reserved.
-//
+//发布首页中的图片+标题单元view
 
 #import <UIKit/UIKit.h>
 

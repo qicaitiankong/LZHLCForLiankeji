@@ -17,7 +17,7 @@
 
 @end
 
-@interface anounceSecondPageView : BasicViewOfAddReturnView
+@interface anounceSecondPageView : UIView
 @property (strong,nonatomic)UIButton *ownButt;
 
 @property (strong,nonatomic)UILabel *ownTitleLabel;

@@ -39,17 +39,17 @@
     [window addSubview:windowView];
 }
 -(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"视图将要出现");
+    //NSLog(@"视图将要出现");
     if(self.isExchangeFromeOut){
         previousTabbarIndex = [LZHTabBarController shareLZHTabbarController].myTabBar.selectButton.tag - 12000;
         if(windowView == nil){
-            NSLog(@"发布view是空");
+            //NSLog(@"发布view是空");
             [self createWindowView];
             windowView.previousTabbarIndex = previousTabbarIndex;
             self.isExchangeFromeOut = NO;
         }
         if(windowView != nil){
-            NSLog(@"发布view已存在");
+           // NSLog(@"发布view已存在");
         }
     }else{
         //

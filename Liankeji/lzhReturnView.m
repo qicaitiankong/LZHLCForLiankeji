@@ -20,7 +20,7 @@
         self.ownButt.frame = CGRectMake(5, 5, 50, self.frame.size.height - 2 * 5);
         self.ownButt.center = CGPointMake(self.ownButt.center.x, self.frame.size.height / 2);
         [self.ownButt setTitle:@"返回" forState:UIControlStateNormal];
-        //self.ownButt.backgroundColor = [UIColor grayColor];
+        //self.ownButt.backgroundColor = [UIColor blackColor];
         [self addSubview:self.ownButt];
         
         self.ownTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width / 2, self.ownButt.frame.origin.y, 100, self.frame.size.height  - self.ownButt.frame.origin.y * 2)];

@@ -55,9 +55,6 @@
 }
 - (void)addRefreshView:(UITableView*)_tableView{
     lzhRefresh *refreshHeader = [lzhRefresh headerWithRefreshingTarget:self refreshingAction:@selector(refreshData:)];
-    UIView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, refreshHeader.frame.size.width, refreshHeader.frame.size.height)];
-    imageView.backgroundColor = [UIColor grayColor];
-    [refreshHeader addSubview:imageView];
     _tableView.mj_header = refreshHeader;
     
 }
@@ -125,7 +122,6 @@
     detailViewController.detaileForView3 = @"2017年是“史上最牛军改”决胜之年。当前，军队规模结构和力量编成改革正在向纵深推进，涉及面更广、触及利益更深、任务更为艰巨，一些官兵将面临单位撤并降改和个人进退去留的考验。军改关键当口，应该保持什么样的精神状态？有什么样的使命担当？需要每名官兵用实际行动做出回答。2016年7月26日，习主席在中央政治局围绕深化国防和军队改革进行第三十四次集体学习时强调：“在国防和军队改革向纵深推进的关键当口，我们要有定力、有担当、有韧劲，继续蹄疾步稳向前走。”改革关头勇者胜。做到有定力、有担当、有韧劲 ，对于“乘势而上、迎难而上”推进军队改革，对于每名官兵作出正确抉择，意义重大而深远。";
     
     [self presentViewController:detailViewController animated:YES completion:nil];
-    //[self.navigationController pushViewController:detailViewController animated:YES];
 }
 //二级页面调用的代理方法
 -(void)updateCellContent:(NSInteger)readNum commentNum:(NSInteger)commentnum giveMoneyNum:(NSInteger)giveMonyNum cellIndex:(NSInteger)row{

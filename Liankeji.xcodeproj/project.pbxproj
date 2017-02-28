@@ -188,6 +188,7 @@
 		60443E4A1E5FC05D00EE0928 /* lzhFindJobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E451E5FC05D00EE0928 /* lzhFindJobCell.m */; };
 		60443E4B1E5FC05D00EE0928 /* lzhFindJobCellGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E471E5FC05D00EE0928 /* lzhFindJobCellGroupView.m */; };
 		60443E4C1E5FC05D00EE0928 /* lzhFindJobCellSmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E491E5FC05D00EE0928 /* lzhFindJobCellSmallView.m */; };
+		605BA9281E65276E00760A03 /* PersonMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BA9271E65276E00760A03 /* PersonMessageViewController.m */; };
 		60D6FAE81E63CD19001C20AB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D6FAE71E63CD19001C20AB /* MessageUI.framework */; };
 		60D6FAEE1E63D4F3001C20AB /* JumpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6FAED1E63D4F3001C20AB /* JumpView.m */; };
 		60D6FAF71E6414EA001C20AB /* LCSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6FAF61E6414EA001C20AB /* LCSetView.m */; };
@@ -579,6 +580,8 @@
 		60443E471E5FC05D00EE0928 /* lzhFindJobCellGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindJobCellGroupView.m; sourceTree = "<group>"; };
 		60443E481E5FC05D00EE0928 /* lzhFindJobCellSmallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFindJobCellSmallView.h; sourceTree = "<group>"; };
 		60443E491E5FC05D00EE0928 /* lzhFindJobCellSmallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindJobCellSmallView.m; sourceTree = "<group>"; };
+		605BA9261E65276E00760A03 /* PersonMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonMessageViewController.h; sourceTree = "<group>"; };
+		605BA9271E65276E00760A03 /* PersonMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonMessageViewController.m; sourceTree = "<group>"; };
 		60D6FAE71E63CD19001C20AB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		60D6FAEC1E63D4F3001C20AB /* JumpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpView.h; sourceTree = "<group>"; };
 		60D6FAED1E63D4F3001C20AB /* JumpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpView.m; sourceTree = "<group>"; };
@@ -1228,6 +1231,15 @@
 			name = "弹窗视图";
 			sourceTree = "<group>";
 		};
+		605BA9251E65272C00760A03 /* 个人信息 */ = {
+			isa = PBXGroup;
+			children = (
+				605BA9261E65276E00760A03 /* PersonMessageViewController.h */,
+				605BA9271E65276E00760A03 /* PersonMessageViewController.m */,
+			);
+			name = "个人信息";
+			sourceTree = "<group>";
+		};
 		60D6FAEF1E640CFC001C20AB /* 设置 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1242,6 +1254,7 @@
 			children = (
 				60D6FAF81E641542001C20AB /* LCSetViewController.h */,
 				60D6FAF91E641542001C20AB /* LCSetViewController.m */,
+				605BA9251E65272C00760A03 /* 个人信息 */,
 			);
 			name = "设置";
 			sourceTree = "<group>";
@@ -2225,6 +2238,7 @@
 				9961CFA41E026DF20021D123 /* firstPageButtonGroup.m in Sources */,
 				999D99471DF04C950067CFBA /* ShareDataBase.m in Sources */,
 				04EC82031E5BCB1600CDA9C9 /* lzhOperationFile.m in Sources */,
+				605BA9281E65276E00760A03 /* PersonMessageViewController.m in Sources */,
 				0435BF9D1E1B8ED300DE859D /* informationSecondPgeTavCell.m in Sources */,
 				0479BE9D1E55512C00FFF991 /* returnViewForSearchViewController.m in Sources */,
 				60D6FAEE1E63D4F3001C20AB /* JumpView.m in Sources */,

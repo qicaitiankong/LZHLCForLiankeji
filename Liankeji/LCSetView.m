@@ -30,28 +30,29 @@
     //添加子视图
     self.picImageView = [[UIImageView alloc]init];
     self.picImageView.layer.masksToBounds = YES;
-    self.picImageView.layer.cornerRadius = 40;
+    self.picImageView.layer.cornerRadius = 33;
     self.picImageView.image = [UIImage imageNamed:@"u=933971716,719375787&fm=23&gp=0.jpg"];
     [self addSubview:self.picImageView];
     
     self.nameLabel = [[UILabel alloc]init];
-    self.nameLabel.text = @"柳晨你真帅";
+    self.nameLabel.text = @"不猜不猜就不猜";
+    self.nameLabel.textAlignment = NSTextAlignmentCenter;
     self.nameLabel.textColor = [UIColor blackColor];
-    self.nameLabel.font = [UIFont systemFontOfSize:15];
+    self.nameLabel.font = [UIFont systemFontOfSize:17];
     [self addSubview:self.nameLabel];
     
     //开始布局
-    CGFloat imageHeight = self.frame.size.height*2.0/3.0-10;
     [self.picImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(ws);
-        make.centerY.mas_equalTo(ws).multipliedBy(2.0/3.0);
-        make.width.height.mas_equalTo(imageHeight);
+        make.top.mas_equalTo(ws).with.offset(5);
+        make.height.mas_equalTo(ws).multipliedBy(2.0/3.0);
+        make.width.mas_equalTo(ws.picImageView.mas_height);
     }];
     
     [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.mas_equalTo(ws.picImageView.mas_centerX);
         make.bottom.mas_equalTo(ws);
-        make.height.mas_equalTo(ws).multipliedBy(1.0/3.0);
+        make.top.mas_equalTo(ws.picImageView.mas_bottom).with.offset(5);
         make.width.mas_equalTo(ws).multipliedBy(0.8);
     }];
     

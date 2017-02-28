@@ -8,6 +8,11 @@
 
 #import "LCSetViewController.h"
 #import "appCommonAttributes.h"
+#import "lzhReturnView.h"
+#import "LCSetView.h"
+
+#define HEIGHTOFCELL 60
+#define HEIGHTOFDEADVIEW 100
 
 @interface LCSetViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -17,28 +22,50 @@
 
 @implementation LCSetViewController
 
-- (void)viewWillAppear:(BOOL)animated{
 
-    self.title = @"设置";
+- (void)viewWillAppear:(BOOL)animated{
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //添加视图
+    [self createView];
+}
+
+#pragma mark - 添加视图
+- (void)createView{
+
+    //添加导航栏
+    lzhReturnView *returnView = [[lzhReturnView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, SCREEN_WIDTH, 44)];
+    returnView.backgroundColor = RGBA(0, 177, 251, 1);
+    [returnView.ownButt setImage:[UIImage imageNamed:@"nav1.png"] forState:UIControlStateNormal];
+    [returnView.ownButt setTitle:@"" forState:UIControlStateNormal];
+    returnView.lcSearchButton.hidden = NO;
+    returnView.lcSearchButton.userInteractionEnabled = YES;
+    [returnView.ownButt addTarget:self action:@selector(dissmiss) forControlEvents:UIControlEventTouchUpInside];
+    returnView.ownTitleLabel.text = @"个人信息";
+    returnView.ownTitleLabel.textColor = [UIColor whiteColor];
+    [self.view addSubview:returnView];
     
+    [self.view addSubview:self.tableView];
+}
+
+#pragma mark - 返回按钮跳转方法
+- (void)dissmiss{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - 创建视图
 - (UITableView *)tableView{
 
-    //获取导航栏加电池栏的高度和
-    CGFloat heightOfSet = NAVIGATIONOfSYSTEM_HEIGHT+STATUSBAR_HEIGHT;
     if (_tableView == nil) {
-        //获取导航栏和电池栏的高度
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, heightOfSet, SCREEN_WIDTH, SCREEN_HEIGHT-heightOfSet-TABBAR_HEIGHT) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT+44, SCREEN_WIDTH, HEIGHTOFDEADVIEW+HEIGHTOFCELL*6) style:UITableViewStylePlain];
+        _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = NO;
-        [self.view addSubview:_tableView];
     }
     return _tableView;
 }
@@ -55,7 +82,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
-    return 60;
+    return HEIGHTOFCELL;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -66,9 +93,90 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    switch (indexPath.row) {
+        case 0:
+            cell.textLabel.text = @"50K";
+            cell.textLabel.textColor = [UIColor blackColor];
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
+            break;
+        case 1:
+            cell.textLabel.text = @"编辑个人信息";
+            cell.textLabel.textColor = [UIColor blackColor];
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
+            break;
+        case 2:
+            cell.textLabel.text = @"关于链科技";
+            cell.textLabel.textColor = [UIColor blackColor];
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
+            break;
+        case 3:
+            cell.textLabel.text = @"检测新版本";
+            cell.textLabel.textColor = [UIColor blackColor];
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
+            break;
+        case 4:
+            cell.textLabel.text = @"帮助";
+            cell.textLabel.textColor = [UIColor blackColor];
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
+            break;
+        case 5:
+            cell.textLabel.text = @"用户协议";
+            cell.textLabel.textColor = [UIColor blackColor];
+            cell.textLabel.font = [UIFont systemFontOfSize:13];
+            break;
+        case 6:
+            cell.textLabel.text = @"退出登录";
+            cell.textLabel.textAlignment = NSTextAlignmentCenter;
+            cell.textLabel.textColor = [UIColor whiteColor];
+            cell.backgroundColor = [UIColor redColor];
+            cell.textLabel.font = [UIFont systemFontOfSize:17];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+            break;
+        default:
+            break;
+    }
     return cell;
 }
+#warning 后期数据填充-》dic;
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    NSDictionary *dic;
+    LCSetView *setView = [[LCSetView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44) andSource:dic];
+    return setView;
+}
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return HEIGHTOFDEADVIEW;
+}
+#pragma mark - cell点击事件
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    switch (indexPath.row) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        case 5:
+            
+            break;
+        case 6:
+            
+            break;
+        default:
+            break;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

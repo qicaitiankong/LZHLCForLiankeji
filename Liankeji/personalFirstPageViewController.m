@@ -14,6 +14,7 @@
 #import "LZHTabBarController.h"
 #import "JumpView.h"
 #import <MessageUI/MessageUI.h>
+#import "LCSetViewController.h"
 
 @interface personalFirstPageViewController ()<UITableViewDelegate,UITableViewDataSource,JumpViewPassMessageDelegate,MFMessageComposeViewControllerDelegate,UINavigationControllerDelegate,MFMailComposeViewControllerDelegate>{
     personalViewOfFirstPage *secondHeaderView;
@@ -42,7 +43,7 @@
 
      thirdSectionImageArr = @[[UIImage imageNamed:@"personalFirstPageMyWallet"],[UIImage imageNamed:@"personalFirstPageMyJifen"],[UIImage imageNamed:@"personalFirstPageMemberCenter"]];
     thirdSectionTitleArr = @[@"我的钱包",@"我的积分",@"会员中心"];
-    fourthSectionImageArr = @[[UIImage imageNamed:@"personalFirstPageCustomer"],[UIImage imageNamed:@"personalFirstPageUs"],[UIImage imageNamed:@"personalFirstPageUs.png "]];
+    fourthSectionImageArr = @[[UIImage imageNamed:@"personalFirstPageCustomer"],[UIImage imageNamed:@"personalFirstPageUs"],[UIImage imageNamed:@"personalFirstPageUs.png"]];
     fourthSectionTitleArr = @[@"客服中心",@"关于我们",@"设置"];
     
     secondHeaderView = [[personalViewOfFirstPage alloc]initWithFrame:CGRectMake(0, - SCREEN_HEIGHT * 0.089, self.view.frame.size.width, SCREEN_HEIGHT * 0.089) numArr:@[@"123",@"23",@"322"] titleArray:@[@"发布的消息",@"关注",@"粉丝"]];
@@ -211,6 +212,10 @@
                 }
                     break;
                 case 1:
+                    
+                    break;
+                case 2:
+                    [self presentViewController:[LCSetViewController new] animated:YES completion:nil];
                     
                     break;
                 default:

@@ -41,8 +41,8 @@
     //添加导航栏
     lzhReturnView *returnView = [[lzhReturnView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, SCREEN_WIDTH, 44)];
     returnView.backgroundColor = RGBA(0, 177, 251, 1);
-    [returnView.ownButt setImage:[UIImage imageNamed:@"nav1.png"] forState:UIControlStateNormal];
-    [returnView.ownButt setTitle:@"" forState:UIControlStateNormal];
+    [returnView.ownButt setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
+    [returnView.ownButt setTitle:@"返回" forState:UIControlStateNormal];
     returnView.lcSearchButton.hidden = NO;
     returnView.lcSearchButton.userInteractionEnabled = YES;
     [returnView.ownButt addTarget:self action:@selector(dissmiss) forControlEvents:UIControlEventTouchUpInside];

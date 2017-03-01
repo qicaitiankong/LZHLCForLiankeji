@@ -11,17 +11,22 @@
 #import "PersonMessageCell.h"
 #import "lzhReturnView.h"
 #import "cityPickerView.h"
+#import "LcChangeViewController.h"
+#import "GenderPickerView.h"
+#import "LcChangeTelephoneNumController.h"
 
 
 #define HEIGHTOFIMAGE 100
 #define HEIGHTOFOTHER 50
 
-@interface PersonMessageViewController ()<UITableViewDelegate,UITableViewDataSource,cityPickerDelegate>
+@interface PersonMessageViewController ()<UITableViewDelegate,UITableViewDataSource,cityPickerDelegate,GenderDelegate>
 
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) NSArray *personArray;
 //存放当前选中的cell
 @property (nonatomic,strong) NSIndexPath *indexPathOfCell;
+//性别选择视图
+@property (nonatomic,strong) GenderPickerView *genderPickerView;
 
 @end
 
@@ -48,8 +53,7 @@
     //添加导航栏
     lzhReturnView *returnView = [[lzhReturnView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, SCREEN_WIDTH, 44)];
     returnView.backgroundColor = RGBA(0, 177, 251, 1);
-    [returnView.ownButt setImage:[UIImage imageNamed:@"nav1.png"] forState:UIControlStateNormal];
-    [returnView.ownButt setTitle:@"" forState:UIControlStateNormal];
+    [returnView.ownButt setTitle:@"返回" forState:UIControlStateNormal];
     returnView.lcSearchButton.hidden = NO;
     returnView.lcSearchButton.userInteractionEnabled = YES;
     [returnView.ownButt addTarget:self action:@selector(dissmiss) forControlEvents:UIControlEventTouchUpInside];
@@ -139,38 +143,81 @@
         case 0:
             
             break;
-        case 1:
-            
+        case 1:{
+            LcChangeViewController *lcchangeViewController = [[LcChangeViewController alloc]init];
+            lcchangeViewController.titleText = @"更改名字";
+            lcchangeViewController.contentText = @"好的名字可以让更多人记住你";
+            [self presentViewController:lcchangeViewController animated:YES completion:nil];
+        }
             break;
-        case 2:
-            
+        case 2:{
+            LcChangeViewController *lcchangeViewController = [[LcChangeViewController alloc]init];
+            lcchangeViewController.titleText = @"个人信息";
+            lcchangeViewController.contentText = @"好的个人信息可以让更多人记住你";
+            [self presentViewController:lcchangeViewController animated:YES completion:nil];
+        }
             break;
         case 3:
             //地区选择
             self.indexPathOfCell = indexPath;
             [self displayAddressPickerView];
             break;
-        case 4:
-            
+        case 4:{
+            self.indexPathOfCell = indexPath;
+            self.genderPickerView = [[GenderPickerView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+            self.genderPickerView.delegate = self;
+            [self.view addSubview:self.genderPickerView];
+        }
             break;
-        case 5:
-            
+        case 5:{
+            LcChangeTelephoneNumController *changeTelteController = [[LcChangeTelephoneNumController alloc]init];
+            [self presentViewController:changeTelteController animated:YES completion:nil];
+        }
             break;
-        case 6:
-            
+        case 6:{
+            LcChangeViewController *lcchangeViewController = [[LcChangeViewController alloc]init];
+            lcchangeViewController.titleText = @"公司名称";
+            lcchangeViewController.contentText = @"设置你的公司名字";
+            [self presentViewController:lcchangeViewController animated:YES completion:nil];
+        }
             break;
-        case 7:
-            
+        case 7:{
+            LcChangeViewController *lcchangeViewController = [[LcChangeViewController alloc]init];
+            lcchangeViewController.titleText = @"邮箱";
+            lcchangeViewController.contentText = @"设置邮箱可以更好的联系你";
+            [self presentViewController:lcchangeViewController animated:YES completion:nil];
+        }
             break;
-        case 8:
-            
+        case 8:{
+            LcChangeViewController *lcchangeViewController = [[LcChangeViewController alloc]init];
+            lcchangeViewController.titleText = @"履历";
+            lcchangeViewController.contentText = @"设置履历可以更好的了解你";
+            [self presentViewController:lcchangeViewController animated:YES completion:nil];
+        }
             break;
-        case 9:
-            
+        case 9:{
+            LcChangeViewController *lcchangeViewController = [[LcChangeViewController alloc]init];
+            lcchangeViewController.titleText = @"详细地址";
+            lcchangeViewController.contentText = @"设置详细地址可以方便一些活动的发送";
+            [self presentViewController:lcchangeViewController animated:YES completion:nil];
+        }
             break;
         default:
             break;
     }
+}
+
+#pragma mark - 选择性别协议方法
+//改变性别的值
+- (void)passMessage:(NSString *)message{
+
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.indexPathOfCell];
+    cell.detailTextLabel.text = message;
+}
+//移除选择视图
+- (void)removePresentView{
+
+    [self.genderPickerView removeFromSuperview];
 }
 
 #pragma mark - 地区选择

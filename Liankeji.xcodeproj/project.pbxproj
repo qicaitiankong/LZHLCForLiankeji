@@ -185,11 +185,15 @@
 		60180E5D1E5D79A500570818 /* findFirstPagePrice@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60180E481E5D79A500570818 /* findFirstPagePrice@2x.png */; };
 		60180E5E1E5D79A500570818 /* findFirstPagePrice@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60180E491E5D79A500570818 /* findFirstPagePrice@3x.png */; };
 		60232E371E600F5500ACF137 /* JumpButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 60232E361E600F5500ACF137 /* JumpButton.m */; };
+		6025B3831E66B573005B0883 /* LcChangeTelephoneNumController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6025B3821E66B573005B0883 /* LcChangeTelephoneNumController.m */; };
 		60443E4A1E5FC05D00EE0928 /* lzhFindJobCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E451E5FC05D00EE0928 /* lzhFindJobCell.m */; };
 		60443E4B1E5FC05D00EE0928 /* lzhFindJobCellGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E471E5FC05D00EE0928 /* lzhFindJobCellGroupView.m */; };
 		60443E4C1E5FC05D00EE0928 /* lzhFindJobCellSmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60443E491E5FC05D00EE0928 /* lzhFindJobCellSmallView.m */; };
 		605BA9281E65276E00760A03 /* PersonMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BA9271E65276E00760A03 /* PersonMessageViewController.m */; };
 		605BA92C1E653EC600760A03 /* PersonMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BA92B1E653EC600760A03 /* PersonMessageCell.m */; };
+		605BA9341E657DD700760A03 /* ChangeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BA9331E657DD700760A03 /* ChangeNavView.m */; };
+		605BA9371E66567000760A03 /* LcChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BA9361E66567000760A03 /* LcChangeViewController.m */; };
+		607C14751E6671FC00C85E63 /* GenderPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 607C14741E6671FC00C85E63 /* GenderPickerView.m */; };
 		60D6FAE81E63CD19001C20AB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60D6FAE71E63CD19001C20AB /* MessageUI.framework */; };
 		60D6FAEE1E63D4F3001C20AB /* JumpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6FAED1E63D4F3001C20AB /* JumpView.m */; };
 		60D6FAF71E6414EA001C20AB /* LCSetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D6FAF61E6414EA001C20AB /* LCSetView.m */; };
@@ -575,6 +579,8 @@
 		60180E491E5D79A500570818 /* findFirstPagePrice@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "findFirstPagePrice@3x.png"; sourceTree = "<group>"; };
 		60232E351E600F5500ACF137 /* JumpButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpButton.h; sourceTree = "<group>"; };
 		60232E361E600F5500ACF137 /* JumpButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpButton.m; sourceTree = "<group>"; };
+		6025B3811E66B573005B0883 /* LcChangeTelephoneNumController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcChangeTelephoneNumController.h; sourceTree = "<group>"; };
+		6025B3821E66B573005B0883 /* LcChangeTelephoneNumController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcChangeTelephoneNumController.m; sourceTree = "<group>"; };
 		60443E441E5FC05D00EE0928 /* lzhFindJobCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFindJobCell.h; sourceTree = "<group>"; };
 		60443E451E5FC05D00EE0928 /* lzhFindJobCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFindJobCell.m; sourceTree = "<group>"; };
 		60443E461E5FC05D00EE0928 /* lzhFindJobCellGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFindJobCellGroupView.h; sourceTree = "<group>"; };
@@ -585,6 +591,12 @@
 		605BA9271E65276E00760A03 /* PersonMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonMessageViewController.m; sourceTree = "<group>"; };
 		605BA92A1E653EC600760A03 /* PersonMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonMessageCell.h; sourceTree = "<group>"; };
 		605BA92B1E653EC600760A03 /* PersonMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonMessageCell.m; sourceTree = "<group>"; };
+		605BA9321E657DD700760A03 /* ChangeNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeNavView.h; sourceTree = "<group>"; };
+		605BA9331E657DD700760A03 /* ChangeNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeNavView.m; sourceTree = "<group>"; };
+		605BA9351E66567000760A03 /* LcChangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcChangeViewController.h; sourceTree = "<group>"; };
+		605BA9361E66567000760A03 /* LcChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcChangeViewController.m; sourceTree = "<group>"; };
+		607C14731E6671FC00C85E63 /* GenderPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenderPickerView.h; sourceTree = "<group>"; };
+		607C14741E6671FC00C85E63 /* GenderPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenderPickerView.m; sourceTree = "<group>"; };
 		60D6FAE71E63CD19001C20AB /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		60D6FAEC1E63D4F3001C20AB /* JumpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JumpView.h; sourceTree = "<group>"; };
 		60D6FAED1E63D4F3001C20AB /* JumpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JumpView.m; sourceTree = "<group>"; };
@@ -1223,7 +1235,7 @@
 			name = "一级界面";
 			sourceTree = "<group>";
 		};
-		60232E301E60046300ACF137 /* 弹窗视图 */ = {
+		60232E301E60046300ACF137 /* 客服中心 */ = {
 			isa = PBXGroup;
 			children = (
 				60232E351E600F5500ACF137 /* JumpButton.h */,
@@ -1231,7 +1243,7 @@
 				60D6FAEC1E63D4F3001C20AB /* JumpView.h */,
 				60D6FAED1E63D4F3001C20AB /* JumpView.m */,
 			);
-			name = "弹窗视图";
+			name = "客服中心";
 			sourceTree = "<group>";
 		};
 		605BA9251E65272C00760A03 /* 个人信息 */ = {
@@ -1239,6 +1251,10 @@
 			children = (
 				605BA9261E65276E00760A03 /* PersonMessageViewController.h */,
 				605BA9271E65276E00760A03 /* PersonMessageViewController.m */,
+				605BA9351E66567000760A03 /* LcChangeViewController.h */,
+				605BA9361E66567000760A03 /* LcChangeViewController.m */,
+				6025B3811E66B573005B0883 /* LcChangeTelephoneNumController.h */,
+				6025B3821E66B573005B0883 /* LcChangeTelephoneNumController.m */,
 			);
 			name = "个人信息";
 			sourceTree = "<group>";
@@ -1246,6 +1262,10 @@
 		605BA9291E653E8F00760A03 /* 个人信息 */ = {
 			isa = PBXGroup;
 			children = (
+				605BA9321E657DD700760A03 /* ChangeNavView.h */,
+				605BA9331E657DD700760A03 /* ChangeNavView.m */,
+				607C14731E6671FC00C85E63 /* GenderPickerView.h */,
+				607C14741E6671FC00C85E63 /* GenderPickerView.m */,
 				605BA92A1E653EC600760A03 /* PersonMessageCell.h */,
 				605BA92B1E653EC600760A03 /* PersonMessageCell.m */,
 			);
@@ -1730,7 +1750,7 @@
 			isa = PBXGroup;
 			children = (
 				60D6FAEF1E640CFC001C20AB /* 设置 */,
-				60232E301E60046300ACF137 /* 弹窗视图 */,
+				60232E301E60046300ACF137 /* 客服中心 */,
 				99E41F711DED2B1E00F32968 /* PersonalTableViewCell.h */,
 				99E41F721DED2B1E00F32968 /* PersonalTableViewCell.m */,
 				0480EAB21E2F00D30000E084 /* personalViewOfFirstPage.h */,
@@ -2211,6 +2231,7 @@
 				992D730B1DF114F000FFD2DD /* NewsTestModel.m in Sources */,
 				0480EAB71E2F04D90000E084 /* personalSmallViewOfFirstPage.m in Sources */,
 				60443E4B1E5FC05D00EE0928 /* lzhFindJobCellGroupView.m in Sources */,
+				607C14751E6671FC00C85E63 /* GenderPickerView.m in Sources */,
 				047A39CF1E2C602100651C7E /* lzhReturnView.m in Sources */,
 				992180091E0788AD00070D46 /* newAnnouncementView.m in Sources */,
 				99E41F2F1DED0E0D00F32968 /* AppDelegate.m in Sources */,
@@ -2230,6 +2251,7 @@
 				60D6FAFA1E641542001C20AB /* LCSetViewController.m in Sources */,
 				992D730E1DF1557300FFD2DD /* GetCellHeight.m in Sources */,
 				049261FD1E1F277F00AFC111 /* commentView.m in Sources */,
+				605BA9341E657DD700760A03 /* ChangeNavView.m in Sources */,
 				047227831E5E926E0045A0C7 /* CommunicateFirstViewController.m in Sources */,
 				04764C6C1E2DFD3000704C96 /* annoounceSecondPageViewController.m in Sources */,
 				04764C691E2DA85A00704C96 /* lzhAlertControllerViewController.m in Sources */,
@@ -2271,6 +2293,7 @@
 				04030AE81E15EBBC00988359 /* informationDetailTableViewCell.m in Sources */,
 				9953E2ED1E0D238700F55604 /* LZHTabButton.m in Sources */,
 				047227941E5E92A30045A0C7 /* LCRecruitCell.m in Sources */,
+				605BA9371E66567000760A03 /* LcChangeViewController.m in Sources */,
 				0434BDE71E1CBF8B0096136E /* cellHeaderView1.m in Sources */,
 				99BDE0561DF3DE020079EEF8 /* FFScrollView.m in Sources */,
 				9953E2EC1E0D238700F55604 /* UIView+Extension.m in Sources */,
@@ -2304,6 +2327,7 @@
 				049262001E1F3B9100AFC111 /* userWriteCommentView.m in Sources */,
 				0412CD9E1E499B5000F664BA /* infomaFirstPageViewForCell.m in Sources */,
 				047A39C21E2C4E1C00651C7E /* ownAnimation.m in Sources */,
+				6025B3831E66B573005B0883 /* LcChangeTelephoneNumController.m in Sources */,
 				0480EAB11E2EFF740000E084 /* personalFirstPageViewController.m in Sources */,
 				992C69821E0A69890052D21B /* UINavigationBar+NavigationBarBackground.m in Sources */,
 				0435BF471E1B379C00DE859D /* ownImageviewAndLableView.m in Sources */,

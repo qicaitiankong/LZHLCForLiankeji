@@ -100,7 +100,6 @@
 		0479BE9D1E55512C00FFF991 /* returnViewForSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0479BE9C1E55512C00FFF991 /* returnViewForSearchViewController.m */; };
 		047A39C21E2C4E1C00651C7E /* ownAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A39C11E2C4E1C00651C7E /* ownAnimation.m */; };
 		047A39C51E2C4E3500651C7E /* announceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A39C41E2C4E3500651C7E /* announceViewController.m */; };
-		047A39CF1E2C602100651C7E /* lzhReturnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A39CE1E2C602100651C7E /* lzhReturnView.m */; };
 		047A39D21E2C678400651C7E /* anounceSecondPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A39D11E2C678400651C7E /* anounceSecondPageView.m */; };
 		047A39EC1E2C768000651C7E /* previosButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 047A39D41E2C768000651C7E /* previosButton.png */; };
 		047A39EE1E2C768000651C7E /* previosButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047A39D61E2C768000651C7E /* previosButton@2x.png */; };
@@ -152,6 +151,7 @@
 		0480EAED1E2F302C0000E084 /* personalFirstPageMyMessage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0480EAD21E2F302C0000E084 /* personalFirstPageMyMessage@2x.png */; };
 		0480EAEE1E2F302C0000E084 /* personalFirstPageMyMessage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0480EAD31E2F302C0000E084 /* personalFirstPageMyMessage@3x.png */; };
 		0480EAF41E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0480EAF31E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m */; };
+		04885BA21E6654D600AD5103 /* lzhReturnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04885BA11E6654D600AD5103 /* lzhReturnView.m */; };
 		0489F3D91E4C3C3E0050AC8E /* announceWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0489F3D81E4C3C3E0050AC8E /* announceWindowView.m */; };
 		048CB6E51E5FCADA00B554E1 /* UIView+EdgeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CB6E41E5FCADA00B554E1 /* UIView+EdgeAnimation.m */; };
 		048CB6E81E5FCFBB00B554E1 /* LZHAddGesterForAround.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CB6E71E5FCFBB00B554E1 /* LZHAddGesterForAround.m */; };
@@ -465,8 +465,6 @@
 		047A39C11E2C4E1C00651C7E /* ownAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ownAnimation.m; sourceTree = "<group>"; };
 		047A39C31E2C4E3500651C7E /* announceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = announceViewController.h; sourceTree = "<group>"; };
 		047A39C41E2C4E3500651C7E /* announceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = announceViewController.m; sourceTree = "<group>"; };
-		047A39CD1E2C602100651C7E /* lzhReturnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhReturnView.h; sourceTree = "<group>"; };
-		047A39CE1E2C602100651C7E /* lzhReturnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhReturnView.m; sourceTree = "<group>"; };
 		047A39D01E2C678400651C7E /* anounceSecondPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = anounceSecondPageView.h; sourceTree = "<group>"; };
 		047A39D11E2C678400651C7E /* anounceSecondPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = anounceSecondPageView.m; sourceTree = "<group>"; };
 		047A39D41E2C768000651C7E /* previosButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previosButton.png; sourceTree = "<group>"; };
@@ -527,6 +525,8 @@
 		0480EAD31E2F302C0000E084 /* personalFirstPageMyMessage@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "personalFirstPageMyMessage@3x.png"; sourceTree = "<group>"; };
 		0480EAF21E2F3CD90000E084 /* personalFirstPageUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = personalFirstPageUserTableViewCell.h; sourceTree = "<group>"; };
 		0480EAF31E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = personalFirstPageUserTableViewCell.m; sourceTree = "<group>"; };
+		04885BA01E6654D600AD5103 /* lzhReturnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhReturnView.h; sourceTree = "<group>"; };
+		04885BA11E6654D600AD5103 /* lzhReturnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhReturnView.m; sourceTree = "<group>"; };
 		0489F3D71E4C3C3E0050AC8E /* announceWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = announceWindowView.h; sourceTree = "<group>"; };
 		0489F3D81E4C3C3E0050AC8E /* announceWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = announceWindowView.m; sourceTree = "<group>"; };
 		048CB6E31E5FCADA00B554E1 /* UIView+EdgeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EdgeAnimation.h"; sourceTree = "<group>"; };
@@ -1045,8 +1045,8 @@
 		047A39CC1E2C5FA800651C7E /* 自定义用于返回的view */ = {
 			isa = PBXGroup;
 			children = (
-				047A39CD1E2C602100651C7E /* lzhReturnView.h */,
-				047A39CE1E2C602100651C7E /* lzhReturnView.m */,
+				04885BA01E6654D600AD5103 /* lzhReturnView.h */,
+				04885BA11E6654D600AD5103 /* lzhReturnView.m */,
 			);
 			name = "自定义用于返回的view";
 			sourceTree = "<group>";
@@ -2219,7 +2219,6 @@
 			files = (
 				992D730B1DF114F000FFD2DD /* NewsTestModel.m in Sources */,
 				0480EAB71E2F04D90000E084 /* personalSmallViewOfFirstPage.m in Sources */,
-				047A39CF1E2C602100651C7E /* lzhReturnView.m in Sources */,
 				992180091E0788AD00070D46 /* newAnnouncementView.m in Sources */,
 				99E41F2F1DED0E0D00F32968 /* AppDelegate.m in Sources */,
 				04A2E9D71E23238500E7F9DF /* userCommentParentView.m in Sources */,
@@ -2243,6 +2242,7 @@
 				04A2EA5B1E23575900E7F9DF /* AddressPickerView.m in Sources */,
 				049C63051E4EF06700B83543 /* lzhRedeceTopSpaceLabel.m in Sources */,
 				047227981E5E92A30045A0C7 /* lzhFindJobCellSmallView.m in Sources */,
+				04885BA21E6654D600AD5103 /* lzhReturnView.m in Sources */,
 				047335371E305BCF00671F44 /* searchFirstPageCollectionViewCell.m in Sources */,
 				99AA38F01E092C8C000A57BC /* sideMenuButton.m in Sources */,
 				047A3A121E2CB3A800651C7E /* announSecondPageNextStepView.m in Sources */,

@@ -20,8 +20,16 @@
         self.ownButt.frame = CGRectMake(5, 5, 50, self.frame.size.height - 2 * 5);
         self.ownButt.center = CGPointMake(self.ownButt.center.x, self.frame.size.height / 2);
         [self.ownButt setTitle:@"返回" forState:UIControlStateNormal];
-        //self.ownButt.backgroundColor = [UIColor blackColor];
+        //self.ownButt.backgroundColor = [UIColor grayColor];
         [self addSubview:self.ownButt];
+        
+        self.lcSearchButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [self.lcSearchButton addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
+        self.lcSearchButton.backgroundColor = [UIColor clearColor];
+        [self.lcSearchButton setImage:[UIImage imageNamed:@"nav2.png"] forState:UIControlStateNormal];
+        self.lcSearchButton.userInteractionEnabled = NO;
+        self.lcSearchButton.hidden = YES;
+        [self addSubview:self.lcSearchButton];
         
         self.ownTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width / 2, self.ownButt.frame.origin.y, 100, self.frame.size.height  - self.ownButt.frame.origin.y * 2)];
         self.ownTitleLabel.center = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2);
@@ -45,9 +53,22 @@
             make.height.mas_equalTo(self).multipliedBy(0.8);
             make.centerY.mas_equalTo(self);
         }];
+        [self.lcSearchButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(self);
+            make.centerY.mas_equalTo(self);
+            make.width.height.mas_equalTo(self.mas_width).multipliedBy(0.2);
+        }];
         
     }
     return self;
+}
+
+#pragma mark - 搜索功能
+- (void)search{
+
+    if (self.lcserachBlock) {
+        self.lcserachBlock();
+    }
 }
 
 /*

@@ -22,6 +22,7 @@
 #import "centerButtonGroupViewController.h"
 #import "searchViewController.h"
 #import "lzhTableHeaderViewForFirstPage.h"
+#import "firstTableViewCellOfFirstPage.h"
 //
 
 //滚动视图高度
@@ -48,7 +49,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableHeaderHeight = SCROLLVIEW_HEIGHT + ANNOUNCE_HEIGHT + BUTTON_GROUP_HEIGHT + SCIENCE_HEADER_HEIGHT;
+    self.tableHeaderHeight = SCROLLVIEW_HEIGHT + ANNOUNCE_HEIGHT + BUTTON_GROUP_HEIGHT;
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.newsArr = [[NSMutableArray alloc]initWithCapacity:2];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -74,14 +75,14 @@
 }
 
 //添加表头
-- (UIView*)crateTableHeaderView{
-    NSArray *announceArr = [NSArray arrayWithObjects:@"今人不见古时月",@"今月曾经照古人",@"古人今人若流水",@"共看明月皆如此", nil];
-    lzhTableHeaderViewForFirstPage *headerView = [[lzhTableHeaderViewForFirstPage alloc]initWithFrame:CGRectMake(0, -self.tableHeaderHeight, SCREEN_WIDTH, self.tableHeaderHeight) targetDelegate:self announceTitleArr:announceArr];
-    return headerView;
-}
+//- (UIView*)crateTableHeaderView{
+//    NSArray *announceArr = [NSArray arrayWithObjects:@"今人不见古时月",@"今月曾经照古人",@"古人今人若流水",@"共看明月皆如此", nil];
+//    lzhTableHeaderViewForFirstPage *headerView = [[lzhTableHeaderViewForFirstPage alloc]initWithFrame:CGRectMake(0, -self.tableHeaderHeight, SCREEN_WIDTH, self.tableHeaderHeight) targetDelegate:self announceTitleArr:announceArr];
+//    return headerView;
+//}
 //初始化tableView
 - (void)initTableView{
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,  0  , SCREEN_WIDTH, 1000) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVIGATION_HEIGHT + STATUSBAR_HEIGHT  , SCREEN_WIDTH, self.view.frame.size.height - NAVIGATION_HEIGHT - STATUSBAR_HEIGHT) style:UITableViewStylePlain];
     [self.view addSubview:_tableView];
     _tableView.backgroundColor = [UIColor whiteColor];
     _tableView.delegate = self;
@@ -90,35 +91,77 @@
 
 //没有数据，先写死了
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    return 2;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    NSInteger rowNum = 0;
+    if(section == 0){
+        rowNum = 1;
+    }else{
+        rowNum = 4;
+    }
+    return rowNum;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    firstPageHeaderCell *cell = nil;
-    cell = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
-    if(nil == cell){
-        cell = [[firstPageHeaderCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell1" targetView:_tableView];
+    UITableViewCell *parentCell = nil;
+    firstTableViewCellOfFirstPage *cell1 = nil;
+    firstPageHeaderCell *cell2 = nil;
+    if(indexPath.section == 0){
+        cell1 = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
+        NSArray *announceArr = [NSArray arrayWithObjects:@"今人不见古时月",@"今月曾经照古人",@"古人今人若流水",@"共看明月皆如此", nil];
+
+        if(cell1 == nil){
+            cell1 = [[firstTableViewCellOfFirstPage alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell1" delegate:self cellHeight:self.tableHeaderHeight announceArr:announceArr tableView:self.tableView];
+        }
+         parentCell = cell1;
+    }else if (indexPath.section == 1){
+        cell2 = [tableView dequeueReusableCellWithIdentifier:@"cell2"];
+        if(nil == cell2){
+            cell2 = [[firstPageHeaderCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell2" targetView:_tableView];
+        }
+        cell2.firstTitleLable.text = @"你好，我是链科技期待你的加入";
+        cell2.secondTitleLable.text = @"目的是中国做大的技术对接";
+        [cell2.ownImageView setImage:[UIImage imageNamed:@"1"]];
+        parentCell = cell2;
+
     }
-    cell.firstTitleLable.text = @"你好，我是链科技期待你的加入";
-    cell.secondTitleLable.text = @"目的是中国做大的技术对接";
-    [cell.ownImageView setImage:[UIImage imageNamed:@"1"]];
-    return cell;
+    
+       return parentCell;
 }
 //设置表头
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    self.tableHeaderView =  [self crateTableHeaderView];
-    return self.tableHeaderView;
+    UIView *headerView = nil;
+    if(section == 0){
+        
+    }else if (section == 1){
+        scinenceHeaderView *scienceView = [[scinenceHeaderView alloc]initWithFrame:CGRectMake(0, -SCIENCE_HEADER_HEIGHT, self.tableView.frame.size.width, SCIENCE_HEADER_HEIGHT)];
+        scienceView.targetDelegate = self;
+        headerView = scienceView;
+    }
+    //self.tableHeaderView =  [self crateTableHeaderView];
+    return headerView;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     //NSLog(@"表头高度%lf",self.tableHeaderView.bounds.size.height);
-    return self.tableHeaderHeight;
+    CGFloat height = 0;
+    if(section == 0){
+        
+    }else if (section == 1){
+        height = SCIENCE_HEADER_HEIGHT;
+    }
+    return height;
 }
 //cell高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return SCREEN_HEIGHT * 0.346;
+    CGFloat height = 0;
+    if(indexPath.section == 0){
+        height = self.tableHeaderHeight;
+    }else if (indexPath.section == 1){
+        height = SCREEN_HEIGHT * 0.346;
+    }
+
+    return  height;
 }
 
 - (void)didReceiveMemoryWarning {

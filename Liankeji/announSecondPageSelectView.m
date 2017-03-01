@@ -14,6 +14,8 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
+        
+        //self.backgroundColor = [UIColor grayColor];
         self.ownSelectButt = [UIButton buttonWithType:UIButtonTypeCustom];
         self.ownSelectButt.frame = CGRectMake(0, 0, 20, 20);
         self.ownSelectButt.center = CGPointMake(self.ownSelectButt.center.x, self.frame.size.height / 2);

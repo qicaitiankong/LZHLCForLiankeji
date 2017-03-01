@@ -18,6 +18,7 @@
 #define VERTICAL_SPACE 30
 
 @implementation announSecondPageNextStepView
+@synthesize commitButt;
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
@@ -65,30 +66,29 @@
         writeGoodView.layer.borderColor = [UIColor grayColor].CGColor;
         writeGoodView.text = @"技术亮点";
         [self addSubview:writeGoodView];
+        //技术描述
+        UILabel *TechnologeDescriptionLabe = [[UILabel alloc]initWithFrame:CGRectMake(goodTechnologeLabe.frame.origin.x, goodTechnologeLabe.frame.origin.y + writeGoodView.bounds.size.height + VERTICAL_SPACE, goodTechnologeLabe.bounds.size.width, goodTechnologeLabe.bounds.size.height)];
+        TechnologeDescriptionLabe.text = @"技术描述：";
+        [self addSubview:TechnologeDescriptionLabe];
+        //
+        UITextView *writeDescriptionView = [[UITextView alloc]initWithFrame:CGRectMake(writeGoodView.frame.origin.x, TechnologeDescriptionLabe.frame.origin.y, writeGoodView.bounds.size.width, writeGoodView.bounds.size.height)];
+        writeDescriptionView.backgroundColor = [UIColor whiteColor];
+        writeDescriptionView.layer.borderWidth = 1;
+        writeDescriptionView.layer.borderColor = [UIColor grayColor].CGColor;
+        [self addSubview:writeDescriptionView];
         //提交
-        announceSecondPageNextStepButt *commitButt = [[announceSecondPageNextStepButt alloc]initWithFrame:CGRectMake(goodTechnologeLabe.frame.origin.x, writeGoodView.frame.origin.y + writeGoodView.frame.size.height + 10, self.frame.size.width - 2 * goodTechnologeLabe.frame.origin.x, 40)];
+       commitButt = [[announceSecondPageNextStepButt alloc]initWithFrame:CGRectMake(TechnologeDescriptionLabe.frame.origin.x, writeDescriptionView.frame.origin.y + writeDescriptionView.frame.size.height + 10, self.frame.size.width - 2 * TechnologeDescriptionLabe.frame.origin.x, 40)];
         [commitButt.nextButt setTitle:@"提交" forState:UIControlStateNormal];
         commitButt.previousButt.userInteractionEnabled = YES;
         commitButt.nextButt.userInteractionEnabled = YES;
          [commitButt.previousButt setBackgroundImage:[UIImage imageNamed:@"nextButton"] forState:UIControlStateNormal];
          [commitButt.nextButt setBackgroundImage:[UIImage imageNamed:@"nextButton"] forState:UIControlStateNormal];
-        [commitButt.previousButt addTarget:self action:@selector(returnHandler:) forControlEvents:UIControlEventTouchUpInside];
-         [commitButt.nextButt addTarget:self action:@selector(commitHandler:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:commitButt];
         
     }
     return self;
 }
-- (void)returnHandler:(UIButton*)_b{
-    NSLog(@"上一步");
-    [UIView animateWithDuration:1 animations:^{
-        self.transform = CGAffineTransformIdentity;
-    } completion:^(BOOL finished) {
-    }];
-}
-- (void)commitHandler:(UIButton*)_b{
-    NSLog(@"提交发布的信息");
-}
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

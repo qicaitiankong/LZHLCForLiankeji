@@ -152,6 +152,8 @@
 		0480EAEE1E2F302C0000E084 /* personalFirstPageMyMessage@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0480EAD31E2F302C0000E084 /* personalFirstPageMyMessage@3x.png */; };
 		0480EAF41E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0480EAF31E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m */; };
 		04885BA21E6654D600AD5103 /* lzhReturnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04885BA11E6654D600AD5103 /* lzhReturnView.m */; };
+		04885BA51E66751600AD5103 /* announceSecondPageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04885BA41E66751600AD5103 /* announceSecondPageScrollView.m */; };
+		04885BA81E66C37800AD5103 /* firstTableViewCellOfFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04885BA71E66C37800AD5103 /* firstTableViewCellOfFirstPage.m */; };
 		0489F3D91E4C3C3E0050AC8E /* announceWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0489F3D81E4C3C3E0050AC8E /* announceWindowView.m */; };
 		048CB6E51E5FCADA00B554E1 /* UIView+EdgeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CB6E41E5FCADA00B554E1 /* UIView+EdgeAnimation.m */; };
 		048CB6E81E5FCFBB00B554E1 /* LZHAddGesterForAround.m in Sources */ = {isa = PBXBuildFile; fileRef = 048CB6E71E5FCFBB00B554E1 /* LZHAddGesterForAround.m */; };
@@ -527,6 +529,10 @@
 		0480EAF31E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = personalFirstPageUserTableViewCell.m; sourceTree = "<group>"; };
 		04885BA01E6654D600AD5103 /* lzhReturnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhReturnView.h; sourceTree = "<group>"; };
 		04885BA11E6654D600AD5103 /* lzhReturnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhReturnView.m; sourceTree = "<group>"; };
+		04885BA31E66751600AD5103 /* announceSecondPageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = announceSecondPageScrollView.h; sourceTree = "<group>"; };
+		04885BA41E66751600AD5103 /* announceSecondPageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = announceSecondPageScrollView.m; sourceTree = "<group>"; };
+		04885BA61E66C37800AD5103 /* firstTableViewCellOfFirstPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstTableViewCellOfFirstPage.h; sourceTree = "<group>"; };
+		04885BA71E66C37800AD5103 /* firstTableViewCellOfFirstPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstTableViewCellOfFirstPage.m; sourceTree = "<group>"; };
 		0489F3D71E4C3C3E0050AC8E /* announceWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = announceWindowView.h; sourceTree = "<group>"; };
 		0489F3D81E4C3C3E0050AC8E /* announceWindowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = announceWindowView.m; sourceTree = "<group>"; };
 		048CB6E31E5FCADA00B554E1 /* UIView+EdgeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+EdgeAnimation.h"; sourceTree = "<group>"; };
@@ -1025,6 +1031,8 @@
 				0489F3D71E4C3C3E0050AC8E /* announceWindowView.h */,
 				0489F3D81E4C3C3E0050AC8E /* announceWindowView.m */,
 				046F01841E4D710200EA36B2 /* LogoOutCompleteDelegate.h */,
+				04885BA31E66751600AD5103 /* announceSecondPageScrollView.h */,
+				04885BA41E66751600AD5103 /* announceSecondPageScrollView.m */,
 			);
 			name = V;
 			sourceTree = "<group>";
@@ -1691,6 +1699,8 @@
 				99EF897E1E03B28F002836B3 /* firstPageHeaderCell.m */,
 				047F2C4D1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.h */,
 				047F2C4E1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m */,
+				04885BA61E66C37800AD5103 /* firstTableViewCellOfFirstPage.h */,
+				04885BA71E66C37800AD5103 /* firstTableViewCellOfFirstPage.m */,
 			);
 			name = V;
 			sourceTree = "<group>";
@@ -2263,6 +2273,7 @@
 				048CB6EE1E5FE0C200B554E1 /* UIView+FrameExtension.m in Sources */,
 				048CB6E51E5FCADA00B554E1 /* UIView+EdgeAnimation.m in Sources */,
 				0435BF9D1E1B8ED300DE859D /* informationSecondPgeTavCell.m in Sources */,
+				04885BA51E66751600AD5103 /* announceSecondPageScrollView.m in Sources */,
 				0479BE9D1E55512C00FFF991 /* returnViewForSearchViewController.m in Sources */,
 				047A39D21E2C678400651C7E /* anounceSecondPageView.m in Sources */,
 				0480EAF41E2F3CD90000E084 /* personalFirstPageUserTableViewCell.m in Sources */,
@@ -2278,6 +2289,7 @@
 				047227841E5E926E0045A0C7 /* CommunicateNavigationViewController.m in Sources */,
 				04030AE81E15EBBC00988359 /* informationDetailTableViewCell.m in Sources */,
 				9953E2ED1E0D238700F55604 /* LZHTabButton.m in Sources */,
+				04885BA81E66C37800AD5103 /* firstTableViewCellOfFirstPage.m in Sources */,
 				047227941E5E92A30045A0C7 /* LCRecruitCell.m in Sources */,
 				0434BDE71E1CBF8B0096136E /* cellHeaderView1.m in Sources */,
 				99BDE0561DF3DE020079EEF8 /* FFScrollView.m in Sources */,

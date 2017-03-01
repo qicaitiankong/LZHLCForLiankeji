@@ -190,6 +190,7 @@
     [self buttonGroupPopOut];
     
 }
+
 //添加适配
 - (void)lzhAddConstrains{
     [buttonArr1 mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:0.136 * SCREEN_WIDTH leadSpacing:SCREEN_WIDTH * 0.085 tailSpacing:SCREEN_WIDTH * 0.085];

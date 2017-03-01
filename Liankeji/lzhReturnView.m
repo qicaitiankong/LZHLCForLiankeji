@@ -34,6 +34,7 @@
         self.ownTitleLabel = [[UILabel alloc]initWithFrame:CGRectMake(frame.size.width / 2, self.ownButt.frame.origin.y, 100, self.frame.size.height  - self.ownButt.frame.origin.y * 2)];
         self.ownTitleLabel.center = CGPointMake(self.frame.size.width / 2, self.frame.size.height / 2);
         self.ownTitleLabel.textAlignment = NSTextAlignmentCenter;
+        self.ownTitleLabel.textColor = [UIColor blackColor];
         //self.ownTitleLabel.backgroundColor = [UIColor grayColor];
         [self addSubview:self.ownTitleLabel];
         //

@@ -22,6 +22,7 @@
 
 @interface anounceSecondPageView ()<UITextFieldDelegate>{
     announSecondPageNextStepView *nextView;
+    UIScrollView *scrollView;
 }
 
 @end
@@ -84,35 +85,30 @@
         [buttView.nextButt setTitle:@"下一步" forState:UIControlStateNormal];
         [buttView.nextButt addTarget:self action:@selector(nextStepHandler:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:buttView];
-        //
-        nextView = [[announSecondPageNextStepView alloc]initWithFrame:CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.frame.size.height)];
-        [self addSubview:nextView];
     }
     return self;
 }
 
-//上传图片
+//图片选取提示框
 - (void)uploadPhoto{
-    
     if(self.delegate){
-        [self.delegate choosePhoto];
+        [self.delegate displayChoosePhotoAlert];
     }
-    
 }
+//下一步
+- (void)nextStepHandler:(UIButton*)_b{
+    if(self.delegate){
+        [self.delegate clickNextStep];
+    }
+}
+
 //代理方法
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder];
     return YES;
 }
 
-- (void)nextStepHandler:(UIButton*)_b{
-    //NSLog(@"下一步");
-    [UIView animateWithDuration:0.8 animations:^{
-        nextView.transform = CGAffineTransformMakeTranslation(-SCREEN_WIDTH, 0);
-    } completion:^(BOOL finished) {
-        
-    }];
-}
+
 /*
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

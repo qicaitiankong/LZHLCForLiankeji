@@ -12,8 +12,11 @@
 
 
 @interface annoounceSecondPageViewController : UIViewController
-@property (strong,nonatomic)anounceSecondPageView *anounceView;
-
+//窗口视图
 @property (strong,nonatomic)announceWindowView *windowView;
+//发布的种类
+@property (strong,nonatomic)NSString *announceTypeStr;
+
+
 
 @end

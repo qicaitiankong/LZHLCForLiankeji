@@ -37,7 +37,7 @@
         [self addSubview:self.scoView];
         [self addSubview:self.anounceView];
         [self addSubview:self.groupButton];
-        [self addSubview:self.scinenceView];
+        //[self addSubview:self.scinenceView];
 
     }
     return self;

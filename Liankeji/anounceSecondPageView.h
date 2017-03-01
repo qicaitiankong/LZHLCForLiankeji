@@ -11,19 +11,15 @@
 
 @protocol announceSecondPageDelegate <NSObject>
 
-- (void)returnHandler;
+-(void)displayChoosePhotoAlert;
 
-- (void)choosePhoto;
+- (void)clickNextStep;
 
 @end
 
 @interface anounceSecondPageView : UIView
-@property (strong,nonatomic)UIButton *ownButt;
-
-@property (strong,nonatomic)UILabel *ownTitleLabel;
 
 @property (strong,nonatomic)UIButton *photoButt;
-
 
 @property (assign,nonatomic)id<announceSecondPageDelegate> delegate;
 

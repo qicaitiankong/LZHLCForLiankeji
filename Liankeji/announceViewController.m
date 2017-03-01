@@ -21,6 +21,8 @@
     NSInteger previousTabbarIndex;
     //窗口发布view
     announceWindowView *windowView;
+    //
+    NSArray *typetTitleArr;
 }
 
 @end
@@ -28,7 +30,7 @@
 @implementation announceViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //self.isExchangeFromeOut = YES;
+    typetTitleArr = @[@"发布技术",@"发布项目",@"发布需求",@"发布资金",@"发布设备",@"发布文章"];
     self.view.backgroundColor = [UIColor whiteColor];
         // Do any additional setup after loading the view.
 }
@@ -60,11 +62,10 @@
 -(void)announceButtonClick:(NSInteger)index{
     NSLog(@"你在点击按钮:tag = %li",index);
     [UIView animateWithDuration:0.5 animations:^{
-        
         secondVC = [[annoounceSecondPageViewController alloc]init];
         secondVC.windowView = windowView;
+        secondVC.announceTypeStr = typetTitleArr[index];
         [self presentViewController:secondVC animated:YES completion:nil];
-       
     } completion:^(BOOL finished) {
         windowView.transform = CGAffineTransformMakeTranslation(-SCREEN_WIDTH, 0);
     }];

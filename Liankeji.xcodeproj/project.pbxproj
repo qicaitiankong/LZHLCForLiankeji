@@ -66,6 +66,24 @@
 		0435BF991E1B7F5B00DE859D /* infoSecondPageQZone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0435BF741E1B7F5B00DE859D /* infoSecondPageQZone@2x.png */; };
 		0435BF9A1E1B7F5B00DE859D /* infoSecondPageQZone@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0435BF751E1B7F5B00DE859D /* infoSecondPageQZone@3x.png */; };
 		0435BF9D1E1B8ED300DE859D /* informationSecondPgeTavCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0435BF9C1E1B8ED300DE859D /* informationSecondPgeTavCell.m */; };
+		043C67271E67B33B0002DE59 /* lzhFirstpageSecondCellView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C67261E67B33B0002DE59 /* lzhFirstpageSecondCellView1.m */; };
+		043C672A1E67E49D0002DE59 /* firstPageSecondCellSmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C67291E67E49D0002DE59 /* firstPageSecondCellSmallView.m */; };
+		043C672D1E67EAB20002DE59 /* firstPageSecondCellGroupview.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C672C1E67EAB20002DE59 /* firstPageSecondCellGroupview.m */; };
+		043C67341E67EF2D0002DE59 /* lzhfirstPageSecondCellJuBao.png in Resources */ = {isa = PBXBuildFile; fileRef = 043C672F1E67EF2D0002DE59 /* lzhfirstPageSecondCellJuBao.png */; };
+		043C67351E67EF2D0002DE59 /* lzhfirstPageSecondCellComment.png in Resources */ = {isa = PBXBuildFile; fileRef = 043C67301E67EF2D0002DE59 /* lzhfirstPageSecondCellComment.png */; };
+		043C67361E67EF2D0002DE59 /* lzhfirstPageSecondCellHavePraised.png in Resources */ = {isa = PBXBuildFile; fileRef = 043C67311E67EF2D0002DE59 /* lzhfirstPageSecondCellHavePraised.png */; };
+		043C67371E67EF2D0002DE59 /* lzhfirstPageSecondCellCommenRect.png in Resources */ = {isa = PBXBuildFile; fileRef = 043C67321E67EF2D0002DE59 /* lzhfirstPageSecondCellCommenRect.png */; };
+		043C67381E67EF2D0002DE59 /* lzhfirstPageSecondCellPraise.png in Resources */ = {isa = PBXBuildFile; fileRef = 043C67331E67EF2D0002DE59 /* lzhfirstPageSecondCellPraise.png */; };
+		043C673D1E67F0940002DE59 /* lzhfirstPageSecondCellPraise@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 043C67391E67F0940002DE59 /* lzhfirstPageSecondCellPraise@2x.png */; };
+		043C673E1E67F0940002DE59 /* lzhfirstPageSecondCellJuBao@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 043C673A1E67F0940002DE59 /* lzhfirstPageSecondCellJuBao@2x.png */; };
+		043C673F1E67F0940002DE59 /* lzhfirstPageSecondCellComment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 043C673B1E67F0940002DE59 /* lzhfirstPageSecondCellComment@2x.png */; };
+		043C67401E67F0940002DE59 /* lzhfirstPageSecondCellHavePraised@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 043C673C1E67F0940002DE59 /* lzhfirstPageSecondCellHavePraised@2x.png */; };
+		043C67421E67FFA50002DE59 /* lzhfirstPageSecondCellCommenRect@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 043C67411E67FFA50002DE59 /* lzhfirstPageSecondCellCommenRect@2x.png */; };
+		043C67451E6801000002DE59 /* lzhFirstPageSecondCellCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C67441E6801000002DE59 /* lzhFirstPageSecondCellCommentView.m */; };
+		043C674D1E680C020002DE59 /* BasicMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C67471E680C020002DE59 /* BasicMessageCell.m */; };
+		043C674E1E680C020002DE59 /* LcPersonalHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C674A1E680C020002DE59 /* LcPersonalHeaderView.m */; };
+		043C674F1E680C020002DE59 /* LcPersonalMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C674C1E680C020002DE59 /* LcPersonalMessageViewController.m */; };
+		043C67521E6817470002DE59 /* lzhFirstPageSecellSmallCommView.m in Sources */ = {isa = PBXBuildFile; fileRef = 043C67511E6817470002DE59 /* lzhFirstPageSecellSmallCommView.m */; };
 		043FB00A1E24A96A0025EE61 /* infotest01.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 043FB0091E24A96A0025EE61 /* infotest01.jpeg */; };
 		043FB00D1E24AF400025EE61 /* exchangeView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 043FB00C1E24AF400025EE61 /* exchangeView1.m */; };
 		046CFB751E34548100E80E9F /* lzhDealNavigationColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 046CFB741E34548100E80E9F /* lzhDealNavigationColor.m */; };
@@ -315,7 +333,7 @@
 		99E41F881DED7EDD00F32968 /* ShareUrlString.m in Sources */ = {isa = PBXBuildFile; fileRef = 99E41F871DED7EDD00F32968 /* ShareUrlString.m */; };
 		99EF89751E0384DC002836B3 /* CenterSmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EF89741E0384DC002836B3 /* CenterSmallView.m */; };
 		99EF897B1E038AD6002836B3 /* a1.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EF89791E038AD6002836B3 /* a1.png */; };
-		99EF897F1E03B28F002836B3 /* firstPageHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EF897E1E03B28F002836B3 /* firstPageHeaderCell.m */; };
+		99EF897F1E03B28F002836B3 /* firstPageSecondCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99EF897E1E03B28F002836B3 /* firstPageSecondCell.m */; };
 		99EF89881E03D0B8002836B3 /* nav3.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EF89871E03D0B8002836B3 /* nav3.png */; };
 		99EF898A1E03D1CE002836B3 /* nav1.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EF89891E03D1CE002836B3 /* nav1.png */; };
 		99EF898C1E03D232002836B3 /* nav2.png in Resources */ = {isa = PBXBuildFile; fileRef = 99EF898B1E03D232002836B3 /* nav2.png */; };
@@ -413,6 +431,32 @@
 		0435BF751E1B7F5B00DE859D /* infoSecondPageQZone@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoSecondPageQZone@3x.png"; sourceTree = "<group>"; };
 		0435BF9B1E1B8ED300DE859D /* informationSecondPgeTavCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = informationSecondPgeTavCell.h; sourceTree = "<group>"; };
 		0435BF9C1E1B8ED300DE859D /* informationSecondPgeTavCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = informationSecondPgeTavCell.m; sourceTree = "<group>"; };
+		043C67251E67B33B0002DE59 /* lzhFirstpageSecondCellView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFirstpageSecondCellView1.h; sourceTree = "<group>"; };
+		043C67261E67B33B0002DE59 /* lzhFirstpageSecondCellView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFirstpageSecondCellView1.m; sourceTree = "<group>"; };
+		043C67281E67E49D0002DE59 /* firstPageSecondCellSmallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstPageSecondCellSmallView.h; sourceTree = "<group>"; };
+		043C67291E67E49D0002DE59 /* firstPageSecondCellSmallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstPageSecondCellSmallView.m; sourceTree = "<group>"; };
+		043C672B1E67EAB20002DE59 /* firstPageSecondCellGroupview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstPageSecondCellGroupview.h; sourceTree = "<group>"; };
+		043C672C1E67EAB20002DE59 /* firstPageSecondCellGroupview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstPageSecondCellGroupview.m; sourceTree = "<group>"; };
+		043C672F1E67EF2D0002DE59 /* lzhfirstPageSecondCellJuBao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lzhfirstPageSecondCellJuBao.png; sourceTree = "<group>"; };
+		043C67301E67EF2D0002DE59 /* lzhfirstPageSecondCellComment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lzhfirstPageSecondCellComment.png; sourceTree = "<group>"; };
+		043C67311E67EF2D0002DE59 /* lzhfirstPageSecondCellHavePraised.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lzhfirstPageSecondCellHavePraised.png; sourceTree = "<group>"; };
+		043C67321E67EF2D0002DE59 /* lzhfirstPageSecondCellCommenRect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lzhfirstPageSecondCellCommenRect.png; sourceTree = "<group>"; };
+		043C67331E67EF2D0002DE59 /* lzhfirstPageSecondCellPraise.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lzhfirstPageSecondCellPraise.png; sourceTree = "<group>"; };
+		043C67391E67F0940002DE59 /* lzhfirstPageSecondCellPraise@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lzhfirstPageSecondCellPraise@2x.png"; sourceTree = "<group>"; };
+		043C673A1E67F0940002DE59 /* lzhfirstPageSecondCellJuBao@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lzhfirstPageSecondCellJuBao@2x.png"; sourceTree = "<group>"; };
+		043C673B1E67F0940002DE59 /* lzhfirstPageSecondCellComment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lzhfirstPageSecondCellComment@2x.png"; sourceTree = "<group>"; };
+		043C673C1E67F0940002DE59 /* lzhfirstPageSecondCellHavePraised@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lzhfirstPageSecondCellHavePraised@2x.png"; sourceTree = "<group>"; };
+		043C67411E67FFA50002DE59 /* lzhfirstPageSecondCellCommenRect@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lzhfirstPageSecondCellCommenRect@2x.png"; sourceTree = "<group>"; };
+		043C67431E6801000002DE59 /* lzhFirstPageSecondCellCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFirstPageSecondCellCommentView.h; sourceTree = "<group>"; };
+		043C67441E6801000002DE59 /* lzhFirstPageSecondCellCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFirstPageSecondCellCommentView.m; sourceTree = "<group>"; };
+		043C67471E680C020002DE59 /* BasicMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicMessageCell.m; sourceTree = "<group>"; };
+		043C67481E680C020002DE59 /* BasicMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicMessageCell.h; sourceTree = "<group>"; };
+		043C67491E680C020002DE59 /* LcPersonalHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcPersonalHeaderView.h; sourceTree = "<group>"; };
+		043C674A1E680C020002DE59 /* LcPersonalHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcPersonalHeaderView.m; sourceTree = "<group>"; };
+		043C674B1E680C020002DE59 /* LcPersonalMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcPersonalMessageViewController.h; sourceTree = "<group>"; };
+		043C674C1E680C020002DE59 /* LcPersonalMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcPersonalMessageViewController.m; sourceTree = "<group>"; };
+		043C67501E6817470002DE59 /* lzhFirstPageSecellSmallCommView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFirstPageSecellSmallCommView.h; sourceTree = "<group>"; };
+		043C67511E6817470002DE59 /* lzhFirstPageSecellSmallCommView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFirstPageSecellSmallCommView.m; sourceTree = "<group>"; };
 		043FB0091E24A96A0025EE61 /* infotest01.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = infotest01.jpeg; sourceTree = "<group>"; };
 		043FB00B1E24AF400025EE61 /* exchangeView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exchangeView1.h; sourceTree = "<group>"; };
 		043FB00C1E24AF400025EE61 /* exchangeView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exchangeView1.m; sourceTree = "<group>"; };
@@ -763,8 +807,8 @@
 		99EF89731E0384DC002836B3 /* CenterSmallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CenterSmallView.h; sourceTree = "<group>"; };
 		99EF89741E0384DC002836B3 /* CenterSmallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CenterSmallView.m; sourceTree = "<group>"; };
 		99EF89791E038AD6002836B3 /* a1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = a1.png; sourceTree = "<group>"; };
-		99EF897D1E03B28F002836B3 /* firstPageHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstPageHeaderCell.h; sourceTree = "<group>"; };
-		99EF897E1E03B28F002836B3 /* firstPageHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstPageHeaderCell.m; sourceTree = "<group>"; };
+		99EF897D1E03B28F002836B3 /* firstPageSecondCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstPageSecondCell.h; sourceTree = "<group>"; };
+		99EF897E1E03B28F002836B3 /* firstPageSecondCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstPageSecondCell.m; sourceTree = "<group>"; };
 		99EF89871E03D0B8002836B3 /* nav3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav3.png; sourceTree = "<group>"; };
 		99EF89891E03D1CE002836B3 /* nav1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav1.png; sourceTree = "<group>"; };
 		99EF898B1E03D232002836B3 /* nav2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nav2.png; sourceTree = "<group>"; };
@@ -928,6 +972,56 @@
 				0435BF3B1E1B360200DE859D /* informationComment@3x.png */,
 			);
 			name = "资讯首页";
+			sourceTree = "<group>";
+		};
+		043C67231E67B28F0002DE59 /* secondCell */ = {
+			isa = PBXGroup;
+			children = (
+				043C67461E680BCF0002DE59 /* LC PersonalCenter */,
+				99EF897D1E03B28F002836B3 /* firstPageSecondCell.h */,
+				99EF897E1E03B28F002836B3 /* firstPageSecondCell.m */,
+				043C67251E67B33B0002DE59 /* lzhFirstpageSecondCellView1.h */,
+				043C67261E67B33B0002DE59 /* lzhFirstpageSecondCellView1.m */,
+				043C67281E67E49D0002DE59 /* firstPageSecondCellSmallView.h */,
+				043C67291E67E49D0002DE59 /* firstPageSecondCellSmallView.m */,
+				043C672B1E67EAB20002DE59 /* firstPageSecondCellGroupview.h */,
+				043C672C1E67EAB20002DE59 /* firstPageSecondCellGroupview.m */,
+				043C67431E6801000002DE59 /* lzhFirstPageSecondCellCommentView.h */,
+				043C67441E6801000002DE59 /* lzhFirstPageSecondCellCommentView.m */,
+				043C67501E6817470002DE59 /* lzhFirstPageSecellSmallCommView.h */,
+				043C67511E6817470002DE59 /* lzhFirstPageSecellSmallCommView.m */,
+			);
+			name = secondCell;
+			sourceTree = "<group>";
+		};
+		043C672E1E67EE4F0002DE59 /* 首页第二个cell */ = {
+			isa = PBXGroup;
+			children = (
+				043C67411E67FFA50002DE59 /* lzhfirstPageSecondCellCommenRect@2x.png */,
+				043C67391E67F0940002DE59 /* lzhfirstPageSecondCellPraise@2x.png */,
+				043C673A1E67F0940002DE59 /* lzhfirstPageSecondCellJuBao@2x.png */,
+				043C673B1E67F0940002DE59 /* lzhfirstPageSecondCellComment@2x.png */,
+				043C673C1E67F0940002DE59 /* lzhfirstPageSecondCellHavePraised@2x.png */,
+				043C672F1E67EF2D0002DE59 /* lzhfirstPageSecondCellJuBao.png */,
+				043C67301E67EF2D0002DE59 /* lzhfirstPageSecondCellComment.png */,
+				043C67311E67EF2D0002DE59 /* lzhfirstPageSecondCellHavePraised.png */,
+				043C67321E67EF2D0002DE59 /* lzhfirstPageSecondCellCommenRect.png */,
+				043C67331E67EF2D0002DE59 /* lzhfirstPageSecondCellPraise.png */,
+			);
+			name = "首页第二个cell";
+			sourceTree = "<group>";
+		};
+		043C67461E680BCF0002DE59 /* LC PersonalCenter */ = {
+			isa = PBXGroup;
+			children = (
+				043C67471E680C020002DE59 /* BasicMessageCell.m */,
+				043C67481E680C020002DE59 /* BasicMessageCell.h */,
+				043C67491E680C020002DE59 /* LcPersonalHeaderView.h */,
+				043C674A1E680C020002DE59 /* LcPersonalHeaderView.m */,
+				043C674B1E680C020002DE59 /* LcPersonalMessageViewController.h */,
+				043C674C1E680C020002DE59 /* LcPersonalMessageViewController.m */,
+			);
+			name = "LC PersonalCenter";
 			sourceTree = "<group>";
 		};
 		043FB0081E24A91A0025EE61 /* testPiccture */ = {
@@ -1695,8 +1789,7 @@
 		99E41F5F1DED248C00F32968 /* V */ = {
 			isa = PBXGroup;
 			children = (
-				99EF897D1E03B28F002836B3 /* firstPageHeaderCell.h */,
-				99EF897E1E03B28F002836B3 /* firstPageHeaderCell.m */,
+				043C67231E67B28F0002DE59 /* secondCell */,
 				047F2C4D1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.h */,
 				047F2C4E1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m */,
 				04885BA61E66C37800AD5103 /* firstTableViewCellOfFirstPage.h */,
@@ -1762,6 +1855,7 @@
 		99E41F761DED4BF500F32968 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				043C672E1E67EE4F0002DE59 /* 首页第二个cell */,
 				046D63881E653FE500308C7D /* refresh */,
 				047335381E308B1F00671F44 /* a2.jpg */,
 				99EF89791E038AD6002836B3 /* a1.png */,
@@ -1975,6 +2069,7 @@
 				99E27A041E0E0FE3008BCE57 /* icon_zixun_dianji@3x.png in Resources */,
 				60180E5E1E5D79A500570818 /* findFirstPagePrice@3x.png in Resources */,
 				0435BF441E1B360200DE859D /* informationComment@3x.png in Resources */,
+				043C67401E67F0940002DE59 /* lzhfirstPageSecondCellHavePraised@2x.png in Resources */,
 				046D639D1E65400500308C7D /* ct_refresh_down_8.png in Resources */,
 				9921800D1E07AF9700070D46 /* 2.png in Resources */,
 				99C1F9921E10A79D004DE512 /* firstpage_buttonGroup_05.png in Resources */,
@@ -1984,6 +2079,7 @@
 				0480EAD71E2F302C0000E084 /* personalFirstPageMember.png in Resources */,
 				99C1F9D51E1102FD004DE512 /* anounce1_5.png in Resources */,
 				99C1F99E1E10A9C7004DE512 /* tab_group_back@2x.png in Resources */,
+				043C67341E67EF2D0002DE59 /* lzhfirstPageSecondCellJuBao.png in Resources */,
 				99C1F9AE1E10AE99004DE512 /* icon_wode_weidianji.png in Resources */,
 				0480EAD41E2F302C0000E084 /* personalFirstPageUs.png in Resources */,
 				046D63A21E65400500308C7D /* refresh_down_background.png in Resources */,
@@ -2007,9 +2103,11 @@
 				047A39F31E2C768000651C7E /* nextButton.png in Resources */,
 				046D63A11E65400500308C7D /* ct_refresh_down_12.png in Resources */,
 				992C69381E0A1C270052D21B /* test.png in Resources */,
+				043C67351E67EF2D0002DE59 /* lzhfirstPageSecondCellComment.png in Resources */,
 				99C1F9D71E1102FD004DE512 /* anounce1_5@3x.png in Resources */,
 				99C1F9981E10A79D004DE512 /* firstpage_buttonGroup_00.png in Resources */,
 				99E27A211E0E1083008BCE57 /* icon_shequ_dianji@3x.png in Resources */,
+				043C67371E67EF2D0002DE59 /* lzhfirstPageSecondCellCommenRect.png in Resources */,
 				047A39FC1E2C768000651C7E /* anounSecondDidNotSelectButt@3x.png in Resources */,
 				04A2EA5A1E23575900E7F9DF /* address.txt in Resources */,
 				60180E4F1E5D79A500570818 /* findFirstPageExperience@3x.png in Resources */,
@@ -2043,6 +2141,7 @@
 				0435BF421E1B360200DE859D /* informationComment.png in Resources */,
 				99E279FF1E0E0FE3008BCE57 /* icon_zixun_weidianji.png in Resources */,
 				0435BF841E1B7F5B00DE859D /* infoSecondPageFriend@3x.png in Resources */,
+				043C673F1E67F0940002DE59 /* lzhfirstPageSecondCellComment@2x.png in Resources */,
 				0435BF771E1B7F5B00DE859D /* infoSecondPageReward@2x.png in Resources */,
 				046D63A01E65400500308C7D /* ct_refresh_down_11.png in Resources */,
 				0480EAD51E2F302C0000E084 /* personalFirstPageUs@2x.png in Resources */,
@@ -2053,6 +2152,7 @@
 				99C1F9DD1E1102FD004DE512 /* anounce1_3@3x.png in Resources */,
 				0480EAE51E2F302C0000E084 /* personalFirstPageMyJifen@3x.png in Resources */,
 				0435BF431E1B360200DE859D /* informationComment@2x.png in Resources */,
+				043C67361E67EF2D0002DE59 /* lzhfirstPageSecondCellHavePraised.png in Resources */,
 				0435BF8C1E1B7F5B00DE859D /* infoSecondPageWeiXin@2x.png in Resources */,
 				99C1F9A31E10AD44004DE512 /* firstpage_buttonGroup_01@2x.png in Resources */,
 				99C1F9961E10A79D004DE512 /* firstpage_buttonGroup_02@2x.png in Resources */,
@@ -2112,6 +2212,7 @@
 				99E27A161E0E1063008BCE57 /* icon_fabu.png in Resources */,
 				047A3A001E2C768000651C7E /* anounSecondPhotoButt@2x.png in Resources */,
 				99E27A231E0E1083008BCE57 /* icon_shequ_weidianji@2x.png in Resources */,
+				043C673E1E67F0940002DE59 /* lzhfirstPageSecondCellJuBao@2x.png in Resources */,
 				0435BF791E1B7F5B00DE859D /* infoSecondPageNotGiveClick.png in Resources */,
 				0435BF781E1B7F5B00DE859D /* infoSecondPageReward@3x.png in Resources */,
 				0435BF7B1E1B7F5B00DE859D /* infoSecondPageNotGiveClick@3x.png in Resources */,
@@ -2134,6 +2235,7 @@
 				0435BF401E1B360200DE859D /* informationSkim@2x.png in Resources */,
 				047A3A0B1E2C907200651C7E /* announSecondPageSelectTrue@2x.png in Resources */,
 				0435BF821E1B7F5B00DE859D /* infoSecondPageFriend.png in Resources */,
+				043C67421E67FFA50002DE59 /* lzhfirstPageSecondCellCommenRect@2x.png in Resources */,
 				047A3A0A1E2C907200651C7E /* announSecondPageSelectTrue.png in Resources */,
 				60180E511E5D79A500570818 /* findFirstPageFindJob@2x.png in Resources */,
 				99E27A0C1E0E101E008BCE57 /* icon_shouye_dianji.png in Resources */,
@@ -2144,6 +2246,8 @@
 				99FADC661E1214B700DA4FB6 /* anounce1_0.png in Resources */,
 				99E27A011E0E0FE3008BCE57 /* icon_zixun_weidianji@3x.png in Resources */,
 				0435BF7E1E1B7F5B00DE859D /* infoSecondPageGiveAttention@3x.png in Resources */,
+				043C673D1E67F0940002DE59 /* lzhfirstPageSecondCellPraise@2x.png in Resources */,
+				043C67381E67EF2D0002DE59 /* lzhfirstPageSecondCellPraise.png in Resources */,
 				0480EAE01E2F302C0000E084 /* personalFirstPageMyPraise.png in Resources */,
 				0480EAEC1E2F302C0000E084 /* personalFirstPageMyMessage.png in Resources */,
 				047A39F01E2C768000651C7E /* previosButton@3x.png in Resources */,
@@ -2232,12 +2336,13 @@
 				992180091E0788AD00070D46 /* newAnnouncementView.m in Sources */,
 				99E41F2F1DED0E0D00F32968 /* AppDelegate.m in Sources */,
 				04A2E9D71E23238500E7F9DF /* userCommentParentView.m in Sources */,
+				043C674D1E680C020002DE59 /* BasicMessageCell.m in Sources */,
 				043FB00D1E24AF400025EE61 /* exchangeView1.m in Sources */,
 				99AA38E81E08C454000A57BC /* scinenceHeaderView.m in Sources */,
 				99C1F9B41E10B11A004DE512 /* ZHQScrollMenu.m in Sources */,
 				04A2E9DA1E23290C00E7F9DF /* HotCommentView.m in Sources */,
 				048EB3C31E544A930080F2E8 /* BasicViewControllerForAddReturnview.m in Sources */,
-				99EF897F1E03B28F002836B3 /* firstPageHeaderCell.m in Sources */,
+				99EF897F1E03B28F002836B3 /* firstPageSecondCell.m in Sources */,
 				99E41F691DED29FD00F32968 /* FirstPageViewController.m in Sources */,
 				99E41F631DED270300F32968 /* NavViewControllerForFirstPage.m in Sources */,
 				049B18451E56850A008013FB /* searchHistoryTableViewCell.m in Sources */,
@@ -2245,6 +2350,7 @@
 				046CFB751E34548100E80E9F /* lzhDealNavigationColor.m in Sources */,
 				992D730E1DF1557300FFD2DD /* GetCellHeight.m in Sources */,
 				049261FD1E1F277F00AFC111 /* commentView.m in Sources */,
+				043C672A1E67E49D0002DE59 /* firstPageSecondCellSmallView.m in Sources */,
 				048CB6ED1E5FE0C200B554E1 /* VierticalScrollView.m in Sources */,
 				047227831E5E926E0045A0C7 /* CommunicateFirstViewController.m in Sources */,
 				04764C6C1E2DFD3000704C96 /* annoounceSecondPageViewController.m in Sources */,
@@ -2252,11 +2358,14 @@
 				04A2EA5B1E23575900E7F9DF /* AddressPickerView.m in Sources */,
 				049C63051E4EF06700B83543 /* lzhRedeceTopSpaceLabel.m in Sources */,
 				047227981E5E92A30045A0C7 /* lzhFindJobCellSmallView.m in Sources */,
+				043C67271E67B33B0002DE59 /* lzhFirstpageSecondCellView1.m in Sources */,
+				043C67451E6801000002DE59 /* lzhFirstPageSecondCellCommentView.m in Sources */,
 				04885BA21E6654D600AD5103 /* lzhReturnView.m in Sources */,
 				047335371E305BCF00671F44 /* searchFirstPageCollectionViewCell.m in Sources */,
 				99AA38F01E092C8C000A57BC /* sideMenuButton.m in Sources */,
 				047A3A121E2CB3A800651C7E /* announSecondPageNextStepView.m in Sources */,
 				04A2E9E31E23357600E7F9DF /* centerButtonGroupViewController.m in Sources */,
+				043C674E1E680C020002DE59 /* LcPersonalHeaderView.m in Sources */,
 				04EC82061E5C0F1B00CDA9C9 /* rightCollectionViewHeaderView.m in Sources */,
 				9953E2E11E0D22FF00F55604 /* informationViewController.m in Sources */,
 				99E41F851DED696100F32968 /* ShareNetWorkState.m in Sources */,
@@ -2309,7 +2418,9 @@
 				049262031E1F939A00AFC111 /* cellFootView.m in Sources */,
 				047A39C51E2C4E3500651C7E /* announceViewController.m in Sources */,
 				048CB6E81E5FCFBB00B554E1 /* LZHAddGesterForAround.m in Sources */,
+				043C672D1E67EAB20002DE59 /* firstPageSecondCellGroupview.m in Sources */,
 				9953E2F01E0D238700F55604 /* LZHTabBar.m in Sources */,
+				043C67521E6817470002DE59 /* lzhFirstPageSecellSmallCommView.m in Sources */,
 				99C1F9B71E10BE81004DE512 /* informationTableViewCell.m in Sources */,
 				047F2C4F1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m in Sources */,
 				04CDD9B61E1E44CB009330FD /* ownTextSpace.m in Sources */,
@@ -2327,6 +2438,7 @@
 				0435BF471E1B379C00DE859D /* ownImageviewAndLableView.m in Sources */,
 				048EB3BD1E5433580080F2E8 /* lzhGetCurrentTime.m in Sources */,
 				04A2EA5D1E23575900E7F9DF /* Province.m in Sources */,
+				043C674F1E680C020002DE59 /* LcPersonalMessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

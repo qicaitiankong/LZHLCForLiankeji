@@ -16,7 +16,7 @@
     self.backgroundColor = RGBA(244, 244, 244, 1);
     if(self){
         //
-        UISegmentedControl *segumentControl = [[UISegmentedControl alloc]initWithItems:@[@"科技圈1",@"科技圈2"]];
+        UISegmentedControl *segumentControl = [[UISegmentedControl alloc]initWithItems:@[@"科技圈",@"专家问答"]];
         segumentControl.frame = CGRectMake(0, 0,self.frame.size.width, self.frame.size.height);
         UIColor *tintColor = RGBA(52, 124, 205, 1);
         [segumentControl setTintColor:tintColor];

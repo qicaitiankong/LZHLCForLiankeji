@@ -16,7 +16,4 @@
 
 @property (strong,nonatomic)UILabel *timeLabel;
 
-@property(strong,nonatomic)UILabel *contentLabel;
-
-
 @end

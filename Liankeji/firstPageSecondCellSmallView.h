@@ -14,6 +14,5 @@
 
 @property (strong,nonatomic)UILabel *rightTitleLabel;
 
-@property(strong,nonatomic)UILabel *lastNumTitleLabel;
 
 @end

@@ -22,8 +22,13 @@
         for(int i = 0 ; i < 3; i ++){
             firstPageSecondCellSmallView *smallView = [[firstPageSecondCellSmallView alloc]initWithFrame:CGRectMake(0, 0, 10, 10)];
             [smallView.leftButt setImage:imageArr[i] forState:UIControlStateNormal];
+            smallView.leftButt.tag = i;//0,1,2
+            smallView.rightTitleLabel.tag = i + 3;//3,4,5
             smallView.rightTitleLabel.text = titleArr[i];
+            [smallView.leftButt addTarget:self action:@selector(clickPrais:) forControlEvents:UIControlEventTouchUpInside];
             [groupArr addObject:smallView];
+            self.leftButt = smallView.leftButt;
+            self.rightLabel = smallView.rightTitleLabel;
             [self addSubview:smallView];
         }
         //
@@ -32,9 +37,28 @@
             make.top.bottom.mas_equalTo(self);
         }];
         //
-        
     }
     return self;
+}
+//点赞评论举报
+- (void)clickPrais:(UIButton*)_b{
+    if(self.targetDelegate == nil){
+        return;
+    }
+        switch (_b.tag) {
+            case 0://点赞
+                [self.targetDelegate clickPraiseButton:[[_b superview] viewWithTag:_b.tag + 3]];
+                break;
+            case 1://评论
+                  [self.targetDelegate clickCommentButton:[[_b superview] viewWithTag:_b.tag + 3]];
+                break;
+    
+            case 2://举报
+                  [self.targetDelegate clickJuBaoButton:[[_b superview] viewWithTag:_b.tag + 3]];
+                break;
+            default:
+                break;
+        }
 }
 
 /*

@@ -23,8 +23,9 @@
 #import "searchViewController.h"
 #import "lzhTableHeaderViewForFirstPage.h"
 #import "firstTableViewCellOfFirstPage.h"
-#import "GetCellHeight.h"
+#import "lzhReturnLabelHeight.h"
 #import "LcPersonalMessageViewController.h"
+#import "firstPageSecondViewControllerForClickScienceCell.h"
 //
 //滚动视图高度
 #define SCROLLVIEW_HEIGHT SCREEN_HEIGHT * 0.374
@@ -35,7 +36,7 @@
 //科技圈view高度
 #define SCIENCE_HEADER_HEIGHT SCREEN_HEIGHT * 0.1
 
-@interface FirstPageViewController ()<FFScrollViewDelegate,groupButtonDelegate,VierticalScrollViewDelegate,UITableViewDelegate,UITableViewDataSource,segumentDelegate>
+@interface FirstPageViewController ()<FFScrollViewDelegate,groupButtonDelegate,VierticalScrollViewDelegate,secondCellPraiseDelegate,UITableViewDelegate,UITableViewDataSource,segumentDelegate>
 
 @property (strong,nonatomic)NSMutableArray *newsArr;
 //表视图
@@ -48,12 +49,14 @@
 
 @implementation FirstPageViewController
 NSArray *testStrArr;
+NSArray *testCommentStrArr;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tableHeaderHeight = SCROLLVIEW_HEIGHT + ANNOUNCE_HEIGHT + BUTTON_GROUP_HEIGHT;
     self.automaticallyAdjustsScrollViewInsets = NO;
     testStrArr = @[@"亿欧8月25日消息：今天上午，2016中国民营企业500强发布会在北京召开。榜单显示，华为控股有限公司以营收总额3590.09亿排名第一.",@"韩美以朝鲜发展核武器为军演理由，发誓“要严惩朝鲜挑衅”，粉碎一切核攻击。朝鲜则迅速做出强硬回击，“警告南朝鲜傀儡党羽和敌对势力不要轻举妄动”，并称美韩军演不停，不放弃妄图侵略朝鲜的野心",@"朝鲜将继续强化以核武力为核心的自卫国防力量。双方的交锋，不停地给东北亚令人焦虑的“烧烤”模式增添燃料，再加上“萨德”，让局势更加复杂不放弃妄图侵略朝鲜的野心，朝鲜将继续强化以核武力为核心的自卫国防力量。双方的交锋，不停地给东北亚令人焦虑的“烧烤”模式增添燃料，再加上“萨德”，让局势更加复杂"];
+    testCommentStrArr = @[@"三季度开始阶段考试都是三季度开始阶段考试都是三季度开始阶段考试都是三季度开始阶段考试都是",@"活动空间设计都是科技的会计师的会计师可活动空间设计都是活动空间设计都是",@"霍建华进货价高合金钢喻户发的发的规范和推广后台有"];
     self.newsArr = [[NSMutableArray alloc]initWithCapacity:2];
     self.view.backgroundColor = [UIColor whiteColor];
     [self initTableView];
@@ -114,8 +117,9 @@ NSArray *testStrArr;
     }else if (indexPath.section == 1){
         cell2 = [tableView dequeueReusableCellWithIdentifier:@"cell2"];
         if(nil == cell2){
-            cell2 = [[firstPageSecondCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell2" targetView:self.tableView changeLabelHeight:[self lzhGetCellLabelHeight:testStrArr[indexPath.row]]];
-            [cell2.viewModel1.imageButt addTarget:self action:@selector(clickImageButton:) forControlEvents:UIControlEventTouchUpInside];
+             CGFloat contentLableheight = [lzhReturnLabelHeight getLabelHeight:testStrArr[indexPath.row] fontSize:15 width:SCREEN_WIDTH * 0.95];
+                       
+            cell2 = [[firstPageSecondCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell2" targetView:self.tableView changeLabelHeight:contentLableheight commentViewContentArr:testCommentStrArr dellegate:self];
             NSLog(@"cell2 为空");
         }
         cell2.contentLabel.text = testStrArr[indexPath.row];
@@ -154,21 +158,44 @@ NSArray *testStrArr;
     if(indexPath.section == 0){
         height = self.tableHeaderHeight;
     }else if (indexPath.section == 1){
-        height = [self lzhGetCellLabelHeight:testStrArr[indexPath.row]] + 50 + 20 + 5 + 5 + SCREEN_HEIGHT * 0.287 + 15;
+       CGFloat lableheight = [lzhReturnLabelHeight getLabelHeight:testStrArr[indexPath.row] fontSize:15 width:SCREEN_WIDTH * 0.95];
+        CGFloat commentToTalHeight = 0;
+        for(NSInteger i = 0 ; i < testCommentStrArr.count; i ++){
+            CGFloat commentHeight = [lzhReturnLabelHeight getLabelHeight: testCommentStrArr[i] fontSize:12 width:SCREEN_WIDTH * 0.7];
+            commentToTalHeight += commentHeight;
+        }
+        height = lableheight +SCREEN_HEIGHT * (0.067 +0.037) + commentToTalHeight + 15;
     }
     return  height;
 }
 
-- (CGFloat)lzhGetCellLabelHeight:(NSString*)contentStr{
-    UILabel *modelLabel = [[UILabel alloc]init];
-    modelLabel.font = [UIFont systemFontOfSize:15];
-    CGFloat h =  [[GetCellHeight ShareCellHeight] cellHeight:modelLabel content:contentStr Cellwidth:self.tableView.frame.size.width - 2 * 5];
-    return h;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    firstPageSecondViewControllerForClickScienceCell *vc = [[firstPageSecondViewControllerForClickScienceCell alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+    
 }
+
+
 //点击头像
 - (void)clickImageButton:(UIButton*)_b{
     LcPersonalMessageViewController *vc = [[LcPersonalMessageViewController alloc]init];
     [self presentViewController:vc animated:YES completion:nil];
+}
+//科技圈cell
+//点赞
+-(void)clickPraiseButton:(UILabel *)praiseLabel{
+    praiseLabel.text = @"点赞（122）";
+    NSLog(@"点赞");
+}
+//评论
+-(void)clickCommentButton:(UILabel *)commentLabel{
+    commentLabel.text = @"12";
+    NSLog(@"评论");
+}
+//举报
+-(void)clickJuBaoButton:(UILabel *)JuBaoLabel{
+    JuBaoLabel.text = @"0";
+    NSLog(@"举报");
 }
 
 //

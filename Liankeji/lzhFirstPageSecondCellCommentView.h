@@ -10,6 +10,8 @@
 
 @interface lzhFirstPageSecondCellCommentView : UIView
 
+@property (strong,nonatomic)UILabel *userNameLabel;
 
+@property (strong,nonatomic)UILabel *commentLabel;
 
 @end

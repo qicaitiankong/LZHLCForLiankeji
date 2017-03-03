@@ -137,6 +137,11 @@
 		047A3A0C1E2C907200651C7E /* announSecondPageSelectTrue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 047A3A091E2C907200651C7E /* announSecondPageSelectTrue@3x.png */; };
 		047A3A0F1E2CACA600651C7E /* announceSecondPageNextStepButt.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A3A0E1E2CACA600651C7E /* announceSecondPageNextStepButt.m */; };
 		047A3A121E2CB3A800651C7E /* announSecondPageNextStepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A3A111E2CB3A800651C7E /* announSecondPageNextStepView.m */; };
+		047A68541E6915230028D5A2 /* lzhReturnLabelHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A68531E6915230028D5A2 /* lzhReturnLabelHeight.m */; };
+		047A68571E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A68561E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.m */; };
+		047A685E1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A685D1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.m */; };
+		047A68611E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A68601E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.m */; };
+		047A68651E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A68641E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.m */; };
 		047F2C4F1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 047F2C4E1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m */; };
 		0480EAB11E2EFF740000E084 /* personalFirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0480EAB01E2EFF740000E084 /* personalFirstPageViewController.m */; };
 		0480EAB41E2F00D30000E084 /* personalViewOfFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0480EAB31E2F00D30000E084 /* personalViewOfFirstPage.m */; };
@@ -534,6 +539,16 @@
 		047A3A0E1E2CACA600651C7E /* announceSecondPageNextStepButt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = announceSecondPageNextStepButt.m; sourceTree = "<group>"; };
 		047A3A101E2CB3A800651C7E /* announSecondPageNextStepView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = announSecondPageNextStepView.h; sourceTree = "<group>"; };
 		047A3A111E2CB3A800651C7E /* announSecondPageNextStepView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = announSecondPageNextStepView.m; sourceTree = "<group>"; };
+		047A68521E6915230028D5A2 /* lzhReturnLabelHeight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhReturnLabelHeight.h; sourceTree = "<group>"; };
+		047A68531E6915230028D5A2 /* lzhReturnLabelHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhReturnLabelHeight.m; sourceTree = "<group>"; };
+		047A68551E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstPageSecondViewControllerForClickScienceCell.h; sourceTree = "<group>"; };
+		047A68561E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstPageSecondViewControllerForClickScienceCell.m; sourceTree = "<group>"; };
+		047A685C1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhSpecialistTableCellHeader.h; sourceTree = "<group>"; };
+		047A685D1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhSpecialistTableCellHeader.m; sourceTree = "<group>"; };
+		047A685F1E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFirstPageScienceDetaileCellHeader.h; sourceTree = "<group>"; };
+		047A68601E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFirstPageScienceDetaileCellHeader.m; sourceTree = "<group>"; };
+		047A68631E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhDetaileScienCellHeaderSmallView.h; sourceTree = "<group>"; };
+		047A68641E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhDetaileScienCellHeaderSmallView.m; sourceTree = "<group>"; };
 		047F2C4D1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhTableHeaderViewForFirstPage.h; sourceTree = "<group>"; };
 		047F2C4E1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhTableHeaderViewForFirstPage.m; sourceTree = "<group>"; };
 		0480EAAF1E2EFF740000E084 /* personalFirstPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = personalFirstPageViewController.h; sourceTree = "<group>"; };
@@ -1175,6 +1190,27 @@
 			path = "发布2级";
 			sourceTree = "<group>";
 		};
+		047A685B1E695ABB0028D5A2 /* zhuanjiaWenDa */ = {
+			isa = PBXGroup;
+			children = (
+				047A685C1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.h */,
+				047A685D1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.m */,
+			);
+			name = zhuanjiaWenDa;
+			sourceTree = "<group>";
+		};
+		047A68621E6961060028D5A2 /* 科技圈 */ = {
+			isa = PBXGroup;
+			children = (
+				047A685F1E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.h */,
+				047A68601E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.m */,
+				043C67231E67B28F0002DE59 /* secondCell */,
+				047A68631E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.h */,
+				047A68641E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.m */,
+			);
+			name = "科技圈";
+			sourceTree = "<group>";
+		};
 		0480EAB81E2F2FFF0000E084 /* 我的 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1789,11 +1825,12 @@
 		99E41F5F1DED248C00F32968 /* V */ = {
 			isa = PBXGroup;
 			children = (
-				043C67231E67B28F0002DE59 /* secondCell */,
+				047A68621E6961060028D5A2 /* 科技圈 */,
 				047F2C4D1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.h */,
 				047F2C4E1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m */,
 				04885BA61E66C37800AD5103 /* firstTableViewCellOfFirstPage.h */,
 				04885BA71E66C37800AD5103 /* firstTableViewCellOfFirstPage.m */,
+				047A685B1E695ABB0028D5A2 /* zhuanjiaWenDa */,
 			);
 			name = V;
 			sourceTree = "<group>";
@@ -1805,6 +1842,8 @@
 				99E41F621DED270300F32968 /* NavViewControllerForFirstPage.m */,
 				99E41F671DED29FD00F32968 /* FirstPageViewController.h */,
 				99E41F681DED29FD00F32968 /* FirstPageViewController.m */,
+				047A68551E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.h */,
+				047A68561E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.m */,
 			);
 			name = C;
 			sourceTree = "<group>";
@@ -1902,6 +1941,8 @@
 				04976EBB1E5189AA00116BE1 /* lzhShadeButton.m */,
 				048EB3BB1E5433580080F2E8 /* lzhGetCurrentTime.h */,
 				048EB3BC1E5433580080F2E8 /* lzhGetCurrentTime.m */,
+				047A68521E6915230028D5A2 /* lzhReturnLabelHeight.h */,
+				047A68531E6915230028D5A2 /* lzhReturnLabelHeight.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -2340,6 +2381,7 @@
 				043FB00D1E24AF400025EE61 /* exchangeView1.m in Sources */,
 				99AA38E81E08C454000A57BC /* scinenceHeaderView.m in Sources */,
 				99C1F9B41E10B11A004DE512 /* ZHQScrollMenu.m in Sources */,
+				047A685E1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.m in Sources */,
 				04A2E9DA1E23290C00E7F9DF /* HotCommentView.m in Sources */,
 				048EB3C31E544A930080F2E8 /* BasicViewControllerForAddReturnview.m in Sources */,
 				99EF897F1E03B28F002836B3 /* firstPageSecondCell.m in Sources */,
@@ -2415,7 +2457,10 @@
 				04A2EA5C1E23575900E7F9DF /* City.m in Sources */,
 				04A2EA601E23641C00E7F9DF /* cityPickerView.m in Sources */,
 				047227951E5E92A30045A0C7 /* LCReleaseCell.m in Sources */,
+				047A68571E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.m in Sources */,
+				047A68611E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.m in Sources */,
 				049262031E1F939A00AFC111 /* cellFootView.m in Sources */,
+				047A68651E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.m in Sources */,
 				047A39C51E2C4E3500651C7E /* announceViewController.m in Sources */,
 				048CB6E81E5FCFBB00B554E1 /* LZHAddGesterForAround.m in Sources */,
 				043C672D1E67EAB20002DE59 /* firstPageSecondCellGroupview.m in Sources */,
@@ -2426,6 +2471,7 @@
 				04CDD9B61E1E44CB009330FD /* ownTextSpace.m in Sources */,
 				99554A4E1DF012BF0028A59E /* ShareHomePath.m in Sources */,
 				047227971E5E92A30045A0C7 /* lzhFindJobCellGroupView.m in Sources */,
+				047A68541E6915230028D5A2 /* lzhReturnLabelHeight.m in Sources */,
 				047A3A061E2C8EAC00651C7E /* announSecondPageSelectView.m in Sources */,
 				047227931E5E92A30045A0C7 /* LCBiddingCell.m in Sources */,
 				048EB3C01E54458A0080F2E8 /* BasicViewOfAddReturnView.m in Sources */,

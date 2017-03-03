@@ -8,18 +8,26 @@
 
 #import <UIKit/UIKit.h>
 #import "appCommonAttributes.h"
-#import "lzhFirstpageSecondCellView1.h"
 #import "firstPageSecondCellGroupview.h"
-#import "lzhFirstPageSecondCellCommentView.h"
+
 
 @interface firstPageSecondCell : UITableViewCell
-//
-@property (strong,nonatomic)lzhFirstpageSecondCellView1 *viewModel1;
-//
+//头像
+@property (strong,nonatomic)UIButton *userImageButt;
+//名字
+@property (strong,nonatomic)UILabel *userNameLabel;
+//时间
+@property (strong,nonatomic)UILabel *userTimeLabel;
+//内容
 @property (strong,nonatomic)UILabel *contentLabel;
-//
-@property (strong,nonatomic)firstPageSecondCellGroupview *groupView;
+//评论者名字
+@property (strong,nonatomic)UILabel *commentUserName;
+//评论内容
+@property (strong,nonatomic)UILabel *commentContentLabel;
 
--(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier targetView:(UIView*)_tableView changeLabelHeight:(CGFloat)height;
+
+//
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier targetView:(UIView*)_tableView changeLabelHeight:(CGFloat)height commentViewContentArr:(NSArray*)ContentArr dellegate:(id)delega;
 
 @end

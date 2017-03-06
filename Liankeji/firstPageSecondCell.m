@@ -13,6 +13,7 @@
 #import "lzhFirstpageSecondCellView1.h"
 #import "lzhFirstPageSecondCellCommentView.h"
 #import "lzhReturnLabelHeight.h"
+#import "lzhNineButtonViewForScienceCell.h"
 
 @interface firstPageSecondCell (){
     lzhFirstpageSecondCellView1 *viewModel1;
@@ -20,6 +21,7 @@
     CGFloat contentLabelHeight;
     NSMutableArray *commentArr;
     NSArray *commentContentArr;
+    lzhNineButtonViewForScienceCell *buttonImageView;
     BOOL isfirst;
     BOOL isSecond;
     BOOL isThird;
@@ -27,7 +29,6 @@
 @end
 
 @implementation firstPageSecondCell
-
 @synthesize contentLabel;
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier targetView:(UIView*)_tableView changeLabelHeight:(CGFloat)height commentViewContentArr:(NSArray*)ContentArr dellegate:(id)delega{
@@ -52,8 +53,13 @@
         contentLabel.backgroundColor = [UIColor whiteColor];
         contentLabel.textColor = [UIColor colorWithRed:161 / 255 green:161 / 255 blue:161 / 255 alpha:1];
         [self.contentView addSubview:contentLabel];
+        //图片
+        
+        buttonImageView = [[lzhNineButtonViewForScienceCell alloc]initWithFrame:CGRectMake(contentLabel.frame.origin.x, contentLabel.frame.origin.y + contentLabel.frame.size.height, SCREEN_WIDTH * 0.95, SCREEN_WIDTH * 0.95)];
+        [self.contentView addSubview:buttonImageView];
         //
-        groupView = [[firstPageSecondCellGroupview alloc]initWithFrame:CGRectMake(0, contentLabel.frame.origin.y + contentLabel.frame.size.height + 5, _tableView.frame.size.width, SCREEN_HEIGHT * 0.037)];
+      // groupView = [[firstPageSecondCellGroupview alloc]initWithFrame:CGRectMake(0, contentLabel.frame.origin.y + contentLabel.frame.size.height + 5, _tableView.frame.size.width, SCREEN_HEIGHT * 0.037)];
+        groupView = [[firstPageSecondCellGroupview alloc]initWithFrame:CGRectMake(0, buttonImageView.frame.origin.y + buttonImageView.frame.size.height + 5, _tableView.frame.size.width, SCREEN_HEIGHT * 0.037)];
         groupView.targetDelegate = delega;
         [self.contentView addSubview:groupView];
         //
@@ -85,9 +91,19 @@
         make.top.mas_equalTo(viewModel1.mas_bottom).offset(5);
         make.height.mas_equalTo(contentLabelHeight);
     }];
+    //
+    [buttonImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(contentLabel);
+        make.top.mas_equalTo(contentLabel.mas_bottom);
+        make.width.height.mas_equalTo(SCREEN_WIDTH * 0.95);
+        
+    }];
+    //
     [groupView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.mas_equalTo(contentLabel);
-        make.top.mas_equalTo(contentLabel.mas_bottom).offset(5);
+        make.left.right.mas_equalTo(buttonImageView);
+        make.top.mas_equalTo(buttonImageView.mas_bottom).offset(5);
+//        make.left.right.mas_equalTo(contentLabel);
+//        make.top.mas_equalTo(contentLabel.mas_bottom).offset(5);
         make.height.mas_equalTo(SCREEN_HEIGHT * 0.037);
     }];
    

@@ -14,5 +14,4 @@
 
 @property (strong,nonatomic)UILabel *praiseNumberLabel;
 
-
 @end

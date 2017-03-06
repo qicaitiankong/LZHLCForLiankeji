@@ -19,14 +19,14 @@
         self.backgroundColor = [UIColor whiteColor];
         self.imageButt = [UIButton buttonWithType:UIButtonTypeCustom];
         self.imageButt.frame = CGRectMake(0, 0, self.bounds.size.height * 0.8, self.bounds.size.height * 0.8);
-        self.imageButt.layer.cornerRadius = self.imageButt.frame.size.width / 2;
+        self.imageButt.layer.cornerRadius = SCREEN_HEIGHT * 0.05 / 2;
         self.imageButt.backgroundColor = [UIColor grayColor];
         
         [self addSubview:self.imageButt];
         //
         [self.imageButt mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self).offset(10);
-            make.height.mas_equalTo(self).multipliedBy(0.8);
+            make.left.mas_equalTo(self).offset(0);
+            make.height.mas_equalTo(SCREEN_HEIGHT * 0.05);
             make.width.mas_equalTo(self.imageButt.mas_height);
             make.centerY.mas_equalTo(self.mas_centerY);
             

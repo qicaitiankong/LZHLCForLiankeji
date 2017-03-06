@@ -18,6 +18,10 @@
 //内容
 @property (strong,nonatomic)UILabel *contentLabel;
 
+@property (strong,nonatomic)UILabel *commentNumberLabel;
+
+@property (strong,nonatomic)UILabel *praiseNumberLabel;
+
 - (instancetype)initWithFrame:(CGRect)frame delegate:(id)targetDelegate contentHeight:(CGFloat)labelContentHeight;
 
 

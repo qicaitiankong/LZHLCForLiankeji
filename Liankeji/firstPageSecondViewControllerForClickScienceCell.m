@@ -10,16 +10,18 @@
 #import "appCommonAttributes.h"
 #import "lzhFirstPageScienceDetaileCellHeader.h"
 #import "lzhReturnLabelHeight.h"
+#import "lzhScienceDetaileCommentTableViewCell.h"
+
 
 @interface firstPageSecondViewControllerForClickScienceCell ()<UITableViewDelegate,UITableViewDataSource>{
-    UITableView *tableView;
+    UITableView *myTableView;
 }
 
 @end
 
 @implementation firstPageSecondViewControllerForClickScienceCell
 NSString  *testStr ;
-
+ NSString *commentStr;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,14 +34,13 @@ NSString  *testStr ;
 
 //初始化tableView
 - (void)initTableView{
-    tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVIGATION_HEIGHT + STATUSBAR_HEIGHT  , SCREEN_WIDTH, self.view.frame.size.height - NAVIGATION_HEIGHT - STATUSBAR_HEIGHT) style:UITableViewStyleGrouped];
-    tableView.backgroundColor = [UIColor grayColor];
-    tableView.delegate = self;
-    tableView.dataSource = self;
-    [self.view addSubview:tableView];
+    myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVIGATION_HEIGHT + STATUSBAR_HEIGHT  , SCREEN_WIDTH, self.view.frame.size.height - NAVIGATION_HEIGHT - STATUSBAR_HEIGHT) style:UITableViewStyleGrouped];
+    myTableView.backgroundColor = [UIColor grayColor];
+    myTableView.delegate = self;
+    myTableView.dataSource = self;
+    [self.view addSubview:myTableView];
     
 }
-
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }
@@ -48,21 +49,35 @@ NSString  *testStr ;
     return 3;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    return cell;
-}
-
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     CGFloat contentheight = [lzhReturnLabelHeight getLabelHeight:testStr fontSize:15 width:self.view.frame.size.width];
-    lzhFirstPageScienceDetaileCellHeader *header = [[lzhFirstPageScienceDetaileCellHeader alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT *0.067 +  contentheight) delegate:self contentHeight:contentheight];
+    lzhFirstPageScienceDetaileCellHeader *header = [[lzhFirstPageScienceDetaileCellHeader alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT *0.067 * 2 + contentheight + 5 + 10) delegate:self contentHeight:contentheight];
     header.contentLabel.text = testStr;
-    
     return header;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    CGFloat contentheight = [lzhReturnLabelHeight getLabelHeight:testStr fontSize:15 width:self.view.frame.size.width];
-    return SCREEN_HEIGHT *0.067 + contentheight;
+    CGFloat contentheight = [lzhReturnLabelHeight getLabelHeight:testStr fontSize:15 width:SCREEN_WIDTH * 0.95];
+    return SCREEN_HEIGHT *0.067 * 2 + contentheight + 5 + 10;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    lzhScienceDetaileCommentTableViewCell *cell = nil;
+    cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if(nil == cell){
+    commentStr = @"几点开始大家好收到货时看风景地方房价肯定是减肥都是垃圾费多少九分裤第十六届反馈的时间飞快的";
+    CGFloat height = [lzhReturnLabelHeight getLabelHeight:commentStr fontSize:15 width:SCREEN_WIDTH * 0.95];
+      cell = [[lzhScienceDetaileCommentTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell" contentLabelHeight:height];
+    }
+    cell.commentNameLab.text = @"迟建勇";
+    cell.commentJobLab.text = @"建筑";
+    cell.commentTimeLab.text = @"2017-12-03";
+    cell.commentContentLabel.text = commentStr;
+    return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat height = [lzhReturnLabelHeight getLabelHeight:commentStr fontSize:15 width:SCREEN_WIDTH * 0.95];
+    return SCREEN_HEIGHT * 0.082 + height + 5 + 5;
 }
 
 - (void)didReceiveMemoryWarning {

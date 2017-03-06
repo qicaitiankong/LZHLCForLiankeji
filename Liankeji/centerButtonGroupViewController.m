@@ -14,7 +14,7 @@
 #import "lzhPickerView.h"
 #import "lzhShadeButton.h"
 
-@interface centerButtonGroupViewController ()<cityPickerDelegate,categoryButtonClickDelegate,pickerCompannyDelegate>{
+@interface centerButtonGroupViewController ()<cityPickerDelegate,categoryButtonClickDelegate,pickerCompannyDelegate,UITableViewDelegate,UITableViewDataSource>{
     //企业类型
     NSArray *categoryTitleArr ;
     //行业类型
@@ -26,6 +26,10 @@
     lzhPickerView *pickerView;
     //当前点击的按钮标签
     NSInteger currentSelectButtTag;
+    //
+    UITableView *myTableView;
+    //
+    
 }
 @end
 
@@ -37,6 +41,8 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     categoryTitleArr = @[@"个人独资",@"合伙企业",@"公司"];
     jobArr = @[@"软件",@"养殖",@"工业",@"制造业"];
+    
+    //
     [self setReturnButton];
     [self AddButtonGroup];
     
@@ -64,6 +70,30 @@
     [categoryButtonGroup addButton:titleArr titleFontSize:14];
 
 }
+//
+-(void)initTableView{
+    myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.returnView.frame.origin.y + self.returnView.frame.size.height, self.view.frame.size.width, 500) style:UITableViewStylePlain];
+    [self.view addSubview:myTableView];
+    myTableView.delegate = self;
+    myTableView.dataSource = self;
+    [myTableView reloadData];
+}
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+//
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    return nil;
+}
+
+
+
+//
 //按钮点击
 -(void)categoryButtonHandler:(NSInteger)tag{
     currentSelectButtTag = tag;

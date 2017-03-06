@@ -26,6 +26,8 @@
 #import "lzhReturnLabelHeight.h"
 #import "LcPersonalMessageViewController.h"
 #import "firstPageSecondViewControllerForClickScienceCell.h"
+#import "lzhZhuanjiawendaTableViewCell.h"
+
 //
 //滚动视图高度
 #define SCROLLVIEW_HEIGHT SCREEN_HEIGHT * 0.374
@@ -45,6 +47,9 @@
 @property (strong,nonatomic)UIView *tableHeaderView;
 //表头高度
 @property (assign,nonatomic) CGFloat tableHeaderHeight;
+
+@property (assign,nonatomic)CGFloat segumentIndex;
+
 @end
 
 @implementation FirstPageViewController
@@ -77,7 +82,11 @@ NSArray *testCommentStrArr;
     [self presentViewController:detailVC animated:YES completion:nil];
 }
 -(void)clickSegumentIndex:(NSInteger)index{
-    NSLog(@"点击分隔控制符：%li",index);
+    if(self.segumentIndex != index){
+        //NSLog(@"点击分隔控制符：%li",index);
+         [self.tableView reloadData];
+    }
+    self.segumentIndex = index;
 }
 
 //初始化tableView
@@ -106,7 +115,6 @@ NSArray *testCommentStrArr;
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *parentCell = nil;
     firstTableViewCellOfFirstPage *cell1 = nil;
-    firstPageSecondCell *cell2 = nil;
     if(indexPath.section == 0){
         cell1 = [tableView dequeueReusableCellWithIdentifier:@"cell1"];
         NSArray *announceArr = [NSArray arrayWithObjects:@"今人不见古时月",@"今月曾经照古人",@"古人今人若流水",@"共看明月皆如此", nil];
@@ -115,15 +123,28 @@ NSArray *testCommentStrArr;
         }
          parentCell = cell1;
     }else if (indexPath.section == 1){
-        cell2 = [tableView dequeueReusableCellWithIdentifier:@"cell2"];
-        if(nil == cell2){
-             CGFloat contentLableheight = [lzhReturnLabelHeight getLabelHeight:testStrArr[indexPath.row] fontSize:15 width:SCREEN_WIDTH * 0.95];
-                       
-            cell2 = [[firstPageSecondCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell2" targetView:self.tableView changeLabelHeight:contentLableheight commentViewContentArr:testCommentStrArr dellegate:self];
-            NSLog(@"cell2 为空");
-        }
-        cell2.contentLabel.text = testStrArr[indexPath.row];
-        parentCell = cell2;
+            CGFloat contentLableheight = [lzhReturnLabelHeight getLabelHeight:testStrArr[indexPath.row] fontSize:15 width:SCREEN_WIDTH * 0.95];
+            if(self.segumentIndex == 0){
+                firstPageSecondCell *cell3 = [tableView dequeueReusableCellWithIdentifier:@"cell3"];
+                if(cell3 == nil){
+                     cell3 = [[firstPageSecondCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell3" targetView:self.tableView changeLabelHeight:contentLableheight commentViewContentArr:testCommentStrArr dellegate:self];
+                }
+                cell3.contentLabel.text = testStrArr[indexPath.row];
+                parentCell = cell3;
+               
+            }else{
+                lzhZhuanjiawendaTableViewCell *cell4 = [tableView dequeueReusableCellWithIdentifier:@"cell4"];
+                if(cell4 == nil){
+                    cell4 = [[lzhZhuanjiawendaTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell4" contentHeight:contentLableheight];
+                }
+                cell4.commentNameLab.text = @"迟建勇";
+                cell4.commentJobLab.text = @"建筑";
+                cell4.commentTimeLab.text = @"2017-03-06";
+                  [cell4.questionButt setTitle:@"提问" forState:UIControlStateNormal];
+                [cell4.lookButt setTitle:@"20元查看" forState:UIControlStateNormal];
+                cell4.questionContentLabel.text = testStrArr[indexPath.row];
+                parentCell = cell4;
+            }
     }
        return parentCell;
 }
@@ -140,6 +161,7 @@ NSArray *testCommentStrArr;
     //self.tableHeaderView =  [self crateTableHeaderView];
     return headerView;
 }
+//
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     //NSLog(@"表头高度%lf",self.tableHeaderView.bounds.size.height);
@@ -151,7 +173,6 @@ NSArray *testCommentStrArr;
     }
     return height;
 }
-
 //cell高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat height = 0;
@@ -164,23 +185,24 @@ NSArray *testCommentStrArr;
             CGFloat commentHeight = [lzhReturnLabelHeight getLabelHeight: testCommentStrArr[i] fontSize:12 width:SCREEN_WIDTH * 0.7];
             commentToTalHeight += commentHeight;
         }
-        height = lableheight +SCREEN_HEIGHT * (0.067 +0.037) + commentToTalHeight + 15;
+        if(self.segumentIndex == 0){
+            height = lableheight +SCREEN_HEIGHT * (0.067 +0.037) + commentToTalHeight + 15 + SCREEN_WIDTH * 0.95;
+        }else if (self.segumentIndex == 1){
+            height = SCREEN_HEIGHT * 0.082 + 5 + 5 + lableheight + 25;
+        }
     }
     return  height;
 }
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     firstPageSecondViewControllerForClickScienceCell *vc = [[firstPageSecondViewControllerForClickScienceCell alloc]init];
     [self presentViewController:vc animated:YES completion:nil];
-    
 }
-
-
 //点击头像
 - (void)clickImageButton:(UIButton*)_b{
     LcPersonalMessageViewController *vc = [[LcPersonalMessageViewController alloc]init];
     [self presentViewController:vc animated:YES completion:nil];
 }
+
 //科技圈cell
 //点赞
 -(void)clickPraiseButton:(UILabel *)praiseLabel{

@@ -139,7 +139,6 @@
 		047A3A121E2CB3A800651C7E /* announSecondPageNextStepView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A3A111E2CB3A800651C7E /* announSecondPageNextStepView.m */; };
 		047A68541E6915230028D5A2 /* lzhReturnLabelHeight.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A68531E6915230028D5A2 /* lzhReturnLabelHeight.m */; };
 		047A68571E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A68561E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.m */; };
-		047A685E1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A685D1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.m */; };
 		047A68611E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A68601E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.m */; };
 		047A68651E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047A68641E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.m */; };
 		047F2C4F1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 047F2C4E1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m */; };
@@ -185,6 +184,9 @@
 		048EB3BD1E5433580080F2E8 /* lzhGetCurrentTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 048EB3BC1E5433580080F2E8 /* lzhGetCurrentTime.m */; };
 		048EB3C01E54458A0080F2E8 /* BasicViewOfAddReturnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 048EB3BF1E54458A0080F2E8 /* BasicViewOfAddReturnView.m */; };
 		048EB3C31E544A930080F2E8 /* BasicViewControllerForAddReturnview.m in Sources */ = {isa = PBXBuildFile; fileRef = 048EB3C21E544A930080F2E8 /* BasicViewControllerForAddReturnview.m */; };
+		048F31391E6CEFA000F8D82C /* lzhScienceDetaileCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048F31381E6CEFA000F8D82C /* lzhScienceDetaileCommentTableViewCell.m */; };
+		048F313C1E6D27F200F8D82C /* lzhZhuanjiawendaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048F313B1E6D27F200F8D82C /* lzhZhuanjiawendaTableViewCell.m */; };
+		048F31421E6D4C0800F8D82C /* lzhNineButtonViewForScienceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 048F31411E6D4C0800F8D82C /* lzhNineButtonViewForScienceCell.m */; };
 		049261FD1E1F277F00AFC111 /* commentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049261FC1E1F277F00AFC111 /* commentView.m */; };
 		049262001E1F3B9100AFC111 /* userWriteCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049261FF1E1F3B9100AFC111 /* userWriteCommentView.m */; };
 		049262031E1F939A00AFC111 /* cellFootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 049262021E1F939A00AFC111 /* cellFootView.m */; };
@@ -543,8 +545,6 @@
 		047A68531E6915230028D5A2 /* lzhReturnLabelHeight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhReturnLabelHeight.m; sourceTree = "<group>"; };
 		047A68551E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = firstPageSecondViewControllerForClickScienceCell.h; sourceTree = "<group>"; };
 		047A68561E6954230028D5A2 /* firstPageSecondViewControllerForClickScienceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = firstPageSecondViewControllerForClickScienceCell.m; sourceTree = "<group>"; };
-		047A685C1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhSpecialistTableCellHeader.h; sourceTree = "<group>"; };
-		047A685D1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhSpecialistTableCellHeader.m; sourceTree = "<group>"; };
 		047A685F1E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhFirstPageScienceDetaileCellHeader.h; sourceTree = "<group>"; };
 		047A68601E6960C50028D5A2 /* lzhFirstPageScienceDetaileCellHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhFirstPageScienceDetaileCellHeader.m; sourceTree = "<group>"; };
 		047A68631E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhDetaileScienCellHeaderSmallView.h; sourceTree = "<group>"; };
@@ -608,6 +608,12 @@
 		048EB3BF1E54458A0080F2E8 /* BasicViewOfAddReturnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewOfAddReturnView.m; sourceTree = "<group>"; };
 		048EB3C11E544A930080F2E8 /* BasicViewControllerForAddReturnview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicViewControllerForAddReturnview.h; sourceTree = "<group>"; };
 		048EB3C21E544A930080F2E8 /* BasicViewControllerForAddReturnview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewControllerForAddReturnview.m; sourceTree = "<group>"; };
+		048F31371E6CEFA000F8D82C /* lzhScienceDetaileCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhScienceDetaileCommentTableViewCell.h; sourceTree = "<group>"; };
+		048F31381E6CEFA000F8D82C /* lzhScienceDetaileCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhScienceDetaileCommentTableViewCell.m; sourceTree = "<group>"; };
+		048F313A1E6D27F200F8D82C /* lzhZhuanjiawendaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhZhuanjiawendaTableViewCell.h; sourceTree = "<group>"; };
+		048F313B1E6D27F200F8D82C /* lzhZhuanjiawendaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhZhuanjiawendaTableViewCell.m; sourceTree = "<group>"; };
+		048F31401E6D4C0800F8D82C /* lzhNineButtonViewForScienceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lzhNineButtonViewForScienceCell.h; sourceTree = "<group>"; };
+		048F31411E6D4C0800F8D82C /* lzhNineButtonViewForScienceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lzhNineButtonViewForScienceCell.m; sourceTree = "<group>"; };
 		049261FB1E1F277F00AFC111 /* commentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commentView.h; sourceTree = "<group>"; };
 		049261FC1E1F277F00AFC111 /* commentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commentView.m; sourceTree = "<group>"; };
 		049261FE1E1F3B9100AFC111 /* userWriteCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userWriteCommentView.h; sourceTree = "<group>"; };
@@ -1005,6 +1011,8 @@
 				043C67441E6801000002DE59 /* lzhFirstPageSecondCellCommentView.m */,
 				043C67501E6817470002DE59 /* lzhFirstPageSecellSmallCommView.h */,
 				043C67511E6817470002DE59 /* lzhFirstPageSecellSmallCommView.m */,
+				048F31401E6D4C0800F8D82C /* lzhNineButtonViewForScienceCell.h */,
+				048F31411E6D4C0800F8D82C /* lzhNineButtonViewForScienceCell.m */,
 			);
 			name = secondCell;
 			sourceTree = "<group>";
@@ -1193,8 +1201,8 @@
 		047A685B1E695ABB0028D5A2 /* zhuanjiaWenDa */ = {
 			isa = PBXGroup;
 			children = (
-				047A685C1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.h */,
-				047A685D1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.m */,
+				048F313A1E6D27F200F8D82C /* lzhZhuanjiawendaTableViewCell.h */,
+				048F313B1E6D27F200F8D82C /* lzhZhuanjiawendaTableViewCell.m */,
 			);
 			name = zhuanjiaWenDa;
 			sourceTree = "<group>";
@@ -1207,6 +1215,8 @@
 				043C67231E67B28F0002DE59 /* secondCell */,
 				047A68631E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.h */,
 				047A68641E6970000028D5A2 /* lzhDetaileScienCellHeaderSmallView.m */,
+				048F31371E6CEFA000F8D82C /* lzhScienceDetaileCommentTableViewCell.h */,
+				048F31381E6CEFA000F8D82C /* lzhScienceDetaileCommentTableViewCell.m */,
 			);
 			name = "科技圈";
 			sourceTree = "<group>";
@@ -2381,7 +2391,6 @@
 				043FB00D1E24AF400025EE61 /* exchangeView1.m in Sources */,
 				99AA38E81E08C454000A57BC /* scinenceHeaderView.m in Sources */,
 				99C1F9B41E10B11A004DE512 /* ZHQScrollMenu.m in Sources */,
-				047A685E1E695FF60028D5A2 /* lzhSpecialistTableCellHeader.m in Sources */,
 				04A2E9DA1E23290C00E7F9DF /* HotCommentView.m in Sources */,
 				048EB3C31E544A930080F2E8 /* BasicViewControllerForAddReturnview.m in Sources */,
 				99EF897F1E03B28F002836B3 /* firstPageSecondCell.m in Sources */,
@@ -2401,8 +2410,10 @@
 				049C63051E4EF06700B83543 /* lzhRedeceTopSpaceLabel.m in Sources */,
 				047227981E5E92A30045A0C7 /* lzhFindJobCellSmallView.m in Sources */,
 				043C67271E67B33B0002DE59 /* lzhFirstpageSecondCellView1.m in Sources */,
+				048F31421E6D4C0800F8D82C /* lzhNineButtonViewForScienceCell.m in Sources */,
 				043C67451E6801000002DE59 /* lzhFirstPageSecondCellCommentView.m in Sources */,
 				04885BA21E6654D600AD5103 /* lzhReturnView.m in Sources */,
+				048F313C1E6D27F200F8D82C /* lzhZhuanjiawendaTableViewCell.m in Sources */,
 				047335371E305BCF00671F44 /* searchFirstPageCollectionViewCell.m in Sources */,
 				99AA38F01E092C8C000A57BC /* sideMenuButton.m in Sources */,
 				047A3A121E2CB3A800651C7E /* announSecondPageNextStepView.m in Sources */,
@@ -2476,6 +2487,7 @@
 				047227931E5E92A30045A0C7 /* LCBiddingCell.m in Sources */,
 				048EB3C01E54458A0080F2E8 /* BasicViewOfAddReturnView.m in Sources */,
 				99E41F2C1DED0E0D00F32968 /* main.m in Sources */,
+				048F31391E6CEFA000F8D82C /* lzhScienceDetaileCommentTableViewCell.m in Sources */,
 				049262001E1F3B9100AFC111 /* userWriteCommentView.m in Sources */,
 				0412CD9E1E499B5000F664BA /* infomaFirstPageViewForCell.m in Sources */,
 				047A39C21E2C4E1C00651C7E /* ownAnimation.m in Sources */,

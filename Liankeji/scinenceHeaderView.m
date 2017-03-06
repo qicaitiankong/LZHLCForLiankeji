@@ -15,9 +15,12 @@
     self = [super initWithFrame:frame];
     self.backgroundColor = RGBA(244, 244, 244, 1);
     if(self){
+        
         //
         UISegmentedControl *segumentControl = [[UISegmentedControl alloc]initWithItems:@[@"科技圈",@"专家问答"]];
         segumentControl.frame = CGRectMake(0, 0,self.frame.size.width, self.frame.size.height);
+        segumentControl.segmentedControlStyle= UISegmentedControlStyleBar;//设置
+        segumentControl.tintColor = [UIColor redColor];
         UIColor *tintColor = RGBA(52, 124, 205, 1);
         [segumentControl setTintColor:tintColor];
         [segumentControl addTarget:self action:@selector(actionHandler:) forControlEvents:UIControlEventValueChanged];
@@ -27,7 +30,9 @@
             make.right.mas_equalTo(self).offset(-10);
             make.top.equalTo(self).offset(SCREEN_HEIGHT * 0.018);
             make.bottom.equalTo(self).offset(-SCREEN_HEIGHT * 0.018);
-        }];        
+        }];
+        //
+        
     }
     return  self;
 }

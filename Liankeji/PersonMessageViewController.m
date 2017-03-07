@@ -14,7 +14,7 @@
 #import "LcChangeViewController.h"
 #import "GenderPickerView.h"
 #import "LcChangeTelephoneNumController.h"
-
+#import "LcResumeViewController.h"
 
 #define HEIGHTOFIMAGE 100
 #define HEIGHTOFOTHER 50
@@ -189,9 +189,8 @@
         }
             break;
         case 8:{
-            LcChangeViewController *lcchangeViewController = [[LcChangeViewController alloc]init];
-            lcchangeViewController.titleText = @"履历";
-            lcchangeViewController.contentText = @"设置履历可以更好的了解你";
+            LcResumeViewController *lcchangeViewController = [[LcResumeViewController alloc]init];
+            lcchangeViewController.titleText = @"个人履历";
             [self presentViewController:lcchangeViewController animated:YES completion:nil];
         }
             break;

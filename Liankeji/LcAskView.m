@@ -93,8 +93,8 @@
     [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(ws.mas_left).with.offset(15);
         make.top.mas_equalTo(ws.mas_top).with.offset(15);
-        make.width.mas_equalTo(ws.mas_width).multipliedBy(0.07);
-        make.height.mas_equalTo(ws.mas_height).multipliedBy(0.1);
+        make.width.mas_equalTo(ws.mas_width).multipliedBy(0.06);
+        make.height.mas_equalTo(ws.mas_width).multipliedBy(0.06);
     }];
     
     [self.tLabel mas_makeConstraints:^(MASConstraintMaker *make) {

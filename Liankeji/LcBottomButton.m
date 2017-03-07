@@ -30,7 +30,6 @@
     [self addSubview:self.picImageView];
     
     self.nameLabel = [[UILabel alloc]init];
-    self.nameLabel.text = @"关注";
     self.nameLabel.textColor = [UIColor blackColor];
     self.nameLabel.textAlignment = NSTextAlignmentCenter;
     self.nameLabel.font = [UIFont systemFontOfSize:13];
@@ -48,7 +47,7 @@
         make.centerX.mas_equalTo(ws);
         make.top.mas_equalTo(ws.mas_top).with.offset(SCREEN_HEIGHT*0.05);
         make.width.mas_equalTo(ws);
-        make.height.mas_equalTo(SCREEN_HEIGHT*0.5);
+        make.height.mas_equalTo(SCREEN_HEIGHT*0.05);
     }];
 }
 

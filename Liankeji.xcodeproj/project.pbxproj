@@ -232,6 +232,14 @@
 		60478E461E6D6B8300E18CB5 /* 视频@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60478E341E6D6B8300E18CB5 /* 视频@2x.png */; };
 		60478E471E6D6B8300E18CB5 /* 视频@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60478E351E6D6B8300E18CB5 /* 视频@3x.png */; };
 		60478E4D1E6D6F6A00E18CB5 /* LcBottomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 60478E4C1E6D6F6A00E18CB5 /* LcBottomButton.m */; };
+		60478E501E6E4D3C00E18CB5 /* LcResumeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60478E4F1E6E4D3C00E18CB5 /* LcResumeViewController.m */; };
+		60478E561E6E530700E18CB5 /* ResumeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 60478E551E6E530700E18CB5 /* ResumeButton.m */; };
+		60478E591E6E62EB00E18CB5 /* ResumeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 60478E581E6E62EB00E18CB5 /* ResumeCell.m */; };
+		60478E5F1E6E81DE00E18CB5 /* LcResumeTwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60478E5E1E6E81DE00E18CB5 /* LcResumeTwoViewController.m */; };
+		60478E631E6EAC9700E18CB5 /* 对号@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60478E601E6EAC9700E18CB5 /* 对号@3x.png */; };
+		60478E641E6EAC9700E18CB5 /* 对号@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 60478E611E6EAC9700E18CB5 /* 对号@2x.png */; };
+		60478E651E6EAC9700E18CB5 /* 对号.png in Resources */ = {isa = PBXBuildFile; fileRef = 60478E621E6EAC9700E18CB5 /* 对号.png */; };
+		60478E691E6EB02100E18CB5 /* LoginAndRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 60478E681E6EB02100E18CB5 /* LoginAndRegisterViewController.m */; };
 		605BA9281E65276E00760A03 /* PersonMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BA9271E65276E00760A03 /* PersonMessageViewController.m */; };
 		605BA92C1E653EC600760A03 /* PersonMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BA92B1E653EC600760A03 /* PersonMessageCell.m */; };
 		605BA9341E657DD700760A03 /* ChangeNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 605BA9331E657DD700760A03 /* ChangeNavView.m */; };
@@ -697,6 +705,19 @@
 		60478E351E6D6B8300E18CB5 /* 视频@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "视频@3x.png"; sourceTree = "<group>"; };
 		60478E4B1E6D6F6A00E18CB5 /* LcBottomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcBottomButton.h; sourceTree = "<group>"; };
 		60478E4C1E6D6F6A00E18CB5 /* LcBottomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcBottomButton.m; sourceTree = "<group>"; };
+		60478E4E1E6E4D3C00E18CB5 /* LcResumeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcResumeViewController.h; sourceTree = "<group>"; };
+		60478E4F1E6E4D3C00E18CB5 /* LcResumeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcResumeViewController.m; sourceTree = "<group>"; };
+		60478E541E6E530700E18CB5 /* ResumeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumeButton.h; sourceTree = "<group>"; };
+		60478E551E6E530700E18CB5 /* ResumeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumeButton.m; sourceTree = "<group>"; };
+		60478E571E6E62EB00E18CB5 /* ResumeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResumeCell.h; sourceTree = "<group>"; };
+		60478E581E6E62EB00E18CB5 /* ResumeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResumeCell.m; sourceTree = "<group>"; };
+		60478E5D1E6E81DE00E18CB5 /* LcResumeTwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LcResumeTwoViewController.h; sourceTree = "<group>"; };
+		60478E5E1E6E81DE00E18CB5 /* LcResumeTwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LcResumeTwoViewController.m; sourceTree = "<group>"; };
+		60478E601E6EAC9700E18CB5 /* 对号@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对号@3x.png"; sourceTree = "<group>"; };
+		60478E611E6EAC9700E18CB5 /* 对号@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对号@2x.png"; sourceTree = "<group>"; };
+		60478E621E6EAC9700E18CB5 /* 对号.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "对号.png"; sourceTree = "<group>"; };
+		60478E671E6EB02100E18CB5 /* LoginAndRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginAndRegisterViewController.h; sourceTree = "<group>"; };
+		60478E681E6EB02100E18CB5 /* LoginAndRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginAndRegisterViewController.m; sourceTree = "<group>"; };
 		605BA9261E65276E00760A03 /* PersonMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonMessageViewController.h; sourceTree = "<group>"; };
 		605BA9271E65276E00760A03 /* PersonMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonMessageViewController.m; sourceTree = "<group>"; };
 		605BA92A1E653EC600760A03 /* PersonMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonMessageCell.h; sourceTree = "<group>"; };
@@ -1444,6 +1465,9 @@
 		60478E231E6D6B8300E18CB5 /* 专家问答 */ = {
 			isa = PBXGroup;
 			children = (
+				60478E601E6EAC9700E18CB5 /* 对号@3x.png */,
+				60478E611E6EAC9700E18CB5 /* 对号@2x.png */,
+				60478E621E6EAC9700E18CB5 /* 对号.png */,
 				60478E241E6D6B8300E18CB5 /* 关注.png */,
 				60478E251E6D6B8300E18CB5 /* 关注@2x.png */,
 				60478E261E6D6B8300E18CB5 /* 关注@3x.png */,
@@ -1466,6 +1490,15 @@
 			path = "专家问答";
 			sourceTree = "<group>";
 		};
+		60478E661E6EAFB400E18CB5 /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				60478E671E6EB02100E18CB5 /* LoginAndRegisterViewController.h */,
+				60478E681E6EB02100E18CB5 /* LoginAndRegisterViewController.m */,
+			);
+			name = "登录注册";
+			sourceTree = "<group>";
+		};
 		605BA9251E65272C00760A03 /* 个人信息 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1475,6 +1508,10 @@
 				605BA9361E66567000760A03 /* LcChangeViewController.m */,
 				6025B3811E66B573005B0883 /* LcChangeTelephoneNumController.h */,
 				6025B3821E66B573005B0883 /* LcChangeTelephoneNumController.m */,
+				60478E4E1E6E4D3C00E18CB5 /* LcResumeViewController.h */,
+				60478E4F1E6E4D3C00E18CB5 /* LcResumeViewController.m */,
+				60478E5D1E6E81DE00E18CB5 /* LcResumeTwoViewController.h */,
+				60478E5E1E6E81DE00E18CB5 /* LcResumeTwoViewController.m */,
 			);
 			name = "个人信息";
 			sourceTree = "<group>";
@@ -1485,9 +1522,13 @@
 				605BA9321E657DD700760A03 /* ChangeNavView.h */,
 				605BA9331E657DD700760A03 /* ChangeNavView.m */,
 				607C14731E6671FC00C85E63 /* GenderPickerView.h */,
+				60478E571E6E62EB00E18CB5 /* ResumeCell.h */,
+				60478E581E6E62EB00E18CB5 /* ResumeCell.m */,
 				607C14741E6671FC00C85E63 /* GenderPickerView.m */,
 				605BA92A1E653EC600760A03 /* PersonMessageCell.h */,
 				605BA92B1E653EC600760A03 /* PersonMessageCell.m */,
+				60478E541E6E530700E18CB5 /* ResumeButton.h */,
+				60478E551E6E530700E18CB5 /* ResumeButton.m */,
 			);
 			name = "个人信息";
 			sourceTree = "<group>";
@@ -1871,6 +1912,7 @@
 		99E41F291DED0E0D00F32968 /* Liankeji */ = {
 			isa = PBXGroup;
 			children = (
+				60478E661E6EAFB400E18CB5 /* 登录注册 */,
 				603ACEFC1E695AF500E7F2C0 /* Third */,
 				99E41F5D1DED240B00F32968 /* firstPage */,
 				9953E2D81E0D227900F55604 /* information */,
@@ -2254,6 +2296,7 @@
 				60180E4A1E5D79A500570818 /* findFirstPageAcademic.png in Resources */,
 				60478E3E1E6D6B8300E18CB5 /* 小logo@3x.png in Resources */,
 				99C1F9D81E1102FD004DE512 /* anounce1_1.png in Resources */,
+				60478E641E6EAC9700E18CB5 /* 对号@2x.png in Resources */,
 				99EF89881E03D0B8002836B3 /* nav3.png in Resources */,
 				99FADC681E1214B700DA4FB6 /* anounce1_0@3x.png in Resources */,
 				047A39EC1E2C768000651C7E /* previosButton.png in Resources */,
@@ -2358,11 +2401,13 @@
 				99C1F9DA1E1102FD004DE512 /* anounce1_1@3x.png in Resources */,
 				0435BF831E1B7F5B00DE859D /* infoSecondPageFriend@2x.png in Resources */,
 				047335391E308B1F00671F44 /* a2.jpg in Resources */,
+				60478E631E6EAC9700E18CB5 /* 对号@3x.png in Resources */,
 				60478E3C1E6D6B8300E18CB5 /* 小logo.png in Resources */,
 				603ACF1F1E695FE600E7F2C0 /* 添加照片.png in Resources */,
 				99C1F9AC1E10AE99004DE512 /* icon_wode_dianji@2x.png in Resources */,
 				99C1F9AD1E10AE99004DE512 /* icon_wode_dianji@3x.png in Resources */,
 				99C1F9901E10A79D004DE512 /* firstpage_buttonGroup_03@2x.png in Resources */,
+				60478E651E6EAC9700E18CB5 /* 对号.png in Resources */,
 				0435BF7A1E1B7F5B00DE859D /* infoSecondPageNotGiveClick@2x.png in Resources */,
 				99C1F9E01E1102FD004DE512 /* anounce1_cancel.@3x.png in Resources */,
 				0480EADE1E2F302C0000E084 /* personalFirstPageCustomer@2x.png in Resources */,
@@ -2516,6 +2561,7 @@
 				99E41F691DED29FD00F32968 /* FirstPageViewController.m in Sources */,
 				99E41F631DED270300F32968 /* NavViewControllerForFirstPage.m in Sources */,
 				049B18451E56850A008013FB /* searchHistoryTableViewCell.m in Sources */,
+				60478E501E6E4D3C00E18CB5 /* LcResumeViewController.m in Sources */,
 				0434BDEA1E1CC44B0096136E /* cellHeaderView2.m in Sources */,
 				046CFB751E34548100E80E9F /* lzhDealNavigationColor.m in Sources */,
 				60D6FAFA1E641542001C20AB /* LCSetViewController.m in Sources */,
@@ -2529,6 +2575,7 @@
 				60478E4D1E6D6F6A00E18CB5 /* LcBottomButton.m in Sources */,
 				04A2EA5B1E23575900E7F9DF /* AddressPickerView.m in Sources */,
 				049C63051E4EF06700B83543 /* lzhRedeceTopSpaceLabel.m in Sources */,
+				60478E561E6E530700E18CB5 /* ResumeButton.m in Sources */,
 				047335371E305BCF00671F44 /* searchFirstPageCollectionViewCell.m in Sources */,
 				99AA38F01E092C8C000A57BC /* sideMenuButton.m in Sources */,
 				047A3A121E2CB3A800651C7E /* announSecondPageNextStepView.m in Sources */,
@@ -2547,11 +2594,13 @@
 				603ACE831E693F8800E7F2C0 /* AnnounceMessageView.m in Sources */,
 				0489F3D91E4C3C3E0050AC8E /* announceWindowView.m in Sources */,
 				99C1F9BE1E10C247004DE512 /* inforMationTableView.m in Sources */,
+				60478E5F1E6E81DE00E18CB5 /* LcResumeTwoViewController.m in Sources */,
 				603ACF141E695B6400E7F2C0 /* TZAssetCell.m in Sources */,
 				9961CFA41E026DF20021D123 /* firstPageButtonGroup.m in Sources */,
 				603ACE6C1E68FF0800E7F2C0 /* CacheTool.m in Sources */,
 				999D99471DF04C950067CFBA /* ShareDataBase.m in Sources */,
 				04EC82031E5BCB1600CDA9C9 /* lzhOperationFile.m in Sources */,
+				60478E591E6E62EB00E18CB5 /* ResumeCell.m in Sources */,
 				60478E221E6D319600E18CB5 /* BottomView.m in Sources */,
 				603ACF181E695B6400E7F2C0 /* TZImagePickerController.m in Sources */,
 				605BA9281E65276E00760A03 /* PersonMessageViewController.m in Sources */,
@@ -2604,6 +2653,7 @@
 				99C1F9B71E10BE81004DE512 /* informationTableViewCell.m in Sources */,
 				047F2C4F1E4AC3C900A2C059 /* lzhTableHeaderViewForFirstPage.m in Sources */,
 				04CDD9B61E1E44CB009330FD /* ownTextSpace.m in Sources */,
+				60478E691E6EB02100E18CB5 /* LoginAndRegisterViewController.m in Sources */,
 				99554A4E1DF012BF0028A59E /* ShareHomePath.m in Sources */,
 				60232E371E600F5500ACF137 /* JumpButton.m in Sources */,
 				60478E131E6A61ED00E18CB5 /* LcAskView.m in Sources */,

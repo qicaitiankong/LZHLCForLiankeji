@@ -22,6 +22,7 @@
 @property (nonatomic,strong) LcAskView *askView;
 @property (nonatomic,strong) PromptView *promptView;
 @property (nonatomic,strong) BottomView *bottomView;
+@property (nonatomic,strong) LcActionButton *actionButton;
 
 @end
 
@@ -53,6 +54,7 @@
     NSArray *imageArray = @[@"图文.png",@"视频.png",@"电话.png"];
     for (int i=0; i<3; i++) {
         LcActionButton *actionButton = [[LcActionButton alloc]initWithFrame:CGRectMake(i*SCREEN_WIDTH/3.0, self.askView.frame.size.height+STATUSBAR_HEIGHT, SCREEN_WIDTH/3.0, SCREEN_HEIGHT*0.2) andNum:i];
+        actionButton.selected = NO;
         actionButton.tag = 110000+i;
         actionButton.picImageView.image = [UIImage imageNamed:imageArray[i]];
         [actionButton addTarget:self action:@selector(change:) forControlEvents:UIControlEventTouchUpInside];
@@ -75,7 +77,7 @@
     UILabel *jieshaoLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, introduceLabel.frame.size.height+introduceLabel.frame.origin.y+1, SCREEN_WIDTH, self.promptView.frame.size.height)];
     jieshaoLabel.text = @"  主攻医疗方面,对于微创技术有自己独特的见解";
     jieshaoLabel.backgroundColor = [UIColor whiteColor];
-    jieshaoLabel.textColor = [UIColor blackColor];
+    jieshaoLabel.textColor = RGBA(56, 56, 56, 0.7);
     jieshaoLabel.font = [UIFont systemFontOfSize:13];
     [self.view addSubview:jieshaoLabel];
     
@@ -84,8 +86,13 @@
 }
 
 #pragma mark - button点击方法
-- (void)change:(UIButton *)button{
+- (void)change:(LcActionButton *)button{
     
+    if (button != self.actionButton) {
+        button.selectImageView.hidden = NO;
+        self.actionButton.selectImageView.hidden = YES;
+        self.actionButton = button;
+    }else{}
     switch (button.tag) {
         case 110000:
             [self.bottomView.askButton setTitle:@"文字咨询" forState:UIControlStateNormal];

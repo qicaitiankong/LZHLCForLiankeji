@@ -22,12 +22,15 @@
     return self;
 }
 
+
+
 #pragma mark - 创建视图
 - (void)createActionView:(NSInteger)num{
 
     self.backgroundColor = [UIColor whiteColor];
     //添加视图
     self.selectImageView = [[UIImageView alloc]init];
+    self.selectImageView.image = [UIImage imageNamed:@"对号.png"];
     self.selectImageView.hidden = YES;
     [self addSubview:self.selectImageView];
     
@@ -57,7 +60,7 @@
     [self.selectImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(ws.nameLabel.mas_left);
         make.centerY.mas_equalTo(ws.nameLabel.mas_centerY);
-        make.height.width.mas_equalTo(ws.nameLabel.mas_height).multipliedBy(0.7);
+        make.height.width.mas_equalTo(ws.nameLabel.mas_height).multipliedBy(0.5);
     }];
     switch (num) {
         case 0:

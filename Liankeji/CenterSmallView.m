@@ -7,13 +7,19 @@
 //
 //首页中间的企业、专家等分类自定义视图
 #import "CenterSmallView.h"
+#import "appCommonAttributes.h"
 
 @implementation CenterSmallView
 - (instancetype)initWithFrame:(CGRect)frame image:(UIImage*)_image lableTitle:(NSString*)_text lableTextCenter:(BOOL)_isCenter delegate:(id<groupButtonDelegate>)_delegate buttonTag:(NSInteger)_buttonTag
 {
     self = [super initWithFrame:frame];
     if (self) {
-        //self.backgroundColor = [UIColor grayColor];
+        //
+        self.layer.borderWidth = 2;
+        UIColor *color = RGBA(246, 246, 246, 1);
+        self.layer.borderColor = color.CGColor;
+        
+        self.backgroundColor = [UIColor whiteColor];
         self.groupdelegate = _delegate;
         _imageButton = [UIButton buttonWithType:UIButtonTypeCustom];
         _imageButton.tag = _buttonTag;
@@ -37,8 +43,8 @@
         [_titleLable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(self);
             make.width.equalTo(self);
-            make.top.equalTo(_imageButton.mas_bottom).offset(2);
-            make.bottom.equalTo(self);
+            make.top.equalTo(_imageButton.mas_bottom);
+            make.bottom.equalTo(self).offset(-2);
         }];
     }
     return self;

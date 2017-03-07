@@ -58,7 +58,6 @@
         buttonImageView = [[lzhNineButtonViewForScienceCell alloc]initWithFrame:CGRectMake(contentLabel.frame.origin.x, contentLabel.frame.origin.y + contentLabel.frame.size.height, SCREEN_WIDTH * 0.95, SCREEN_WIDTH * 0.95)];
         [self.contentView addSubview:buttonImageView];
         //
-      // groupView = [[firstPageSecondCellGroupview alloc]initWithFrame:CGRectMake(0, contentLabel.frame.origin.y + contentLabel.frame.size.height + 5, _tableView.frame.size.width, SCREEN_HEIGHT * 0.037)];
         groupView = [[firstPageSecondCellGroupview alloc]initWithFrame:CGRectMake(0, buttonImageView.frame.origin.y + buttonImageView.frame.size.height + 5, _tableView.frame.size.width, SCREEN_HEIGHT * 0.037)];
         groupView.targetDelegate = delega;
         [self.contentView addSubview:groupView];

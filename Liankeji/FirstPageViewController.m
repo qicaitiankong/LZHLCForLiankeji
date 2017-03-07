@@ -128,6 +128,7 @@ NSArray *testCommentStrArr;
                 firstPageSecondCell *cell3 = [tableView dequeueReusableCellWithIdentifier:@"cell3"];
                 if(cell3 == nil){
                      cell3 = [[firstPageSecondCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell3" targetView:self.tableView changeLabelHeight:contentLableheight commentViewContentArr:testCommentStrArr dellegate:self];
+                    [cell3.userImageButt addTarget:self action:@selector(clickImageButton:) forControlEvents:UIControlEventTouchUpInside];
                 }
                 cell3.contentLabel.text = testStrArr[indexPath.row];
                 parentCell = cell3;
@@ -173,6 +174,9 @@ NSArray *testCommentStrArr;
     }
     return height;
 }
+
+//
+
 //cell高
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat height = 0;
@@ -197,7 +201,7 @@ NSArray *testCommentStrArr;
     firstPageSecondViewControllerForClickScienceCell *vc = [[firstPageSecondViewControllerForClickScienceCell alloc]init];
     [self presentViewController:vc animated:YES completion:nil];
 }
-//点击头像
+//科技圈点击头像
 - (void)clickImageButton:(UIButton*)_b{
     LcPersonalMessageViewController *vc = [[LcPersonalMessageViewController alloc]init];
     [self presentViewController:vc animated:YES completion:nil];

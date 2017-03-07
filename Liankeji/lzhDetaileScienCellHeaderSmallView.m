@@ -39,8 +39,6 @@
             make.top.bottom.mas_equalTo(self.commentNumberLabel);
         }];
         //
-        
-        
     }
     return self;
 }

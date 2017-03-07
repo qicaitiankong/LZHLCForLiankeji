@@ -58,8 +58,6 @@
         [self createSideMenu];
         [self.sideMenuView popAnimation:!self.sideMenuView.isOut];
     }
-    
-   
 }
 //创建侧拉菜单
 - (void)createSideMenu{

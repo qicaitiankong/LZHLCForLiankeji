@@ -20,7 +20,7 @@ NSMutableArray *buttonArr2;
         buttonArr2 = [[NSMutableArray alloc]init];
         for(NSInteger i = 0; i < _titleArray.count; i ++){
             CenterSmallView *smallView = [[CenterSmallView alloc]initWithFrame:CGRectZero image:_imageArr[i] lableTitle:_titleArray[i] lableTextCenter:YES delegate:_groupDelegate buttonTag:i + 1];
-            if(i < 4){
+            if(i < 3){
                 [buttonArr1 addObject:smallView];
             }else{
                 [buttonArr2 addObject:smallView];
@@ -40,22 +40,14 @@ NSMutableArray *buttonArr2;
         make.height.mas_equalTo((self.frame.size.height - 15) * 0.5);
     }];
     UIButton *button1 = buttonArr1[0];
-    UIButton *button2 = buttonArr1[1];
-    //第二行两个按钮
-    UIView *view1 = buttonArr2[0];
-    [view1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(button1.mas_leading);
+    //第二行按钮
+    [buttonArr2 mas_distributeViewsAlongAxis:MASAxisTypeHorizontal withFixedSpacing:self.frame.size.width * 0.08 leadSpacing:self.frame.size.width * 0.041 tailSpacing:self.frame.size.width * 0.041];
+    [buttonArr2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(button1.mas_bottom).offset(5);
-        make.width.equalTo(button1.mas_width);
-        make.height.equalTo(button1.mas_height);
+        make.height.mas_equalTo((self.frame.size.height - 15) * 0.5);
     }];
-    UIView *view2 = buttonArr2[1];
-    [view2 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.leading.equalTo(button2.mas_leading);
-        make.top.equalTo(button2.mas_bottom).offset(5);
-        make.width.equalTo(button2.mas_width);
-        make.height.equalTo(button2.mas_height);
-    }];
+
+    
 }
 
 //设置view样式

@@ -11,10 +11,12 @@
 #import "lzhFirstPageScienceDetaileCellHeader.h"
 #import "lzhReturnLabelHeight.h"
 #import "lzhScienceDetaileCommentTableViewCell.h"
+#import "lzhReturnView.h"
 
 
 @interface firstPageSecondViewControllerForClickScienceCell ()<UITableViewDelegate,UITableViewDataSource>{
     UITableView *myTableView;
+    lzhReturnView *returnView;
 }
 
 @end
@@ -26,15 +28,28 @@ NSString  *testStr ;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self addReturnView];
     [self initTableView];
     testStr = @"亿欧8月25日消息：今天上午，2016中国民营企业500强发布会在北京召开。榜单显示，华为控股有限公司以营收总额3590.09亿排名第一";
     
     // Do any additional setup after loading the view.
 }
+//
+- (void)addReturnView{
+    returnView = [[lzhReturnView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, self.view.frame.size.width, NAVIGATION_HEIGHT)];
+    //returnView.ownButt.titleLabel.textColor = [UIColor blackColor];
+    [returnView.ownButt addTarget:self action:@selector(returnHandler:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:returnView];
+}
+
+- (void)returnHandler:(UIButton*)_b{
+        [self dismissViewControllerAnimated:YES completion:^{
+        }];
+}
 
 //初始化tableView
 - (void)initTableView{
-    myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVIGATION_HEIGHT + STATUSBAR_HEIGHT  , SCREEN_WIDTH, self.view.frame.size.height - NAVIGATION_HEIGHT - STATUSBAR_HEIGHT) style:UITableViewStyleGrouped];
+    myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, returnView.frame.origin.y + returnView.frame.size.height , SCREEN_WIDTH, self.view.frame.size.height - returnView.frame.origin.y - returnView.frame.size.height) style:UITableViewStyleGrouped];
     myTableView.backgroundColor = [UIColor grayColor];
     myTableView.delegate = self;
     myTableView.dataSource = self;
@@ -46,7 +61,7 @@ NSString  *testStr ;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return 6;
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{

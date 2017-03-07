@@ -30,7 +30,6 @@
 @implementation announceViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    typetTitleArr = @[@"发布技术",@"发布项目",@"发布需求",@"发布资金",@"发布设备",@"发布文章"];
     self.view.backgroundColor = [UIColor whiteColor];
         // Do any additional setup after loading the view.
 }

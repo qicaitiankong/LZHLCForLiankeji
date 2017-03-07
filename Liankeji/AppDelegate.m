@@ -26,7 +26,7 @@
     self.window.rootViewController = tab;
     
     [self.window makeKeyAndVisible];
-    
+    NSLog(@"%@",[ShareHomePath GetShareHome].getDocumentsPath);
     
     // Override point for customization after application launch.
     return YES;

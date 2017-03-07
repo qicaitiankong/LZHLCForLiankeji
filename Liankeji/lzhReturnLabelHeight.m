@@ -20,7 +20,7 @@
         h =  [[GetCellHeight ShareCellHeight] cellHeight:modelLabel content:content Cellwidth:labelWidth];
         return h;
     }
-    return h;
+    return h + 5;
 }
 
 @end

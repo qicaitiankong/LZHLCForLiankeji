@@ -58,7 +58,7 @@
 //中间button按钮组
 - (firstPageButtonGroup*)testButtonGroup{
     NSMutableArray *buttonImageArr = [[NSMutableArray alloc]init];
-    NSMutableArray *lableTitleArr = [[NSMutableArray alloc]initWithObjects:@"企业",@"专家",@"技术人才",@"高校",@"第三方",@"更多",nil];
+    NSMutableArray *lableTitleArr = [[NSMutableArray alloc]initWithObjects:@"找成果",@"找专家",@"找需求",@"找人才",@"找服务",@"找企业",nil];
     for(NSInteger i = 0 ; i < 6; i ++){
         NSString *imageName = [NSString stringWithFormat:@"firstpage_buttonGroup_0%li",i];
         UIImage *image = [UIImage imageNamed:imageName];

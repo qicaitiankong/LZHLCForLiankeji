@@ -43,7 +43,7 @@
         self.backgroundColor = [UIColor whiteColor];
         buttonArr1 = [[NSMutableArray alloc]initWithCapacity:3];
         buttonArr2 = [[NSMutableArray alloc]initWithCapacity:3];
-        buttonTitleArray = [[NSMutableArray alloc]initWithObjects:@"发布技术",@"发布项目",@"发布需求",@"发布资金",@"发布设备",@"发布文章", nil];
+        buttonTitleArray = [[NSMutableArray alloc]initWithObjects:@"发布技术",@"发布项目",@"发布需求",@"发布简历",@"发布招聘",@"更多", nil];
         self.targetDelegate = _delegate;
         self.logoDelegate = _delegate;
         [self addAnimationImageView];

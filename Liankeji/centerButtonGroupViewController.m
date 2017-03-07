@@ -13,8 +13,12 @@
 #import "lzhReturnView.h"
 #import "lzhPickerView.h"
 #import "lzhShadeButton.h"
+#import "lzhSearchView.h"
+#import "lzhFirstPageFindZhuanjiaTableViewCell.h"
+#import "lzhReturnLabelHeight.h"
+#import "AnswerOfExpertsViewController.h"
 
-@interface centerButtonGroupViewController ()<cityPickerDelegate,categoryButtonClickDelegate,pickerCompannyDelegate,UITableViewDelegate,UITableViewDataSource>{
+@interface centerButtonGroupViewController ()<cityPickerDelegate,categoryButtonClickDelegate,pickerCompannyDelegate,lzhSearchDele,UITableViewDelegate,UITableViewDataSource>{
     //企业类型
     NSArray *categoryTitleArr ;
     //行业类型
@@ -29,11 +33,14 @@
     //
     UITableView *myTableView;
     //
+    lzhSearchView *searchView;
+    
     
 }
 @end
 
 @implementation centerButtonGroupViewController
+NSString *tetsStr;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,11 +48,13 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     categoryTitleArr = @[@"个人独资",@"合伙企业",@"公司"];
     jobArr = @[@"软件",@"养殖",@"工业",@"制造业"];
-    
+    tetsStr = @"健康的时间考虑的技术开发附近看到了实际付款了都是九分裤老司机法律手段而我如何或热日金额可进入可进入可任务一威武热我欧瑞欧日欧";
     //
     [self setReturnButton];
+    [self initSearchView];
     [self AddButtonGroup];
-    
+    //
+    [self initTableView];
     // Do any additional setup after loading the view.
 }
 //返回按钮
@@ -57,11 +66,19 @@
 - (void)returnButtonHandler:(UIButton*)_b{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+//
+- (void)initSearchView{
+    searchView = [[lzhSearchView alloc]initWithFrame:CGRectMake(0, self.returnView.frame.origin.y + self.returnView.frame.size.height, self.view.frame.size.width, 40)];
+    searchView.targetDele = self;
+    [self.view addSubview:searchView];
+    
+    
+}
 
 //添加上部按钮组
 - (void)AddButtonGroup{
     NSArray *titleArr = @[@"地区",@"企业类型",@"行业",@"筛选"];
-   categoryButtonGroup = [[ZHQScrollMenu alloc]initWithFrame:CGRectMake(0, self.returnView.frame.origin.y + self.returnView.frame.size.height, self.view.frame.size.width, 40) delegate:self];
+   categoryButtonGroup = [[ZHQScrollMenu alloc]initWithFrame:CGRectMake(0, searchView.frame.origin.y + searchView.frame.size.height, self.view.frame.size.width, 40) delegate:self];
     categoryButtonGroup.repeatClick = YES;
     [self.view addSubview:categoryButtonGroup];
     categoryButtonGroup.lineView.hidden = YES;
@@ -72,7 +89,7 @@
 }
 //
 -(void)initTableView{
-    myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.returnView.frame.origin.y + self.returnView.frame.size.height, self.view.frame.size.width, 500) style:UITableViewStylePlain];
+    myTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, categoryButtonGroup.frame.origin.y + categoryButtonGroup.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - categoryButtonGroup.frame.origin.y - categoryButtonGroup.frame.size.height) style:UITableViewStylePlain];
     [self.view addSubview:myTableView];
     myTableView.delegate = self;
     myTableView.dataSource = self;
@@ -84,14 +101,36 @@
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 10;
 }
-//
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-    
-    return nil;
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    CGFloat height = 0;
+    height = [lzhReturnLabelHeight getLabelHeight:tetsStr fontSize:13 width:SCREEN_WIDTH * 0.75];
+    return 15 + SCREEN_HEIGHT * 0.052 + height + 20;
 }
 
-
+//
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    //自定义cell
+    lzhFirstPageFindZhuanjiaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"searchCell01"];
+    if(nil == cell){
+        CGFloat height2 = 0;
+        height2 = [lzhReturnLabelHeight getLabelHeight:tetsStr fontSize:13 width:SCREEN_WIDTH * 0.75];
+        cell = [[lzhFirstPageFindZhuanjiaTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"searchCell01" contentLabelHeight:height2];
+        [cell.userButt addTarget:self action:@selector(clickUserButt:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    cell.userNameLabel.text = @"迟建勇";
+    cell.jobLabel.text = @"航天航空";
+    cell.homePlace.text = @"青岛大学";
+    cell.contentLabel.text = tetsStr;
+    cell.beginMoneyLabel.text = @"100元起价";
+    cell.purchasePersonNumberLabel.text = @"999购买";
+    return cell;
+}
+//点击了专家头像
+-(void)clickUserButt:(UIButton*)_b{
+    AnswerOfExpertsViewController *answerVC = [[AnswerOfExpertsViewController alloc]init];
+    [self presentViewController:answerVC animated:YES completion:^{
+    }];
+}
 
 //
 //按钮点击
@@ -117,6 +156,10 @@
         default:
             break;
     }
+}
+//点击搜索按钮
+-(void)clickSearchButt:(UIButton *)_b{
+    NSLog(@"你在点击搜索按钮");
 }
 
 //弹出地点选择器

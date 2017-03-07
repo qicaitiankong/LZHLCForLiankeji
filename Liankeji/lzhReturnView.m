@@ -19,7 +19,9 @@
         self.ownButt = [UIButton buttonWithType:UIButtonTypeCustom];
         self.ownButt.frame = CGRectMake(5, 5, 50, self.frame.size.height - 2 * 5);
         self.ownButt.center = CGPointMake(self.ownButt.center.x, self.frame.size.height / 2);
+        [self.ownButt setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self.ownButt setTitle:@"返回" forState:UIControlStateNormal];
+        //[self.ownButt setImage:[UIImage imageNamed:@"WechatIMG"] forState:UIControlStateNormal];
         //self.ownButt.backgroundColor = [UIColor grayColor];
         [self addSubview:self.ownButt];
         

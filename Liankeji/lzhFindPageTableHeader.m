@@ -56,21 +56,21 @@
                 self.leftTitleLabel.textColor = RGBA(2, 149, 211, 1);
                 self.bottomLineView.backgroundColor = RGBA(2, 149, 211, 1);
                 break;
+//            case 1:
+//                self.leftImageView.image = [UIImage imageNamed:@"findFirstPagePrice.png"];
+//                self.leftTitleLabel.text = @"今日竞价";
+//                self.leftTitleLabel.textColor = RGBA(247, 128, 41, 1);
+//                self.bottomLineView.backgroundColor = RGBA(247, 128, 41, 1);
+//                [self.moreButt setTitleColor:[UIColor colorWithRed:247/255.0 green:128/255.0 blue:41/255.0 alpha:1] forState:UIControlStateNormal];
+//                break;
             case 1:
-                self.leftImageView.image = [UIImage imageNamed:@"findFirstPagePrice.png"];
-                self.leftTitleLabel.text = @"今日竞价";
-                self.leftTitleLabel.textColor = RGBA(247, 128, 41, 1);
-                self.bottomLineView.backgroundColor = RGBA(247, 128, 41, 1);
-                [self.moreButt setTitleColor:[UIColor colorWithRed:247/255.0 green:128/255.0 blue:41/255.0 alpha:1] forState:UIControlStateNormal];
-                break;
-            case 2:
                 self.leftImageView.image = [UIImage imageNamed:@"findFirstPageFindPerson"];
                 self.leftTitleLabel.text = @"企业招聘";
                 self.leftTitleLabel.textColor = RGBA(85, 175, 38, 1);
                 self.bottomLineView.backgroundColor = RGBA(85, 175, 38, 1);
                 [self.moreButt setTitleColor:[UIColor colorWithRed:85/255.0 green:175/255.0 blue:38/255.0 alpha:1] forState:UIControlStateNormal];
                 break;
-            case 3:
+            case 2:
                 self.leftImageView.image = [UIImage imageNamed:@"findFirstPageNewAnnounce.png"];
                 self.leftTitleLabel.text = @"个人求职";
                 self.leftTitleLabel.textColor = RGBA(22, 152, 212, 1);

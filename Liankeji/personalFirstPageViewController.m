@@ -16,6 +16,10 @@
 #import <MessageUI/MessageUI.h>
 #import "LCSetViewController.h"
 
+#import "LcPersonalMessageViewController.h"
+#import "AnnounceMessageViewController.h"
+#import "AnswerOfExpertsViewController.h"
+
 @interface personalFirstPageViewController ()<UITableViewDelegate,UITableViewDataSource,JumpViewPassMessageDelegate,MFMessageComposeViewControllerDelegate,UINavigationControllerDelegate,MFMailComposeViewControllerDelegate>{
     personalViewOfFirstPage *secondHeaderView;
     UITableView *ownTableView;
@@ -58,7 +62,7 @@
 
 
 - (void)initTableView{
-    ownTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NAVIGATION_HEIGHT, self.view.frame.size.width, SCREEN_HEIGHT - NAVIGATION_HEIGHT - TABBAR_HEIGHT)];
+    ownTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, SCREEN_HEIGHT - NAVIGATION_HEIGHT - TABBAR_HEIGHT) style:UITableViewStyleGrouped];
     ownTableView.backgroundColor = RGBA(246, 246, 246, 1);
     ownTableView.delegate = self;
     ownTableView.dataSource = self;
@@ -104,6 +108,7 @@
         cell1.jobLabel.text = @"私营业主";
         cell1.memberImageView.image = [UIImage imageNamed:@"personalFirstPageMember"];
         cell1.memberNameLabel.text = @"黄金会员";
+        cell1.selectionStyle = UITableViewCellSelectionStyleNone;
         cell = cell1;
     }else{
         PersonalTableViewCell *cell2 = [tableView dequeueReusableCellWithIdentifier:@"personalCell2"];
@@ -130,6 +135,7 @@
         }
         [cell2.firstImageView setImage:imageArr[indexPath.row]];
         [cell2.secondTitleLable setText:titleArray[indexPath.row]];
+        cell2.selectionStyle = UITableViewCellSelectionStyleNone;
         cell = cell2;
     }
     return cell;
@@ -190,8 +196,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     switch (indexPath.section) {
-        case 0:
-            
+        case 0:{
+            LcPersonalMessageViewController *personalMessageController = [[LcPersonalMessageViewController alloc]init];
+            [self presentViewController:personalMessageController animated:YES completion:nil];
+        }
             break;
         case 1:
             
@@ -211,8 +219,10 @@
                     jumpView.jumpDelegate = self;
                 }
                     break;
-                case 1:
-                    
+                case 1:{
+                    AnswerOfExpertsViewController *answerOfExpertsViewController = [[AnswerOfExpertsViewController alloc]init];
+                    [self presentViewController:answerOfExpertsViewController animated:YES completion:nil];
+                }
                     break;
                 case 2:
                     [self presentViewController:[LCSetViewController new] animated:YES completion:nil];

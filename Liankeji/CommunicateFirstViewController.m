@@ -41,17 +41,19 @@
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
+    return 3;
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (section == 0) {
         return 1;
     }else if (section == 1){
-        return 4;
-    }else if (section ==2){
         return 3;
-    }else{
+    }
+//    else if (section ==2){
+//        return 3;
+//    }
+    else{
         return 4;
     }
 }
@@ -63,14 +65,16 @@
             cell.releaseDic = nil;
         }
         return cell;
-    }else if (indexPath.section == 1){
-        LCBiddingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LCBiddingCell"];
-        if(cell == nil){
-            cell = [[LCBiddingCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LCBiddingCell"];
-            cell.biddingDic = nil;
-        }
-        return cell;
-    }else if (indexPath.section == 2){
+    }
+//    else if (indexPath.section == 1){
+//        LCBiddingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LCBiddingCell"];
+//        if(cell == nil){
+//            cell = [[LCBiddingCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LCBiddingCell"];
+//            cell.biddingDic = nil;
+//        }
+//        return cell;
+//    }
+    else if (indexPath.section == 1){
         LCRecruitCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LCRecruitCell"];
         if(cell == nil){
             cell = [[LCRecruitCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LCRecruitCell"];
@@ -89,9 +93,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return SCREEN_WIDTH/3.0*1.5+20;
-    }else if (indexPath.section == 1){
-        return 100;
-    }else if (indexPath.section == 2){
+    }
+//    else if (indexPath.section == 1){
+//        return 100;
+//    }
+    else if (indexPath.section == 1){
         return 230;
     }else{
         return 100;

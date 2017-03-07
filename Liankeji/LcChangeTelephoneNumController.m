@@ -14,7 +14,7 @@
 //底层文字颜色
 #define COLOROFBOTTOMWORD   RGBA(56, 56, 56, 0.7)
 
-@interface LcChangeTelephoneNumController ()
+@interface LcChangeTelephoneNumController ()<UITextFieldDelegate>
 
 //导航栏
 @property (nonatomic,strong) ChangeNavView *changeView;
@@ -63,6 +63,7 @@
     [self.view addSubview:label];
     
     self.phoneTextField = [[UITextField alloc]init];
+    self.phoneTextField.delegate = self;
     self.phoneTextField.layer.masksToBounds = YES;
     self.phoneTextField.layer.cornerRadius = 5;
     self.phoneTextField.layer.borderWidth = 0.5;
@@ -137,6 +138,37 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+#pragma mark - phoneTextField的协议方法
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+
+    if (![self isValidateMobile:self.phoneTextField.text]) {
+        [self showOKAlertWithMessage:@"手机号不符合格式要求"];
+        self.phoneTextField.text = @"";
+    };
+}
+
+#pragma mark - 提示窗口
+- (void)showOKAlertWithMessage:(NSString *)message{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+#pragma mark - 屏幕自带的点击方法
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+
+    if (![self.phoneTextField.text isEqualToString:@""]) {
+        if (![self isValidateMobile:self.phoneTextField.text]) {
+            [self showOKAlertWithMessage:@"手机号格式不符合格式要求"];
+            self.phoneTextField.text = @"";
+        };
+    }
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

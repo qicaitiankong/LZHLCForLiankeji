@@ -11,7 +11,7 @@
 #import "ChangeNavView.h"
 #import <Masonry.h>
 
-@interface LcChangeViewController ()
+@interface LcChangeViewController ()<UITextViewDelegate>
 
 @property (nonatomic,strong) ChangeNavView *changeNavView;
 @property (nonatomic,strong) UITextView *contentTextView;
@@ -47,6 +47,9 @@
     
     //添加内容
     self.contentTextView = [[UITextView alloc]init];
+    if ([self.titleText isEqualToString:@"邮箱"]) {
+        self.contentTextView.delegate = self;
+    }
     self.contentTextView.layer.masksToBounds = YES;
     self.contentTextView.layer.cornerRadius = 5;
     self.contentTextView.layer.borderWidth = 0.5;
@@ -93,6 +96,38 @@
     NSString *emailRegex = @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
     NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
     return [emailTest evaluateWithObject:email];
+}
+
+
+#pragma mark - phoneTextField的协议方法
+- (void)textViewDidEndEditing:(UITextView *)textView{
+
+    if (![self isValidateEmail:self.contentTextView.text]) {
+        [self showOKAlertWithMessage:@"邮箱不符合格式要求"];
+        self.contentTextView.text = @"";
+    };
+}
+
+
+#pragma mark - 提示窗口
+- (void)showOKAlertWithMessage:(NSString *)message{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [alertController dismissViewControllerAnimated:YES completion:nil];
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+
+#pragma mark - 屏幕自带的点击方法
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    if (![self.contentTextView.text isEqualToString:@""]) {
+        if (![self isValidateEmail:self.contentTextView.text]) {
+            [self showOKAlertWithMessage:@"邮箱格式不符合要求"];
+            self.contentTextView.text = @"";
+        };
+    }
 }
 
 

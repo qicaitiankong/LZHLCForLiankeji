@@ -19,8 +19,6 @@
         //添加样式
         self.backgroundColor = RGBA(35, 35, 35, 0.5);
         self.userInteractionEnabled = YES;
-        self.layer.masksToBounds = YES;
-        self.layer.cornerRadius = 10;
         //添加点击手势
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapOn)];
         [self addGestureRecognizer:tap];

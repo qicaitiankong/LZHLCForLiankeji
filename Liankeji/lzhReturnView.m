@@ -19,12 +19,13 @@
         self.ownButt = [UIButton buttonWithType:UIButtonTypeCustom];
         self.ownButt.frame = CGRectMake(5, 5, 50, self.frame.size.height - 2 * 5);
         self.ownButt.center = CGPointMake(self.ownButt.center.x, self.frame.size.height / 2);
-        [self.ownButt setTitle:@"返回" forState:UIControlStateNormal];
+        [self.ownButt setImage:[UIImage imageNamed:@"WechatIMG.png"] forState:UIControlStateNormal];
         //self.ownButt.backgroundColor = [UIColor grayColor];
         [self addSubview:self.ownButt];
         
         self.lcSearchButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [self.lcSearchButton addTarget:self action:@selector(search) forControlEvents:UIControlEventTouchUpInside];
+        [self.lcSearchButton.titleLabel setTextAlignment:NSTextAlignmentRight];
         self.lcSearchButton.backgroundColor = [UIColor clearColor];
         [self.lcSearchButton setImage:[UIImage imageNamed:@"nav2.png"] forState:UIControlStateNormal];
         self.lcSearchButton.userInteractionEnabled = NO;
@@ -42,9 +43,9 @@
         [self addSubview:line];
         //
         [self.ownButt mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self);
-            make.width.mas_equalTo(self).multipliedBy(0.2);
-            make.height.mas_equalTo(self).multipliedBy(0.8);
+            make.left.mas_equalTo(self).with.offset(10);
+            make.width.mas_equalTo(self.mas_height).multipliedBy(0.5);
+            make.height.mas_equalTo(self).multipliedBy(0.5);
             make.centerY.mas_equalTo(self);
         }];
         [self.ownTitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -54,9 +55,9 @@
             make.centerY.mas_equalTo(self);
         }];
         [self.lcSearchButton mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.mas_equalTo(self);
+            make.right.mas_equalTo(self.mas_right).with.offset(-10);
             make.centerY.mas_equalTo(self);
-            make.width.height.mas_equalTo(self.mas_width).multipliedBy(0.2);
+            make.width.height.mas_equalTo(self.mas_height).multipliedBy(0.5);
         }];
         
     }

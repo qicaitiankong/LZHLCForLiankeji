@@ -11,6 +11,7 @@
 #import "PersonMessageViewController.h"
 #import "lzhReturnView.h"
 #import "LCSetView.h"
+#import "CacheTool.h"
 
 #define HEIGHTOFCELL 60
 #define HEIGHTOFDEADVIEW 100
@@ -41,8 +42,7 @@
     //添加导航栏
     lzhReturnView *returnView = [[lzhReturnView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT, SCREEN_WIDTH, 44)];
     returnView.backgroundColor = RGBA(0, 177, 251, 1);
-    [returnView.ownButt setImage:[UIImage imageNamed:@""] forState:UIControlStateNormal];
-    [returnView.ownButt setTitle:@"返回" forState:UIControlStateNormal];
+    [returnView.ownButt setImage:[UIImage imageNamed:@"WechatIMG.png"] forState:UIControlStateNormal];
     returnView.lcSearchButton.hidden = NO;
     returnView.lcSearchButton.userInteractionEnabled = YES;
     [returnView.ownButt addTarget:self action:@selector(dissmiss) forControlEvents:UIControlEventTouchUpInside];
@@ -62,7 +62,7 @@
 - (UITableView *)tableView{
 
     if (_tableView == nil) {
-        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT+44, SCREEN_WIDTH, HEIGHTOFDEADVIEW+HEIGHTOFCELL*6) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, STATUSBAR_HEIGHT+44, SCREEN_WIDTH, HEIGHTOFDEADVIEW+HEIGHTOFCELL*6) style:UITableViewStyleGrouped];
         _tableView.backgroundColor = [UIColor whiteColor];
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -94,11 +94,15 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identity];
     }
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     switch (indexPath.row) {
-        case 0:
-            cell.textLabel.text = @"50K";
+        case 0:{
+            NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+            float numOfCache = [CacheTool folderSizeAtPath:cachesPath];
+            cell.textLabel.text = [NSString stringWithFormat:@"%dM",(int)numOfCache];
             cell.textLabel.textColor = [UIColor blackColor];
             cell.textLabel.font = [UIFont systemFontOfSize:13];
+        }
             break;
         case 1:
             cell.textLabel.text = @"编辑个人信息";
@@ -153,8 +157,11 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     switch (indexPath.row) {
-        case 0:
-            
+        case 0:{
+            [CacheTool clearCache:[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]];
+            UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+            cell.textLabel.text = @"0M";
+        }
             break;
         case 1:
             [self presentViewController:[PersonMessageViewController new] animated:YES completion:nil];

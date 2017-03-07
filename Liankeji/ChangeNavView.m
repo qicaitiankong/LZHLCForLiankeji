@@ -32,7 +32,8 @@
     self.backgroundColor = RGBA(0, 177, 251, 1);
     //添加子视图
     self.backButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [self.backButton setTitle:@"返回" forState:UIControlStateNormal];
+    //[self.backButton setTitle:@"返回" forState:UIControlStateNormal];
+    [self.backButton setImage:[UIImage imageNamed:@"WechatIMG.png"] forState:UIControlStateNormal];
     [self.backButton setTintColor:[UIColor whiteColor]];
     [self.backButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [self addSubview:self.backButton];
@@ -44,8 +45,11 @@
     self.tLabel.font = [UIFont systemFontOfSize:17];
     [self addSubview:self.tLabel];
     
+
+    
     self.preservationButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.preservationButton setTitle:@"保存" forState:UIControlStateNormal];
+    [self.preservationButton.titleLabel setTextAlignment:NSTextAlignmentRight];
     [self.preservationButton setTintColor:[UIColor whiteColor]];
     [self.preservationButton.titleLabel setFont:[UIFont systemFontOfSize:15]];
     [self addSubview:self.preservationButton];
@@ -53,9 +57,9 @@
     //添加布局
     [self.backButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(ws);
-        make.left.mas_equalTo(ws).with.offset(5);
-        make.height.mas_equalTo(ws).multipliedBy(0.7);
-        make.width.mas_equalTo(ws).multipliedBy(0.2);
+        make.left.mas_equalTo(ws).with.offset(10);
+        make.height.mas_equalTo(ws).multipliedBy(0.5);
+        make.width.mas_equalTo(ws.mas_height).multipliedBy(0.5);
     }];
     
     [self.tLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -67,9 +71,9 @@
     
     [self.preservationButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerY.mas_equalTo(ws);
-        make.right.mas_equalTo(ws.mas_right).with.offset(-5);
+        make.right.mas_equalTo(ws.mas_right).with.offset(-10);
         make.height.mas_equalTo(ws).multipliedBy(0.7);
-        make.width.mas_equalTo(ws).multipliedBy(0.2);
+        make.width.mas_equalTo(ws.mas_height).multipliedBy(0.7);
     }];
     
 }
